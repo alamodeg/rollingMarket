@@ -19,8 +19,8 @@ export function Navigator() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <Nav.Link href="#home">LOGO</Nav.Link>
-              <Nav.Link href="#link">Contacto</Nav.Link>
-              <Nav.Link href="#link">Quienes Somos</Nav.Link>
+              <Nav.Link href="/Contacto">Contacto</Nav.Link>
+              <Nav.Link href="/QuienesSomos">Quienes Somos</Nav.Link>
             </Nav>
             <div className='p-2 ms-auto'>
               <Navbar.Text>

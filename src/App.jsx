@@ -8,8 +8,8 @@ import { Navigator } from './components/navBar/Navigator.jsx'
 function App() {
   return (
     <>
-
     <Navigator/>
+
 
     </>
   );
