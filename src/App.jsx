@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
 import { Navigator } from './components/navBar/Navigator.jsx'
+import { Contacto } from './components/contacto/Contacto.jsx';
+
 
 function App() {
   return (
     <>
     <Navigator/>
-
+    <Contacto/>
 
     </>
   );
