@@ -1,0 +1,42 @@
+.imgContacto{
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.pieFotoContacto{
+  display: flex;
+  justify-content: space-around;
+  font-size: small;
+}
+
+.segundoNavContacto a:link, a:visited, a:active{
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  color: black;
+}
+
+.segundoNavContacto a:hover{
+  font-weight: bold;
+}
+
+.containerContacto{
+  border-radius: 10px;
+}
+
+iframe {
+  padding: 5px;
+  width: 99%;
+  border: 1px solid black;
+} 
+
+
+.divFormContacto{
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  align-items: center;
+}
+
