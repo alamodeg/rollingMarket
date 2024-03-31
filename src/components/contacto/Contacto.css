@@ -10,15 +10,16 @@
   font-size: small;
 }
 
-.segundoNavContacto a:link, a:visited, a:active{
+.segundoNavContacto{
   display: flex;
   justify-content: space-around;
   text-decoration: none;
-  color: black;
+  color: #000000A6;
 }
 
-.segundoNavContacto a:hover{
-  font-weight: bold;
+
+.segundoNavContacto:hover{
+   color: rgb(0,0,0,0.8);
 }
 
 .containerContacto{
