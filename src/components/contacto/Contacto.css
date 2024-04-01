@@ -7,7 +7,9 @@
 .pieFotoContacto{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   font-size: small;
+  height: 58px;
 }
 
 .segundoNavContacto{
