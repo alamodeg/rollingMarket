@@ -108,6 +108,8 @@ const MainPage = () => {
     //align header & cells
     muiTableHeadCellProps: {align: 'center', },
     muiTableBodyCellProps: {align: 'center', },
+
+    enableColumnActions: false,
     
   });
 
