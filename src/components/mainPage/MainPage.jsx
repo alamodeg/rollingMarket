@@ -75,7 +75,7 @@ const MainPage = () => {
         accessorKey: 'categoria',
         header: 'Categoria',
         size: 150,
-        filterSelectOptions: ['Herramientras', 'Comida', 'Hogar'],
+        filterSelectOptions: ['Bebidas', 'Limpieza', 'Herramientras & Hogar', 'Mascotas','Muebles','Entretenimiento'],
         filterVariant: 'multi-select'
 
         
