@@ -1,0 +1,68 @@
+.container {
+    background-color: #dad3d3b0;
+    margin-top: 20px;
+}
+
+.logoFooter {
+    height: 100px;
+}
+
+.copyright {
+    background-color: rgba(212, 28, 28, 0.973);
+}
+
+.titleList,
+.list {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0%;
+    font-size: 16px;
+}
+
+.titleList {
+    font-weight: bold;
+    color: #000000a6;
+}
+
+.list a {
+    text-decoration: none;
+    color: #03030391;
+}
+
+.list {
+    color: #03030391;
+}
+
+.list a:hover {
+    color: rgba(212, 28, 28, 0.973);
+}
+
+.copy,
+a {
+    color: white;
+    ;
+}
+
+.copy a:hover {
+    color:rgba(128, 8, 8, 0.973) ;
+}
+
+.networkList li {
+    list-style-type: none;
+    display: inline;
+}
+
+.networkList {
+    padding: 0%;
+}
+
+.networkList a {
+    text-decoration: none;
+    color: #e8e8e9;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.networkList a:hover {
+    color:rgba(128, 8, 8, 0.973) ;
+}
