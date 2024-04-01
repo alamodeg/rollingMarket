@@ -7,19 +7,19 @@ const Footer = () => {
     <>
       <div className="container-fluid text-center">
         <div className="row p-3">
-          <ul className={`col-12 col-md-4 ${colCenter()}`}>
+          <ul className="col-12 col-md-4">
             <h5 className="titleList">Categorías</h5>
-            <li className="list"><a href="">Comida</a></li>
-            <li className="list"><a href="">Bebidas</a></li>
-            <li className="list"><a href="">Artículos de limpieza</a></li>
+            <li className="article"><a href="">Comida</a></li>
+            <li className="article"><a href="">Bebidas</a></li>
+            <li className="article"><a href="">Artículos de limpieza</a></li>
           </ul>
 
-          <ul className={`col-12 col-md-4 ${colCenter()}`}>
+          <ul className="col-12 col-md-4">
             <h5 className="titleList">Dirección:</h5>
-            <li className="list">Laprida 605, San Miguel de Tucumán, Tucumán.</li>
+            <li className="article">Laprida 605, San Miguel de Tucumán, Tucumán.</li>
             <hr />
             <h5 className="titleList">Horarios:</h5>
-            <li className="list">Lunes a sabados de 9 a 18hrs.</li>
+            <li className="article">Lunes a sabados de 9 a 18hrs.</li>
           </ul>
 
             <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
@@ -55,16 +55,6 @@ const Footer = () => {
       </div>
     </>
   );
-
-  function colCenter() {
-    const widthWindow = window.innerWidth; // devuelve el ancho interior de la ventana del navegador en píxeles
-
-    if (widthWindow <= 576) {
-      return "text-center";
-    } else {
-      return "text-start";
-    }
-  }
 };
 
 export default Footer;
