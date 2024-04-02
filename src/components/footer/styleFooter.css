@@ -8,7 +8,7 @@
 }
 
 .copyright {
-    background-color: rgba(212, 28, 28, 0.973);
+    background-color: #FF553B;
 }
 
 
@@ -54,7 +54,7 @@
 }
 
 .article a:hover {
-    color: rgba(212, 28, 28, 0.973);
+    color: #ff553b;
 }
 
 .copy,
@@ -64,7 +64,7 @@ a {
 }
 
 .copy a:hover {
-    color:rgba(128, 8, 8, 0.973) ;
+    color: #6d1d11 ;
 }
 
 .networkList li {
@@ -84,5 +84,5 @@ a {
 }
 
 .networkList a:hover {
-    color:rgba(128, 8, 8, 0.973) ;
+    color:#6d1d11  ;
 }
