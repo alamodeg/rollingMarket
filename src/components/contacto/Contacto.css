@@ -19,13 +19,17 @@
   color: #000000A6;
 }
 
+.segundoNavContacto:hover {
+  text-decoration: underline;
+  color: rgb(0,0,0,0.8);
 
-.segundoNavContacto:hover{
-   color: rgb(0,0,0,0.8);
 }
 
 .containerContacto{
   border-radius: 10px;
+  background-image: url('../../assets/img/imgContacto/fondo.jpg');
+  background-size: cover;
+  background-position: center; 
 }
 
 iframe {
@@ -42,4 +46,15 @@ iframe {
   border: 1px solid black;
   align-items: center;
   border-radius: 5px;
+}
+
+.imagenFondoPieContacto{
+  background-image: url('../../assets/img/imgContacto/fondo.jpg');
+  background-size: cover;
+  background-position: center; 
+}
+
+.cardFondoContacto{
+  background-color: transparent;
+  border: none;
 }

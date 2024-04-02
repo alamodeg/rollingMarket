@@ -1,27 +1,6 @@
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-
-// export function Contacto() {
-//   return (
-//     <Container>
-//       {/* <Row>
-//         <div className='border m-1 p-1 justify-content-center'>
-//             <Col className=''>FORMULARIO</Col>
-//             <Col>IFRAME MAPS</Col>
-//         </div>
-//       </Row> */}
-
-
-//     </Container>
-//   );
-// };
-
-
 import React from 'react';
 import '../contacto/Contacto.css'
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import imgCarrito from '../../assets/img/imgCarrito.png'
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 
 
 
@@ -32,15 +11,15 @@ export function Contacto() {
         <img className='imgContacto' src="https://masonlineprod.vtexassets.com/assets/vtex.file-manager-graphql/images/78d545f7-7217-4cba-8914-94e9f6b27c8c___40719512d07ec389bd37898afab91c2e.png" alt="imagenSuperiorContacto" />
       </Container>
 
-
       <div className='pieFotoContacto mt-0 mb-4 p-2 bg-body-secondary'>
-        <a className='segundoNavContacto' href="#">Preguntas Frecuentes</a>
+        <a className='segundoNavContacto' href="#" variant='nav-underline'>Preguntas Frecuentes</a>
         <a className='segundoNavContacto' href="#">Sucursales y métodos de entrega</a>
         <a className='segundoNavContacto' href="#">Medios de Contacto</a>
         <a className='segundoNavContacto' href="#">Política de Privacidad</a>
       </div>
 
-      <Container className='bg-body-secondary mt-3 p-2 containerContacto'>
+
+      <Container className='mt-3 p-2 containerContacto'>
         <Row>
           <Col md={6}>
             <div className='p-2'>
@@ -67,21 +46,59 @@ export function Contacto() {
                   Enviar Consulta
                 </Button>
               </Form>
-          <div className='d-flex justify-content-center text-center
+              <div className='d-flex justify-content-center text-center
           align-items-center m-3 p-3'>
-          Comunicate de manera gratuita llamando al 0381 578-3030 de lunes a sábados de 8 a 21 hs.
-          </div>
+                Comunicate de manera gratuita llamando al 0381 578-3030 de lunes a sábados de 8 a 21 hs.
+              </div>
 
             </div>
           </Col>
         </Row>
       </Container>
 
-
-      <div fluid className='d-flex mt-4 mb-2 p-2 bg-body-secondary'>
-        <span className='ms-5'>LOGO</span>
-        <img className='ms-3' src={imgCarrito} alt="Carrito_logo" />
-      </div>
+      <Container fluid className='imagenFondoPieContacto mt-5 mb-5'>
+        <Row>
+          <Col xs={12} md={4}>
+            <Card className="text-center mb-3 p-2 cardFondoContacto">
+              <Card.Header className='cardFondoContacto'>
+                <Card.Title>Demo de Prueba para tu sitio</Card.Title>
+              </Card.Header>
+              <Card.Body>
+                <Card.Text>
+                  Reserva tu demo y proba tu sitio web con un solo click!.
+                </Card.Text>
+                <Button variant="dark">Click Aquí!</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={12} md={4}>
+            <Card className="text-center mb-3 p-2 cardFondoContacto">
+            <Card.Header className='cardFondoContacto'>
+                <Card.Title>Nuestro Centro de Ayuda</Card.Title>
+              </Card.Header>
+              <Card.Body>
+                <Card.Text>
+                  Comunicate con nuestros asesores de forma inmediata.
+                </Card.Text>
+                <Button variant="dark">Click Aquí!</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs={12} md={4}>
+            <Card className="text-center mb-3 p-2 cardFondoContacto">
+            <Card.Header className='cardFondoContacto'>
+                <Card.Title>Unite a nuestro proyecto</Card.Title>
+              </Card.Header>
+              <Card.Body>
+                <Card.Text>
+                  Forma parte de nuestro equipo para futuros desarrollos.
+                </Card.Text>
+                <Button variant="dark">Click Aquí!</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
 
     </>
   );
