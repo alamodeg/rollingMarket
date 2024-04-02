@@ -3,16 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/footer/Footer";
 import { Navigator } from './components/navBar/Navigator.jsx'
 
 function App() {
   return (
     <>
-    <Navigator/>
-
-
+     
+     <Navigator/>
+      <Footer />
     </>
   );
 }
 
-export default App
+export default App;
+  
+
+
