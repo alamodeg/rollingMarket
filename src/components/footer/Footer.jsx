@@ -1,5 +1,5 @@
 import './styleFooter.css';
-import logoFooter from '../../assets/img/logoFooter.jpg';
+import logoFooter from '../../assets/img/imgFooter/logoFooter.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Footer = () => {
