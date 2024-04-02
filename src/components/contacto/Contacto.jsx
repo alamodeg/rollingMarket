@@ -7,6 +7,7 @@ import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 export function Contacto() {
   return (
     <>
+
       <Container fluid className='p-0'>
         <img className='imgContacto' src="https://masonlineprod.vtexassets.com/assets/vtex.file-manager-graphql/images/78d545f7-7217-4cba-8914-94e9f6b27c8c___40719512d07ec389bd37898afab91c2e.png" alt="imagenSuperiorContacto" />
       </Container>
@@ -28,52 +29,52 @@ export function Contacto() {
           </Col>
 
           <Col md={6}>
-            <div className='mt-2 p-2 divFormContacto' /*style={{ border: '2px solid black', borderRadius: '10px' }}*/>
-              <Form className='formContacto'>
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="juanperez@hotmail.com" />
-                </Form.Group>
+            <div className='mt-2 p-2 divFormContacto' />
+            <Form className='formContacto'>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" placeholder="juanperez@hotmail.com" />
+              </Form.Group>
 
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                  <Form.Label className='mt-3'>Dejanos tu consulta!</Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder='Consulta' maxLength={155} minLength={10} />
-                </Form.Group>
-                <Form.Group controlId="formBasicCheckbox" className='p-2'>
-                  <Form.Check className='d-flex justify-content-center pb-2' type="checkbox" label="Estoy de acuerdo con los terminos y condiciones" />
-                </Form.Group>
-                <Button variant='success' type="submit">
-                  Enviar Consulta
-                </Button>
-              </Form>
-              <div className='d-flex justify-content-center text-center
-          align-items-center m-3 p-3'>
-                Comunicate de manera gratuita llamando al 0381 578-3030 de lunes a sábados de 8 a 21 hs.
+              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Label className='mt-3'>Dejanos tu consulta!</Form.Label>
+                <Form.Control as="textarea" rows={3} placeholder='Consulta' maxLength={155} minLength={10} />
+              </Form.Group>
+              <Form.Group controlId="formBasicCheckbox" className='p-2'>
+                <Form.Check className='d-flex justify-content-center pb-2' type="checkbox" label="Estoy de acuerdo con los terminos y condiciones" />
+              </Form.Group>
+              <div className='d-flex justify-content-center '>
+              <Button variant='success' type="submit">
+                Enviar Consulta
+              </Button>
               </div>
-
+            </Form>
+            <div className='d-flex justify-content-center text-center
+          align-items-center m-3 p-3'>
+              Comunicate de manera gratuita llamando al 0381 578-3030 de lunes a sábados de 8 a 21 hs.
             </div>
           </Col>
         </Row>
       </Container>
 
       <Container fluid className='imagenFondoPieContacto mt-5 mb-5'>
-        <Row>
+        <Row className='d-flex align-items-stretch'>
           <Col xs={12} md={4}>
-            <Card className="text-center mb-3 p-2 cardFondoContacto">
+            <Card className="text-center mb-3 p-2 cardFondoContacto h-100">
               <Card.Header className='cardFondoContacto'>
                 <Card.Title>Demo de Prueba para tu sitio</Card.Title>
               </Card.Header>
               <Card.Body>
                 <Card.Text>
-                  Reserva tu demo y proba tu sitio web con un solo click!.
+                  Reserva tu propia web con un solo click!.
                 </Card.Text>
                 <Button variant="dark">Click Aquí!</Button>
               </Card.Body>
             </Card>
           </Col>
           <Col xs={12} md={4}>
-            <Card className="text-center mb-3 p-2 cardFondoContacto">
-            <Card.Header className='cardFondoContacto'>
+            <Card className="text-center mb-3 p-2 cardFondoContacto h-100">
+              <Card.Header className='cardFondoContacto'>
                 <Card.Title>Nuestro Centro de Ayuda</Card.Title>
               </Card.Header>
               <Card.Body>
@@ -84,14 +85,14 @@ export function Contacto() {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} md={4}>
-            <Card className="text-center mb-3 p-2 cardFondoContacto">
-            <Card.Header className='cardFondoContacto'>
+          <Col xs={12} md={4} className='mb-4'>
+            <Card className="text-center mb-3 p-2 cardFondoContacto h-100">
+              <Card.Header className='cardFondoContacto'>
                 <Card.Title>Unite a nuestro proyecto</Card.Title>
               </Card.Header>
               <Card.Body>
                 <Card.Text>
-                  Forma parte de nuestro equipo para futuros desarrollos.
+                  Forma parte de nuestro equipo para futuros desarrollos
                 </Card.Text>
                 <Button variant="dark">Click Aquí!</Button>
               </Card.Body>

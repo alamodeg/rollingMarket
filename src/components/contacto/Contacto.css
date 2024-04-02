@@ -37,7 +37,7 @@ iframe {
   width: 99%;
   border: 1px solid black;
   border-radius: 5px;
-} 
+}  */
 
 .divFormContacto{
   text-align: center;
@@ -57,4 +57,10 @@ iframe {
 .cardFondoContacto{
   background-color: transparent;
   border: none;
+}
+
+.formContacto{
+  background-image: url('../../assets/img/imgContacto/fondo.jpg');
+  background-size: cover;
+  background-position: center; 
 }
