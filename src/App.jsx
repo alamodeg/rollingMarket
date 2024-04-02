@@ -4,11 +4,14 @@ import viteLogo from '/vite.svg'
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
 import { Navigator } from './components/navBar/Navigator.jsx'
+import {AboutUs} from './components/aboutUs/AboutUs.jsx'
 
 function App() {
   return (
     <>
     <Navigator/>
+    <AboutUs/>
+
 
 
     </>
