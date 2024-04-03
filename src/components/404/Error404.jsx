@@ -1,9 +1,10 @@
 import './styleError404.css'
+import fondoError from '../../assets/img/imgError404/fondoError.jpg';
 
 const Error404 = () => {
   return (
     <>
-      <h1>error</h1>
+
     </>
   )
 }
