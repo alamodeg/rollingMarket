@@ -1,11 +1,15 @@
-.container {
+.containerFooter {
     background-color: #dad3d3b0;
-    margin-top: 20px;
 }
 
 .logoFooter {
     height: 100px;
     border-radius: 100%;
+
+}
+
+.logoFooter:hover {
+  transform: scale(1.1);
 }
 
 .copyright {
