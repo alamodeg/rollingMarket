@@ -59,8 +59,18 @@ iframe {
   border: none;
 }
 
+.cardHeaderContacto{
+  background-color: transparent;
+  border: none;
+  min-height: 72px;
+}
+
 .formContacto{
   background-image: url('../../assets/img/imgContacto/fondo.jpg');
   background-size: cover;
   background-position: center; 
+}
+
+.cardTextFondoContacto{
+  min-height: 72px;
 }
