@@ -1,12 +1,14 @@
 import './styleFooter.css';
 import logoFooter from '../../assets/img/imgFooter/logoFooter.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const Footer = () => {
   return (
     <>
-      <div className="container-fluid text-center">
-        <div className="row p-3">
+      <Container fluid className="containerFooter text-center">
+        <Row className=" p-3">
           <ul className="col-12 col-md-4">
             <h5 className="titleList">Categorías</h5>
             <li className="article"><a href="">Comida</a></li>
@@ -23,11 +25,11 @@ const Footer = () => {
           </ul>
 
             <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
-            <img className="logoFooter" src={logoFooter} alt="logoRollingMarket" />
+            <a href=""><img className="logoFooter" src={logoFooter} alt="logoRollingMarket" /></a>
             </div>
 
-        </div>
-        <div className="row copyright pt-3 justify-content-center">
+        </Row>
+        <Row className="copyright pt-3 justify-content-center">
           <p className="copy col-12 col-md-8 pt-2">
           &copy; 2024 RollingMarket | Tenemos todo lo que necesitas - <a href="">Política de privacidad</a>
           </p>
@@ -51,8 +53,8 @@ const Footer = () => {
                     </li>
                 </ul>
           </div>
-        </div>
-      </div>
+        </Row>
+      </Container>
     </>
   );
 };
