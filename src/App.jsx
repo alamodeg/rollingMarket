@@ -9,7 +9,13 @@ import {AboutUs} from './components/aboutUs/AboutUs.jsx'
 
 function App() {
   return (
-    <>
-}
+  <>
+
+    <Navigator/>
+    <AboutUs/>
+    <Footer/>
+
+  </>    
+) } ;
 
 export default App
