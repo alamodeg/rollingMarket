@@ -14,7 +14,7 @@ export function AboutUs () {
     <Container fluid>
       <Row>
         {/* Tarjeta Principal */}
-        <Col md={12}>
+        <Col md={12} className="d-flex justify-content-center">
           <Card className="cardPrincipal card-principal-hover">
             <Card.Body>
               <Card.Text>
