@@ -10,15 +10,12 @@
     margin: 10px 10px 10px 10px;
     transition: all 0.4s; /* Agregamos transición para un efecto suave */
   }
-  
+ 
   .cardPrincipal {
-    width: 100%;
+    width: 90%;
   }
   
-  #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+  #root { 
     text-align: center;
   }
   
