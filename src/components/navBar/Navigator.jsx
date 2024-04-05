@@ -20,15 +20,16 @@ export function Navigator() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav variant='underline'>
-              <Nav.Link href="/Contacto">Contacto</Nav.Link>
-              <Nav.Link href="/QuienesSomos">Quienes Somos</Nav.Link>
+              <Nav.Link href="/contacto">Contacto</Nav.Link>
+              <Nav.Link href="/aboutUs">Quienes Somos</Nav.Link>
             </Nav>
             <div className='p-2 ms-auto'>
-              <Navbar.Text>
+              
+              {/* <Navbar.Text>
                 Bienvenido <a href="#login">PANEL DE USUARIO O ADMIN</a>
-                {/* {user ? "Bienvenido" + user.nombre : "NO ESTAS LOGEADO"} */}
+                 {user ? "Bienvenido" + user.nombre : "NO ESTAS LOGEADO"} 
+              </Navbar.Text> */}
 
-              </Navbar.Text>
             </div>
             <Nav className='p-2 ms-auto' variant='underline'>
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
