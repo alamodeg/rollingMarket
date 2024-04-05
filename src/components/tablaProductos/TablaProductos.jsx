@@ -20,7 +20,7 @@ const TablaProductos = () => {
     </div>
  <Table className='tabla' striped bordered hover>
       <thead >
-        <tr>
+        <tr >
         <th>Nombre del Producto</th>
           <th>Categoria</th>
           <th>Descripcion</th>
