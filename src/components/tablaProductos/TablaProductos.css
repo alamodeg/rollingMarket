@@ -1,9 +1,17 @@
-table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    unicode-bidi: isolate;
-    border-spacing: 2px;
-    border-color: gray;
+.boton-crud{
+margin: 0px 10px 0px 10px
+
+}
+
+.fila{
+    width: 220px;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton-solo{
+    margin: 15px
 }

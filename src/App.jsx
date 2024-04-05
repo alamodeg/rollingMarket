@@ -1,11 +1,15 @@
 
 import TablaProductos from './components/tablaProductos/TablaProductos'
 
+
 function App() {
 
   return (
     <>
-      <TablaProductos/>
+    
+    <TablaProductos/>
+    
+      
     </>
   )
 }
