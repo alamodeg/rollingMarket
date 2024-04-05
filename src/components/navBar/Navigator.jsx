@@ -21,7 +21,7 @@ export function Navigator() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav variant='underline'>
               <Nav.Link href="/contacto">Contacto</Nav.Link>
-              <Nav.Link href="/aboutUs">Quienes Somos</Nav.Link>
+              <Nav.Link href="/quienesSomos">Quienes Somos</Nav.Link>
             </Nav>
             <div className='p-2 ms-auto'>
               
