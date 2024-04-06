@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <>
       <Container fluid className="containerFooter text-center">
-        <Row className=" p-3">
-          <ul className="col-12 col-md-4">
+        <Row className=" p-3">        
+            <ul className="col-12 col-md-4 category">
             <h5 className="titleList">Categorías</h5>
             <li className="article"><a href="">Comida</a></li>
             <li className="article"><a href="">Bebidas</a></li>
