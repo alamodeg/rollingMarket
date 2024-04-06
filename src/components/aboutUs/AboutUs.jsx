@@ -26,7 +26,7 @@ export function AboutUs () {
         </Col>
       </Row>
       <Row>
-        {/* Primera fila con tres tarjetas */}
+        {/* Primera fila con tres tarjetas miembros*/}
         <Col md={4} className="d-flex justify-content-center">
           <Card className="cardSecundaria">
             <Card.Img variant="top" src={Jorge} />
