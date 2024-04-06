@@ -1,43 +1,66 @@
 .imgBack {
-    background-image: url('../../assets/img/imgError404/fondoError.jpg');
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    width: 100%;
-    height: 400px; /* Ajusta la altura según tus necesidades */
-    display: flex;
-    margin: 0%;
-    padding: 0%;
-  }
-
-  .tittleError {
-    color:#6d1d11;
-  }
-
-
-  .imgShoppingCart {
-    max-width: 80%; /* Ajusta el ancho máximo de la imagen */
-    height: auto; /* Ajusta la altura automáticamente */
-  
-  }
-  
-  .buttomBack{
-    background-color: #ff553b;
-    border-color: #6d1d11;
-    
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  
-.buttomBack:focus{
-    box-shadow: none;
-    outline: none;
-  }
-
-  .buttonBack:active {
-  background-color: #ff553b;
-  border-color: #6d1d11;
+  background-image: url('../../assets/img/imgError404/fondoError.jpg');
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: center; 
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-  .buttomBack:hover{
-    background-color:#f82606;
+
+.imgShoppingCart {
+  max-width: 100%;
+}
+
+.tittleError {
+  color:#af2b16;
+  margin-top: 20px;
+  font-size: 60px;
+}
+
+@media (max-width: 768px) {
+  .tittleError {
+    color:#af2b16;
+    margin-top: 20px;
+    font-size: 30px;
   }
+
+  .buttomBack{
+    margin-bottom: 30px;
+    padding: 0.6em 1em;
+    border: 4px solid #fa725a;
+    transition: ease-in-out 0.3s;
+    background-color: transparent;
+    color: #ff553b;
+    font-weight: bolder;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+}
+
+.buttomBack {
+  margin-top: 40px;
+  padding: 0.6em 1em;
+  border: 4px solid #fa725a;
+  transition: ease-in-out 0.3s;
+  background-color: transparent;
+  color: #ff553b;
+  font-weight: bolder;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.buttomBack:hover {
+  background-color:#ff553b;
+  border-color: #af2b16;
+  color: white;
+  transform: scale(1.1) rotate(6deg);
+  color: white;
+}
+
+.buttomBack:active{
+  background-color:#ff553b !important;
+  border-color: #af2b16!important;
+  color: white !important;
+}
