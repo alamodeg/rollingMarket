@@ -1,9 +1,9 @@
 import React from 'react'
 import { Routes, Route} from 'react-router-dom';
 import { Contacto } from '../../components/contacto/Contacto';
-import { AboutUs }  from '../../components/aboutUs/AboutUs';
+// import { AboutUs }  from '../../components/aboutUs/AboutUs';
 
-
+// asdasdasdad
 
 export function Rutas() {
   // const user = JSON.parse(localStorage.getItem("user"));
