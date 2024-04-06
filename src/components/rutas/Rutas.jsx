@@ -1,9 +1,8 @@
 import React from 'react'
 import { Routes, Route} from 'react-router-dom';
-import { Contacto } from '../../components/contacto/Contacto';
+import { Contact } from '../../page/contacto/Contact';
 // import { AboutUs }  from '../../components/aboutUs/AboutUs';
 
-// asdasdasdad
 
 export function Rutas() {
   // const user = JSON.parse(localStorage.getItem("user"));
@@ -11,7 +10,7 @@ export function Rutas() {
   return (
     <>
       <Routes>
-        <Route path ='/contacto' element={<Contacto></Contacto>}></Route>
+        <Route path ='/contacto' element={<Contact></Contact>}></Route>
         {/* <Route path ='/quienesSomos' element={<AboutUs></AboutUs>}></Route> */}
       </Routes>
     </>
