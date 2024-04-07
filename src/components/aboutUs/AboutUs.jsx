@@ -12,15 +12,16 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 export function AboutUs () {
   return (
     <Container fluid>
-      <Row>
+      <Row className="cardPrincipalAboutUs">
         {/* Tarjeta Principal */}
         <Col md={12} className="d-flex justify-content-center">
           <Card className="cardPrincipal card-principal-hover">
             <Card.Body>
               <Card.Text>
-                Somos un apasionado grupo de desarrolladores web comprometidos con la creación de soluciones digitales innovadoras. En nuestro equipo, nos identificamos como Rolling Coders, y nuestra misión es ofrecer a nuestros clientes experiencias web excepcionales y aplicaciones que satisfagan sus necesidades de manera efectiva. En Rolling Coders, comprendemos la importancia de comprender las metas y aspiraciones de nuestros clientes. Nos esforzamos por ir más allá de las expectativas, colaborando estrechamente con cada cliente para garantizar que cada proyecto sea una expresión auténtica de su visión. Nuestro compromiso con la excelencia técnica y la atención al detalle nos impulsa a alcanzar estándares de calidad superiores en cada línea de código que escribimos. Nos emociona presentar este proyecto como un reflejo de nuestra pasión y dedicación al mundo del desarrollo web. Estamos ansiosos por demostrar nuestra capacidad para transformar ideas en realidad digital, abordando desafíos con soluciones creativas y adaptándonos constantemente a las últimas tendencias tecnológicas. En Rolling Coders, no solo construimos sitios web y aplicaciones; construimos asociaciones duraderas con nuestros clientes. Estamos listos para enfrentar nuevos desafíos, aprender y crecer juntos. Gracias por ser parte de nuestro viaje y explorar el mundo de las posibilidades que ofrecemos.
+              Somos Rolling Coders, un equipo apasionado de desarrolladores web dedicados a crear soluciones digitales innovadoras. Nuestra misión es proporcionar a nuestros clientes experiencias excepcionales y aplicaciones efectivas, colaborando estrechamente con ellos para materializar su visión. Nos comprometemos con la excelencia técnica y la atención al detalle, adaptándonos constantemente a las últimas tendencias tecnológicas. Más que construir sitios y aplicaciones, forjamos asociaciones duraderas. Estamos preparados para enfrentar nuevos desafíos y crecer juntos. ¡Únete a nosotros en este emocionante viaje hacia el mundo de las posibilidades digitales!             
               </Card.Text>
-              <Button variant="primary" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}>Conocer más</Button>
+              <Button variant="primary" className="botonCardPrincipalAboutUs">Conocer más</Button>
+
             </Card.Body>
           </Card>
         </Col>
@@ -33,12 +34,12 @@ export function AboutUs () {
             <Card.Body>
               <Card.Title>Jorge Medina</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+              ¡Hola! Soy Jorge, tengo 30 años y me encuentro inmerso en mi formación en Ingeniería en Sistemas de Información. Desde joven, he estado fascinado por la tecnología y cómo puede transformar nuestras vidas. Mi experiencia y dedicación se reflejan en mi trabajo en Rolling Coders, donde me enorgullece formar parte de un equipo que constantemente desafía los límites de la creatividad y la innovación.
               </Card.Text>
               <ButtonGroup className="button-group-hover">
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-github"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-linkedin"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-instagram"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-github"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-linkedin"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-instagram"></i></Button>
               </ButtonGroup>
             </Card.Body>
           </Card>
@@ -49,12 +50,12 @@ export function AboutUs () {
             <Card.Body>
               <Card.Title>Ignacio Skibski</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+              Saludos, soy Ignacio, un apasionado de la programación de 21 años. Estoy actualmente estudiando Tecnicatura en Programación, y cada día descubro nuevas posibilidades dentro del mundo del código. En Rolling Coders, encuentro un espacio para poner en práctica mis habilidades y aprender de mis compañeros, contribuyendo así a la creación de soluciones digitales que realmente impacten positivamente en la vida de las personas.
               </Card.Text>
               <ButtonGroup className="button-group-hover">
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-github"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-linkedin"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-instagram"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-github"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-linkedin"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-instagram"></i></Button>
               </ButtonGroup>
             </Card.Body>
           </Card>
@@ -65,18 +66,18 @@ export function AboutUs () {
             <Card.Body>
               <Card.Title>Gabriel Urueña</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+              Hola, soy Gabriel. Tengo 22 años y actualmente estoy estudiando Ingeniería Geodésica. Desde que descubrí mi pasión por la programación, he encontrado una forma de combinar mis habilidades técnicas con mi interés por resolver problemas. En el equipo de Rolling Coders, me encanta contribuir con mi entusiasmo y conocimientos para crear soluciones digitales innovadoras.
               </Card.Text>
               <ButtonGroup className="button-group-hover">
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-github"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-linkedin"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-instagram"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-github"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-linkedin"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-instagram"></i></Button>
               </ButtonGroup>
             </Card.Body>
           </Card>
         </Col>
       </Row>
-      <Row>
+      <Row className="segundaFilaCardsAboutUs">
         {/* Segunda fila con dos tarjetas */}
         <Col md={6} className="d-flex justify-content-center">
           <Card className="cardSecundaria">
@@ -87,9 +88,9 @@ export function AboutUs () {
                 Some quick example text to build on the card title and make up the bulk of the card's content.
               </Card.Text>
               <ButtonGroup className="button-group-hover">
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-github"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-linkedin"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-instagram"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-github"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-linkedin"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-instagram"></i></Button>
               </ButtonGroup>
             </Card.Body>
           </Card>
@@ -103,9 +104,9 @@ export function AboutUs () {
                 Some quick example text to build on the card title and make up the bulk of the card's content.
               </Card.Text>
               <ButtonGroup className="button-group-hover">
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-github"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-linkedin"></i></Button>
-                <Button variant="primary" className="rounded-circle mx-1" style={{ backgroundColor: '#FF5733', borderColor: '#FF5733' }}><i className="bi bi-instagram"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-github"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-linkedin"></i></Button>
+                <Button variant="primary" className="botonCardSecuAboutUs rounded-circle mx-1"><i className="bi bi-instagram"></i></Button>
               </ButtonGroup>
             </Card.Body>
           </Card>

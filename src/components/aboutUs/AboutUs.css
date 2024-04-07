@@ -8,9 +8,24 @@
   .card {
     width: 18rem;
     margin: 10px 10px 10px 10px;
-    transition: all 0.4s; /* Agregamos transición para un efecto suave */
+    transition: all 0.4s; 
   }
- 
+  .cardPrincipalAboutUs {
+    margin-top: 10px; 
+  }
+  .botonCardPrincipalAboutUs {
+    background-color: #FF5733;
+    border-color: #FF5733;
+    }
+  .segundaFilaCardsAboutUs {
+    margin-bottom: 20px; 
+  }
+
+  .botonCardSecuAboutUs {
+    background-color: #FF5733;
+    border-color: #FF5733;
+    }
+
   .cardPrincipal {
     width: 90%;
   }
