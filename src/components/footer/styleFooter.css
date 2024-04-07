@@ -25,8 +25,7 @@
         text-align: center;
         padding-left: 0%;
         font-size: 16px;
-    }
-   
+    }   
 }
 
 @media (min-width: 768px) {
@@ -38,7 +37,12 @@
         padding-left: 0%;
         font-size: 16px;
     }
-   
+
+    .category {
+        padding-left: 80px;
+    }
+    
+
 }
 
 
