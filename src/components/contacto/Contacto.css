@@ -32,12 +32,12 @@
   background-position: center; 
 }
 
-.iframeMaps {
+iframe {
   padding: 5px;
   width: 99%;
   border: 1.1px solid black;
   border-radius: 5px;
-} */
+};
 
 .divFormContacto{
   text-align: center;
