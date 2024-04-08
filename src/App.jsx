@@ -5,14 +5,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css' 
 import Footer from "./components/footer/Footer";
 import { Navigator } from './components/navBar/Navigator.jsx'
-import {AboutUs} from './components/aboutUs/AboutUs.jsx'
+import Login  from "./components/login/Login.jsx"
 
 function App() {
   return (
   <>
 
     <Navigator/>
-    <AboutUs/>
+    <Login/>
     <Footer/>
 
   </>    
