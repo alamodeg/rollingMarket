@@ -11,8 +11,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export function AboutUs () {
   return (
-    <body className="bodyAboutUs">
-    <Container fluid  classname="containerAboutUs text-center">
+    <Container fluid className="bodyAboutUs">
+    <Container fluid>
       <Row>
         {/* Tarjeta Principal */}
         <Col md={12} className="primeraCardAboutUs d-flex justify-content-center" >
@@ -27,7 +27,7 @@ export function AboutUs () {
           </Card>
         </Col>
       </Row>
-      <Row>
+      <Row className="mb-3">
         {/* Primera fila con tres tarjetas miembros*/}
         <Col md={4} className="d-flex justify-content-center">
           <Card className="cardSecundariaAboutUs text-center">
@@ -81,7 +81,7 @@ export function AboutUs () {
       {/* Segunda fila con dos tarjetas */}
         
       <Row>
-        <Col md={6} className="d-flex justify-content-center">
+        <Col md={6} className="d-flex justify-content-center mb-3">
           <Card className="cardSecundariaAboutUs text-center">
             <Card.Img variant="top" src={Julian} />
             <Card.Body>
@@ -96,7 +96,7 @@ export function AboutUs () {
             </Card.Body>
           </Card>
         </Col>
-        <Col md={6} className="d-flex justify-content-center">
+        <Col md={6} className="d-flex justify-content-center mb-3">
           <Card className="cardSecundariaAboutUs text-center">
             <Card.Img variant="top" src={Alvaro} />
             <Card.Body>
@@ -114,7 +114,7 @@ export function AboutUs () {
         </Col>
       </Row>
     </Container>
-    </body>
+    </Container>
   );
 };
 
