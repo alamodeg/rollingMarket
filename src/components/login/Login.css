@@ -9,7 +9,7 @@ transition: all 0.4s;
 
 .cardLoginPrincipal:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: scale(1.05); /* Aumenta el tamaño al hacer hover */
+    transform: scale(1.05);
   }
 
 .formLogin {
@@ -25,36 +25,37 @@ transition: all 0.4s;
     background-color: #FF5733;
     border-color: #FF5733;
     }
-    .botonFormLogin:hover {
-        background-color: #808080 !important;
-        border-color: #808080 !important;
-      }
+.botonFormLogin:hover {
+    background-color: #808080 !important;
+    border-color: #808080 !important;
+    }
     
-      .bodyLogin {
-        background-image: url('../../assets/img/imgLogin/fondo.png');
-        background-size: auto;
-        background-repeat: repeat;
-      }
+    .bodyLogin {
+      background-image: url('../../assets/img/imgLogin/fondo.png');
+      background-size: auto;
+      background-repeat: repeat;
+      background-attachment: fixed; /* Establece la imagen de fondo como fija */
+    }
 .etiquetaLogin{
     color: blue;
     text-decoration: underline;
 }
 
 .opcionRegistro {
-    display: flex; /* Establece el contenedor como un contenedor flexible */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%; 
   }
 .opcionContraseñaLogin {
-    display: flex; /* Establece el contenedor como un contenedor flexible */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 
   .imagenRegistro {
-    width: 80%; /* Ajusta el ancho de la imagen según sea necesario */
-    max-width: 300px; /* Define un máximo ancho para la imagen */
+    width: 80%; 
+    max-width: 300px;
     margin-top: 40px;
   }
