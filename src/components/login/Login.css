@@ -52,3 +52,9 @@ transition: all 0.4s;
     align-items: center; /* Centra verticalmente el contenido */
     height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
   }
+
+  .imagenRegistro {
+    width: 80%; /* Ajusta el ancho de la imagen según sea necesario */
+    max-width: 300px; /* Define un máximo ancho para la imagen */
+    margin-top: 40px;
+  }

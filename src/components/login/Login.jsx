@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card, Button, ButtonGroup, Form } from 'react-bootstrap';
 import './Login.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja.png';
 
 const Login = () => {
   return (
@@ -10,6 +11,7 @@ const Login = () => {
         <Row className="justify-content-center">
           <Col className="d-flex justify-content-center colLogin" md={12} > 
             <Card className="cardLoginPrincipal align-items-center">
+            <img src={rollingMarketNaranja} alt="Imagen de registro" className="imagenRegistro" />
               <Form className="formLogin d-flex d-flex flex-column">
               <div className="opcionContraseñaLogin">
                 <p>¿Aún no tenes una cuenta? <a className="etiquetaLogin"href="#" >Solicitá tu alta de usuario</a></p>
