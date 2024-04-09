@@ -1,0 +1,54 @@
+.cardLoginPrincipal {
+width: 50%;
+margin: 30px;
+transition: all 0.4s;
+}
+.colLoginPrincipal{
+    margin:50px;
+}
+
+.cardLoginPrincipal:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05); /* Aumenta el tamaño al hacer hover */
+  }
+
+.formLogin {
+    width: 80%;
+    margin: 30px;
+    }
+    
+.formLogin{
+    margin:50px;
+    }
+
+.botonFormLogin {
+    background-color: #FF5733;
+    border-color: #FF5733;
+    }
+    .botonFormLogin:hover {
+        background-color: #808080 !important;
+        border-color: #808080 !important;
+      }
+    
+      .bodyLogin {
+        background-image: url('../../assets/img/imgLogin/fondo.png');
+        background-size: auto;
+        background-repeat: repeat;
+      }
+.etiquetaLogin{
+    color: blue;
+    text-decoration: underline;
+}
+
+.opcionRegistro {
+    display: flex; /* Establece el contenedor como un contenedor flexible */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+  }
+.opcionContraseñaLogin {
+    display: flex; /* Establece el contenedor como un contenedor flexible */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+  }
