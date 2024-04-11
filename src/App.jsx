@@ -7,11 +7,13 @@ import { Navigator } from './components/navBar/Navigator';
 function App() {
   return (
     <>
-      <Navigator/>
 
-      <Footer />
+      <Navigator/>
+    
+
+    <Footer/>
     </>
   );
 }
 
-export default App;
+export default App
