@@ -23,7 +23,7 @@ function MyVerticallyCenteredModal(props) {
       <img src={rollingMarketNaranja} alt="Imagen de registro" className="imagenRegistro" />
       </div>
       <Form className="formLogin d-flex d-flex flex-column">
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formBasicName">
                   <Form.Label>Ingresá tu nombre completo</Form.Label>
                   <Form.Control type="text" placeholder="Nombre y apellido" maxLength={30} />
                   <Form.Text className="text-muted"></Form.Text>
@@ -40,7 +40,7 @@ function MyVerticallyCenteredModal(props) {
                   <Form.Control type="password" placeholder="Contraseña" maxLength={20} />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="formBasicPasswordRepeat">
                   <Form.Label>Vuelva a ingresar su contraseña</Form.Label>
                   <Form.Control type="password" placeholder="Contraseña" maxLength={20} />
                 </Form.Group>
