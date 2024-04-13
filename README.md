@@ -1,8 +1,104 @@
-# React + Vite
+# 🛒 RollingMarket 🛒 <!-- <a name="informacion"></a> -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+_En esta plataforma hemos creado un diseño sencillo pero encantador, pensado para hacer más **amigable** y **eficiente** nuestro trabajo diario. Con herramientas intuitivas y un aspecto agradable, buscamos **facilitar la gestión y colaboración dentro de nuestro negocio**. ¡Explora y disfruta de esta nueva experiencia digital!"
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📃 Nuestro Indice 📃
+* [Requisitos e Instalación](#requisitos-instalacion)
+* [Información del proyecto](#informacion)
+* [Tecnologías utilizadas](#tecnologias)
+* [Nuestro Equipo](#integrantes)
+* [Agradecimientos] (#agradecimientos)
+
+
+
+## Comenzando 🚀 <a name="requisitos-instalacion"></a>
+
+_Te vamos a **guiar** paso a paso para que puedas utilizar nuestro proyecto en tu maquina local y darle el uso que vos quieras, seguí las instrucciones a continuación y en caso de tener algún inconveniente no dudes en contactarte con el <a name="integrantes">**_Equipo de desarrollo_**</a> de **rollingMarket**.
+
+
+### ¿Cómo se hace una copia de esté proyecto? 🖨️ <a name="requisitos-instalacion"></a>
+
+**1_** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto. (_preferentemente que inicie con minuscula_)
+
+<img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/1CreandoCarpeta.gif"></img>
+
+**2_** Ingresa a nuestro repositorio en github: https://github.com/alamodeg/rollingMarket y copia el link de nuestro repositorio.
+  
+<img src= "https://i.ibb.co/dp7B2zM/1-Creando-Carpeta.gif"></img>
+
+
+  
+3. **Dentro** de la carpeta que creaste en el **paso (1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
+  
+  ```
+<img src= "https://i.ibb.co/dp7B2zM/1-Creando-Carpeta.gif"></img>
+  ```
+
+  4. Utiliza el comando **git clone** seguido de la _URL_ que copiaste anteriormente. (__Ejemplo__: git clone https://github.com/alamodeg/rollingMarket)
+
+  ```
+<img src="">
+
+  5. Presiona **Enter** y se descargará automáticamente el repositorio en tu máquina local.
+  
+  6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, tenes que colocar **npm i** en la terminal del Visual, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.
+  
+  ```
+<img src="">
+
+
+## Despliegue 📦  <a name="informacion"></a>
+
+_Nuestro deploy_:
+<!-- insetar link del deploy -->
+
+## Construido con 🛠️  <a name="tecnologias"></a>
+
+
+<!-- * [HTML](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
+* [CSS](https://maven.apache.org/) - Manejador de dependencias
+* [REACT](https://es.react.dev/) - Usado para generar RSS -->
+
+
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
+
+## Te quedaron dudas o tenes alguna consulta? 📖 <a name="integrantes"></a>
+
+_Comunicate con nuestro equipo de desarrollo y resolve todas tus inquietudes:_  <a name="integrantes">**_Equipo de desarrollo_**</a> de **rollingMarket**.
+
+
+## Autores ✒️ <a name="integrantes"></a>
+
+_RollingMarket fue posible gracias a nuestro equipo de desarrollo, conformado por_:
+
+
+* **Julián Martín** - *Documentacion-FrontEnd-BackEnd* - https://github.com/JulianMartin98 | https://www.linkedin.com/in/julian-martin-9903aa1ba/
+
+* **Alvaro Deguer** - *-FrontEnd-BackEnd* - https://github.com/alamodeg | 
+
+* **Jorge Luis Avalos Medina** - *-FrontEnd-BackEnd* - https://github.com/AvalosJorge | 
+
+* **Gabriel Enrique Urueña** - *-FrontEnd-BackEnd* - https://github.com/GabrielUruena01 | 
+
+* **Ignacio Skibski** - *-FrontEnd-BackEnd* - https://github.com/nachoo07 | 
+
+
+## Expresiones de Gratitud 🎁❤️ <a name="agradecimientos"></a>
+
+_Por ultimo pero no menos importante, no queriamos dejar de lado a todas esas personas que nos brindaron su ayuda y estuvieron presente durante todo el proceso de desarrollo de nuestro proyecto._
+
+
+* A la academia **RollingCode** por brindarnos esta beca y la posiblidad de acceder 
+* A nuestro querido profe **Diego Olmi**, por haber transmitido todos los conocimientos necesarios para el desarrollo del proyecto, por su buena onda y sinceridad siempre por delante de cada clase.
+* A nuestro tutor **Francisco Iturburu**, por su disposición y rapidez para resolver cualquier conflicto, inquietud o duda que se nos puede haber presentado.
+* _Mencion especial_ para **Ezequiel Massa** por ser un excelente amgio y compañero, brindandonos ayuda en situaciones donde nuestros conocimientos parecian no dar a basto.
+* Y a todos nuestros compañeros que formaron parte del proceso de aprendizaje
+
+- Gracias Totales ❤️
+
+---
+---
+⌨️ con ❤️ por [Equipo de RollingMarket]😊
