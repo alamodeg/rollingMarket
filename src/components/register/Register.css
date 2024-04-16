@@ -1,0 +1,16 @@
+.botonFormLogin {
+  background-color: #FF5733;
+  border-color: #FF5733;
+  }
+  
+.botonFormLogin:hover {
+  background-color: #808080 !important;
+  border-color: #808080 !important;
+  }
+
+.imagenRegistro {
+  width: 80%; 
+  max-width: 300px;
+  margin-top: 40px;
+}
+
