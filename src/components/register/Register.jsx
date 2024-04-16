@@ -23,7 +23,7 @@ export function Register (props) {
       <div className="d-flex justify-content-center">
       <img src={rollingMarketNaranja} alt="Imagen de registro" className="imagenRegistro" />
       </div>
-      <Form className="formLogin d-flex d-flex flex-column">
+      <Form className="d-flex d-flex flex-column">
                 <Form.Group className="mb-3" controlId="formBasicName">
                   <Form.Label>Ingresá tu nombre completo</Form.Label>
                   <Form.Control type="text" placeholder="Nombre y apellido" maxLength={30} />
