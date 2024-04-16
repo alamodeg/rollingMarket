@@ -1,7 +1,8 @@
 import React from 'react'
 import { Routes, Route} from 'react-router-dom';
 import { Contact } from '../../page/contacto/Contact';
-import { AboutUs }  from '../../components/aboutUs/AboutUs';
+import AboutUsPage from '../../page/aboutUs/AboutUsPage';
+import LoginPage from '../../page/login/LoginPage';
 
 
 export function Rutas() {
@@ -11,7 +12,8 @@ export function Rutas() {
     <>
       <Routes>
         <Route path ='/contacto' element={<Contact></Contact>}></Route>
-        <Route path ='/quienesSomos' element={<AboutUs></AboutUs>}></Route>
+        <Route path ='/quienesSomos' element={<AboutUsPage></AboutUsPage>}></Route>
+        <Route path ='/login' element={<LoginPage></LoginPage>}></Route>
       </Routes>
     </>
   );
