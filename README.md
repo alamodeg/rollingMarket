@@ -1,6 +1,7 @@
+
 <h1 align="center"> 🛒 RollingMarket 🛒 </h1> <a name="inicio"></a>
 <p align="center"> En esta plataforma creamos un diseño sencillo pero encantador, pensado para hacer más **amigable** y **eficiente** nuestro trabajo diario. Con herramientas intuitivas y un aspecto agradable, buscamos **facilitar la gestión y colaboración dentro de tu negocio**. ¡Explora y disfruta de esta nueva experiencia digital </p>
-<p align="center"><img src="../rollingMarket/src/assets/img/gifREADME/FotoPresentacion.png"/></p> 
+<p align="center"><img src="https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/FotoPresentacion.png"/></p> 
 
 
 
