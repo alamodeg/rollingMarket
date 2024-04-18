@@ -19,15 +19,15 @@
 
 # ¿Cómo se hace una copia de esté proyecto? 🖨️ <a name="requisitos-instalacion"></a>
 
-  ### **1_** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto.  (_preferentemente que inicie con minuscula_).
+  ### **1** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto.  (_preferentemente que inicie con minuscula_).
   <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/1CreandoCarpeta.gif"></img>
   
 
-  ### **2_** Ingresa a nuestro repositorio en github: https://github.com/alamodeg/rollingMarket y copia el link de nuestro repositorio.
+  ### **2** Ingresa a nuestro repositorio en github: https://github.com/alamodeg/rollingMarket y copia el link de nuestro repositorio.
   <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/2IngresandoARepo.gif"></img>
   
 
-  ### 3_ Dentro de la carpeta que creaste en el **paso-(1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
+  ### 3 Dentro de la carpeta que creaste en el **paso-(1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
   <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/3IngresandoTerminal.gif"></img>
   
   
@@ -52,25 +52,25 @@ _Nuestro deploy_:
 <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
 
-## Te quedaron dudas o tenes alguna consulta? 📖 <a name="integrantes"></a>
+## ¿Te quedaron dudas o tenes alguna consulta? 📖 <a name="integrantes"></a>
 
-Comunicate con nuestro equipo de desarrollo y resolve todas tus inquietudes:_  <a name="integrantes">**_Equipo de desarrollo_**</a> de **rollingMarket**.
+Comunicate con nuestro equipo de desarrollo y resolve todas tus inquietudes:  <a name="integrantes">**_Equipo de desarrollo_**</a> de **rollingMarket**.
 
 
 ## Autores ✒️ <a name="integrantes"></a>
 
-RollingMarket fue posible gracias a nuestro equipo de desarrollo, conformado por_:
+RollingMarket fue posible gracias a nuestro equipo de desarrollo, conformado por:
 
 
-* **Julián Martín** - *Documentacion-FrontEnd-BackEnd* - https://github.com/JulianMartin98 | https://www.linkedin.com/in/julian-martin-9903aa1ba/
+* **Julián Martín** | *[Documentacion FrontEnd BackEnd]* | https://github.com/JulianMartin98 | https://www.linkedin.com/in/julian-martin-9903aa1ba/
 
-* **Alvaro Deguer** - *-FrontEnd-BackEnd* - https://github.com/alamodeg | 
+* **Alvaro Deguer** | *[FrontEnd BackEnd]* | https://github.com/alamodeg | 
 
-* **Jorge Luis Avalos Medina** - *-FrontEnd-BackEnd* - https://github.com/AvalosJorge | 
+* **Jorge Luis Avalos Medina** | *[FrontEnd BackEnd]* | https://github.com/AvalosJorge | 
 
-* **Gabriel Enrique Urueña** - *-FrontEnd-BackEnd* - https://github.com/GabrielUruena01 | 
+* **Gabriel Enrique Urueña** | *[FrontEnd BackEnd]* | https://github.com/GabrielUruena01 | 
 
-* **Ignacio Skibski** - *-FrontEnd-BackEnd* - https://github.com/nachoo07 | 
+* **Ignacio Skibski** | *[FrontEnd BackEnd]* | https://github.com/nachoo07 | 
 
 ---
 ---
