@@ -23,11 +23,11 @@
   <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/1CreandoCarpeta.gif"></img>
   
 
-  ### **2** Ingresa a nuestro repositorio en github: https://github.com/alamodeg/rollingMarket y copia el link de nuestro repositorio.
+  ### **2** Ingresa a nuestro repositorio en github y copia el link del repo https://github.com/alamodeg/rollingMarket.
   <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/2IngresandoARepo.gif"></img>
   
 
-  ### 3 Dentro de la carpeta que creaste en el **paso-(1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
+  ### 3 Dentro de la carpeta que creaste en el **paso (1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
   <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/3IngresandoTerminal.gif"></img>
   
   
@@ -35,7 +35,7 @@
   <img src="https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/4ClonandoRepo.gif"></img>
 
   
-  ### 6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, tenes que colocar **npm i** en la terminal del Visual, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.
+  ### 6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, debes ingresar el comando "**npm i**" en la terminal del VisualStudio, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.
   <img src="https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/6InstalandoNPM.gif"></img>
 
 
