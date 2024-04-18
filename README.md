@@ -26,9 +26,11 @@
 
 # ¿Cómo se hace una copia de esté proyecto? 🖨️ <a name="requisitos-instalacion"></a>
 
+´´
   ### **1** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto.  (_preferentemente que inicie con minuscula_).
   <img src= "https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/1TestResize.gif"></img>
   
+´´
 
   ### **2** Ingresa a nuestro repositorio en github y copia el link del repo https://github.com/alamodeg/rollingMarket.
   <img src= "https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/2IngresandoARepo-ezgif.com-resize.gif"></img>
@@ -42,7 +44,8 @@
   <img src="https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/4ClonandoRepo-ezgif.com-resize.gif"></img>
 
   
-  ### 6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, debes ingresar el comando "**npm i**" en la terminal del VisualStudio, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.
+  ### 6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, debes ingresar el comando "**npm i**" en la terminal del VisualStudio, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.(Recordá escribir el comando "npm run dev" para ejectura el proyecto")
+
   <img src="https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/6InstalandoNPM-ezgif.com-resize.gif"></img>
 
 
