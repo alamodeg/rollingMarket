@@ -1,51 +1,42 @@
 # 🛒 RollingMarket 🛒 <!-- <a name="informacion"></a> -->
 
-_En esta plataforma hemos creado un diseño sencillo pero encantador, pensado para hacer más **amigable** y **eficiente** nuestro trabajo diario. Con herramientas intuitivas y un aspecto agradable, buscamos **facilitar la gestión y colaboración dentro de nuestro negocio**. ¡Explora y disfruta de esta nueva experiencia digital!"
+### En esta plataforma hemos creado un diseño sencillo pero encantador, pensado para hacer más **amigable** y **eficiente** nuestro trabajo diario. Con herramientas intuitivas y un aspecto agradable, buscamos **facilitar la gestión y colaboración dentro de nuestro negocio**. ¡Explora y disfruta de esta nueva experiencia digital!"
 
 
 ## 📃 Nuestro Indice 📃
 * [Requisitos e Instalación](#requisitos-instalacion)
 * [Información del proyecto](#informacion)
 * [Tecnologías utilizadas](#tecnologias)
-* [Nuestro Equipo](#integrantes)
-* [Agradecimientos] (#agradecimientos)
+* [Integrantes](#integrantes)
+* [Agradecimientos](#agradecimientos)
 
 
 
 ## Comenzando 🚀 <a name="requisitos-instalacion"></a>
 
-_Te vamos a **guiar** paso a paso para que puedas utilizar nuestro proyecto en tu maquina local y darle el uso que vos quieras, seguí las instrucciones a continuación y en caso de tener algún inconveniente no dudes en contactarte con el <a name="integrantes">**_Equipo de desarrollo_**</a> de **rollingMarket**.
+  ### Te vamos a **guiar** paso a paso para que puedas utilizar nuestro proyecto en tu maquina local y darle el uso que vos quieras, seguí las instrucciones a continuación y en caso de tener algún inconveniente no dudes en contactarte con el Equipo de desarrollo de **rollingMarket**.
 
 
-### ¿Cómo se hace una copia de esté proyecto? 🖨️ <a name="requisitos-instalacion"></a>
+# ¿Cómo se hace una copia de esté proyecto? 🖨️ <a name="requisitos-instalacion"></a>
 
-**1_** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto. (_preferentemente que inicie con minuscula_)
-
-<img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/1CreandoCarpeta.gif"></img>
-
-**2_** Ingresa a nuestro repositorio en github: https://github.com/alamodeg/rollingMarket y copia el link de nuestro repositorio.
+  ### **1_** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto.  (_preferentemente que inicie con minuscula_).
+  <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/1CreandoCarpeta.gif"></img>
   
-<img src= "https://i.ibb.co/dp7B2zM/1-Creando-Carpeta.gif"></img>
 
+  ### **2_** Ingresa a nuestro repositorio en github: https://github.com/alamodeg/rollingMarket y copia el link de nuestro repositorio.
+  <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/2IngresandoARepo.gif"></img>
+  
+
+  ### 3_ Dentro de la carpeta que creaste en el **paso-(1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
+  <img src= "https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/3IngresandoTerminal.gif"></img>
+  
+  
+  ### 4. Utiliza el comando **git clone** seguido de la _URL_ que copiaste anteriormente. (__Ejemplo__: git clone https://github.com/alamodeg/rollingMarket). Presiona **Enter** y se descargará automáticamente el repositorio en tu máquina local.
+  <img src="https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/4ClonandoRepo.gif"></img>
 
   
-3. **Dentro** de la carpeta que creaste en el **paso (1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
-  
-  ```
-<img src= "https://i.ibb.co/dp7B2zM/1-Creando-Carpeta.gif"></img>
-  ```
-
-  4. Utiliza el comando **git clone** seguido de la _URL_ que copiaste anteriormente. (__Ejemplo__: git clone https://github.com/alamodeg/rollingMarket)
-
-  ```
-<img src="">
-
-  5. Presiona **Enter** y se descargará automáticamente el repositorio en tu máquina local.
-  
-  6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, tenes que colocar **npm i** en la terminal del Visual, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.
-  
-  ```
-<img src="">
+  ### 6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, tenes que colocar **npm i** en la terminal del Visual, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.
+  <img src="https://github.com/alamodeg/rollingMarket/blob/dev/src/assets/img/gifREADME/6InstalandoNPM.gif"></img>
 
 
 ## Despliegue 📦  <a name="informacion"></a>
@@ -56,23 +47,18 @@ _Nuestro deploy_:
 ## Construido con 🛠️  <a name="tecnologias"></a>
 
 
-<!-- * [HTML](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [CSS](https://maven.apache.org/) - Manejador de dependencias
-* [REACT](https://es.react.dev/) - Usado para generar RSS -->
-
-
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
 
 ## Te quedaron dudas o tenes alguna consulta? 📖 <a name="integrantes"></a>
 
-_Comunicate con nuestro equipo de desarrollo y resolve todas tus inquietudes:_  <a name="integrantes">**_Equipo de desarrollo_**</a> de **rollingMarket**.
+Comunicate con nuestro equipo de desarrollo y resolve todas tus inquietudes:_  <a name="integrantes">**_Equipo de desarrollo_**</a> de **rollingMarket**.
 
 
 ## Autores ✒️ <a name="integrantes"></a>
 
-_RollingMarket fue posible gracias a nuestro equipo de desarrollo, conformado por_:
+RollingMarket fue posible gracias a nuestro equipo de desarrollo, conformado por_:
 
 
 * **Julián Martín** - *Documentacion-FrontEnd-BackEnd* - https://github.com/JulianMartin98 | https://www.linkedin.com/in/julian-martin-9903aa1ba/
@@ -85,10 +71,12 @@ _RollingMarket fue posible gracias a nuestro equipo de desarrollo, conformado po
 
 * **Ignacio Skibski** - *-FrontEnd-BackEnd* - https://github.com/nachoo07 | 
 
+---
+---
 
 ## Expresiones de Gratitud 🎁❤️ <a name="agradecimientos"></a>
 
-_Por ultimo pero no menos importante, no queriamos dejar de lado a todas esas personas que nos brindaron su ayuda y estuvieron presente durante todo el proceso de desarrollo de nuestro proyecto._
+Por ultimo pero no menos importante, no queriamos dejar de lado a todas esas personas que nos brindaron su ayuda y estuvieron presente durante todo el proceso de desarrollo de nuestro proyecto._
 
 
 * A la academia **RollingCode** por brindarnos esta beca y la posiblidad de acceder 
