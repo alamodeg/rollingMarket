@@ -1,9 +1,13 @@
-# 🛒 RollingMarket 🛒 <!-- <a name="informacion"></a> -->
+
+<div align="center">
+# 🛒 RollingMarket 🛒 <a name="inicio"></a>
 
 ### En esta plataforma creamos un diseño sencillo pero encantador, pensado para hacer más **amigable** y **eficiente** nuestro trabajo diario. Con herramientas intuitivas y un aspecto agradable, buscamos **facilitar la gestión y colaboración dentro de tu negocio**. ¡Explora y disfruta de esta nueva experiencia digital!
 
+</div>
 
 ## 📃 Nuestro Indice 📃
+* [Bienvenida] (#inicio)
 * [Requisitos e Instalación](#requisitos-instalacion)
 * [Información del proyecto](#informacion)
 * [Tecnologías utilizadas](#tecnologias)
