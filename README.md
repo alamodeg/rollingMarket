@@ -30,19 +30,20 @@
   #### **1** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto.  (_preferentemente que inicie con minuscula_).
   <img src= "https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/1TestResize.gif"></img>
 
-  ### **2** Ingresa a nuestro repositorio en github y copia el link del repo https://github.com/alamodeg/rollingMarket.
+
+  #### **2** Ingresa a nuestro repositorio en github y copia el link del repo https://github.com/alamodeg/rollingMarket.
   <img src= "https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/2IngresandoARepo-ezgif.com-resize.gif"></img>
   
 
-  ### 3 Dentro de la carpeta que creaste en el **paso (1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
+  #### 3 Dentro de la carpeta que creaste en el **paso (1)** hace click derecho y ejecuta cualquier consola de tu preferencia, sea CMD-GitBash-PowerShell-Etc. (**Recomendamos** utilizar **_Git Bash_**").
   <img src= "https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/3IngresandoTerminal-ezgif.com-resize.gif"></img>
   
   
-  ### 4. Utiliza el comando **git clone** seguido de la _URL_ que copiaste anteriormente. (__Ejemplo__: git clone https://github.com/alamodeg/rollingMarket). Presiona **Enter** y se descargará automáticamente el repositorio en tu máquina local.
+  #### 4. Utiliza el comando **git clone** seguido de la _URL_ que copiaste anteriormente. (__Ejemplo__: git clone https://github.com/alamodeg/rollingMarket). Presiona **Enter** y se descargará automáticamente el repositorio en tu máquina local.
   <img src="https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/4ClonandoRepo-ezgif.com-resize.gif"></img>
 
   
-  ### 6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, debes ingresar el comando "**npm i**" en la terminal del VisualStudio, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.(Recordá escribir el comando "npm run dev" para ejectura el proyecto")
+  #### 6. ¡Ya casi estamos! Una vez clonado nuestro proyecto, debes ingresar el comando "**npm i**" en la terminal del VisualStudio, de esta forma instalas todos los paquetes y librerias necesari@s para utilizar nuestro sistema.(Recordá escribir el comando "npm run dev" para ejectura el proyecto")
 
   <img src="https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/6InstalandoNPM-ezgif.com-resize.gif"></img>
 
