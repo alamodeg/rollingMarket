@@ -26,11 +26,9 @@
 
 # ¿Cómo se hace una copia de esté proyecto? 🖨️ <a name="requisitos-instalacion"></a>
 
-´´
-  ### **1** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto.  (_preferentemente que inicie con minuscula_).
+
+  #### **1** Desde tu computadora, crea una carpeta donde vas a almacenar nuestro proyecto.  (_preferentemente que inicie con minuscula_).
   <img src= "https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/1TestResize.gif"></img>
-  
-´´
 
   ### **2** Ingresa a nuestro repositorio en github y copia el link del repo https://github.com/alamodeg/rollingMarket.
   <img src= "https://github.com/alamodeg/rollingMarket/blob/feat/readMe/src/assets/img/gifREADME/2IngresandoARepo-ezgif.com-resize.gif"></img>
