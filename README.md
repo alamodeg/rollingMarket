@@ -7,7 +7,7 @@
 
 
 ## 📃 Nuestro Indice 📃
-* [Bienvenida] (#inicio)
+* [Bienvenida](#inicio)
 * [Requisitos e Instalación](#requisitos-instalacion)
 * [Información del proyecto](#informacion)
 * [Tecnologías utilizadas](#tecnologias)
