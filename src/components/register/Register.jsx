@@ -48,7 +48,7 @@ export function Register(props) {
               <Form.Text className="text-muted"></Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicName">
+            <Form.Group className="mb-3" controlId="formBasicSurname">
               <Form.Label>Ingresá tu apellido</Form.Label>
               <Form.Control type="text" placeholder="Apellido" maxLength={30} onChange={(e) => setSurname(e.target.value)} />
               <Form.Text className="text-muted"></Form.Text>
