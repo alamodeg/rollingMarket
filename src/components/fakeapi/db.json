@@ -1,0 +1,23 @@
+{
+    "productos": [
+        {
+          "id": "1",
+          "nombre": "nacho",
+          "precio": "41",
+          "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
+        },
+        {
+            "id": "2",
+            "nombre": "nacho",
+            "precio": "41",
+            "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
+          },
+          {
+            "id": "3",
+            "nombre": "nacho",
+            "precio": "41",
+            "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
+          }
+        
+      ]
+}

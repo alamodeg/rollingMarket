@@ -3,16 +3,20 @@ import { Navigator } from './components/navBar/Navigator'
 
 import TablaProductos from './components/tablaProductos/TablaProductos'
 import TablaUsuarios from './components/tablaUsuarios/TablaUsuarios'
+import ProductosContext from './context/ProductosContext'
 
 function App() {
 
 
   return (
     <>
+    <ProductosContext>
       <Navigator/>
       <TablaProductos/>
       <TablaUsuarios/>
       <Footer/>
+    </ProductosContext>
+
     </>
   )
 }

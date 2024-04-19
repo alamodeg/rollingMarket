@@ -1,10 +1,15 @@
 import {Table, Button, Modal} from 'react-bootstrap';
 import './tablaProductos.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useState } from 'react';
-const TablaProductos = () => {
-    const [show, setShow] = useState(false);
+import { useState, useContext } from 'react';
+import { ProductsProvider } from '../../context/ProductosContext';
 
+const TablaProductos = () => {
+
+    const {productos} = useContext(ProductsProvider)
+
+    const [show, setShow] = useState(false);
+    
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   return (
@@ -18,7 +23,10 @@ const TablaProductos = () => {
         Agregar Productos
       </Button>
     </div>
- <Table className='tabla' striped bordered hover>
+    {productos.length === 0 ? (
+      "no hay productos"
+    ) : (
+      <Table className='tabla' striped bordered hover>
       <thead >
         <tr >
         <th>Nombre del Producto</th>
@@ -58,17 +66,12 @@ const TablaProductos = () => {
           <td></td>
           <td className='fila'><Button className='boton-crud' variant="danger">Eliminar</Button><Button className='boton-crud' variant="danger">Editar</Button></td>
         </tr>
-        <tr>
-          <td>Coca cola</td>
-          <td>Bebida</td>
-          <td>Gaseosa 2 Litros</td>
-          <td>15</td>
-          <td>15/03/2024</td>
-          <td></td>
-          <td className='fila'><Button className='boton-crud' variant="danger">Eliminar</Button><Button className='boton-crud' variant="danger">Editar</Button></td>
-        </tr>
       </tbody>
     </Table>
+    )}
+
+    
+  
     
 
 
