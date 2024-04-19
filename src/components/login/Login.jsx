@@ -4,6 +4,9 @@ import './Login.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja.png';
 import { Register } from '../../components/register/Register';
+import { UsersProvider } from "../../context/UsersContext";
+import { useContext } from 'react';
+
 
 // Función de componente para el modal
 // function MyVerticallyCenteredModal(props) {
