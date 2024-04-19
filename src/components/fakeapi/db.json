@@ -1,0 +1,37 @@
+{
+    "users": [
+      {
+        "name": "Juan",
+        "email": "juan@example.com",
+        "password": "password123"
+      },
+      {
+        "name": "María",
+        "email": "maria@example.com",
+        "password": "mypass456"
+      },
+      {
+        "name": "Pedro",
+        "email": "pedro@example.com",
+        "password": "securepass789"
+      }
+    ],
+    "products": [
+      {
+        "id": 101,
+        "name": "Producto 1",
+        "price": 20.50
+      },
+      {
+        "id": 102,
+        "name": "Producto 2",
+        "price": 15.75
+      },
+      {
+        "id": 103,
+        "name": "Producto 3",
+        "price": 35.00
+      }
+    ]
+  }
+  
