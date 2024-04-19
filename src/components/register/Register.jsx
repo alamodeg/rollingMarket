@@ -3,7 +3,8 @@ import '../register/Register.css';
 import { Button, Form, Modal} from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja.png';
-
+import { UsersProvider } from "../../context/UsersContext";
+import { useContext } from 'react';
 
 export function Register (props) {
   return (
