@@ -9,7 +9,7 @@
 }
 
 .logoFooter:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .copyright {
@@ -18,7 +18,7 @@
 
 
 @media (max-width: 767px) {
-    
+
     .titleList,
     .article {
         list-style-type: none;
@@ -26,11 +26,10 @@
         padding-left: 0%;
         font-size: 16px;
     }
-   
 }
 
 @media (min-width: 768px) {
-    
+
     .titleList,
     .article {
         list-style-type: none;
@@ -38,7 +37,12 @@
         padding-left: 0%;
         font-size: 16px;
     }
-   
+
+    .category {
+        padding-left: 80px;
+    }
+
+
 }
 
 
@@ -69,7 +73,7 @@ a {
 }
 
 .copy a:hover {
-    color: #6d1d11 ;
+    color: #6d1d11;
 }
 
 .networkList li {
@@ -89,5 +93,5 @@ a {
 }
 
 .networkList a:hover {
-    color:#6d1d11  ;
+    color: #6d1d11;
 }

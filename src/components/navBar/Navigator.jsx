@@ -21,16 +21,17 @@ export function Navigator() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav variant='underline'>
               <Nav.Link href="/contacto">Contacto</Nav.Link>
-              <Nav.Link href="/aboutUs">Quienes Somos</Nav.Link>
+              <Nav.Link href="/quienesSomos">Quienes Somos</Nav.Link>
             </Nav>
-            <div className='p-2 ms-auto'>
-              
-              {/* <Navbar.Text>
-                Bienvenido <a href="#login">PANEL DE USUARIO O ADMIN</a>
-                 {user ? "Bienvenido" + user.nombre : "NO ESTAS LOGEADO"} 
-              </Navbar.Text> */}
 
+            <div className='ms-auto d-flex align-items-center'>
+              <div className='text-center'>
+                {/* {user ? `Bienvenido ${user.nombre}` : <div>!No estas Logeado!</div>} */}
+              </div>
             </div>
+
+
+              {/* NAVBAR VIEJO QUITAR */}
             <Nav className='p-2 ms-auto' variant='underline'>
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -45,6 +46,34 @@ export function Navigator() {
             </NavDropdown> */}
               <Button className='p-2 ms-auto' variant="success">Iniciar Sesión</Button>
             </Nav>
+            {/* FIN DEL NAVBAR VIEJO A QUITAR */}
+
+            {/* <Form className="ms-auto">
+            <Nav>
+    {user ? (
+      user.isAdmin ? (
+        <Nav.Link onClick={() => navigate("/admin")}>
+          Administrador
+        </Nav.Link>
+      ) : (
+        <Nav.Link onClick={() => navigate("/user-menu")}>
+          Usuario
+        </Nav.Link>
+      )
+    ) : (
+      <Button variant="success" onClick={handleShow}>
+        Iniciar Sesión
+      </Button>
+    )}
+    {user ? (
+      <Button variant="danger" onClick={() => logOut()}>
+        Cerrar Sesión
+      </Button>
+    ) : null}
+  </Nav>
+            </Form> */}
+
+
           </Navbar.Collapse>
         </Container>
       </Navbar>
