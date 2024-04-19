@@ -90,7 +90,7 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Ingresá tu email</Form.Label>
                   <Form.Control type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}
- name="email" maxLength={20} />
+ name="email" maxLength={50} />
                   <Form.Text className="text-muted"></Form.Text>
                 </Form.Group>
 
