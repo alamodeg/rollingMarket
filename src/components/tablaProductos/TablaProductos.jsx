@@ -1,16 +1,20 @@
 import {Table, Button, Modal} from 'react-bootstrap';
-import './tablaProductos.css'
+import '../tablaProductos/TablaProductos.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState, useContext } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
+import FormProductos from '../formProductos/FormProductos';
 
 const TablaProductos = () => {
 
     const {productos} = useContext(ProductsProvider)
 
-    const [show, setShow] = useState(false);
+    const [mostrarModal, setMostrarModal] = useState(false)
     
-    const handleClose = () => setShow(false);
+    const abrirModal = () => {
+      setMostrarModal(true)
+    }
+
     const handleShow = () => setShow(true);
   return (
     <>
@@ -19,9 +23,10 @@ const TablaProductos = () => {
     </div>
     
     <div>
-        <Button variant="primary" className='boton-solo' onClick={handleShow}>
+        <Button variant="primary" className='boton-solo' onClick={abrirModal}>
         Agregar Productos
       </Button>
+      {mostrarModal && <FormProductos onClick={() => setMostrarModal(false)}/>}
     </div>
     {productos.length === 0 ? (
       "no hay productos"
@@ -33,62 +38,32 @@ const TablaProductos = () => {
           <th>Categoria</th>
           <th>Descripcion</th>
           <th>Stock</th>
+          <th>Precio</th>
           <th>Fecha Ultima Modificacion</th>
           <th>Imagen</th>
           <th>Crud</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Coca cola</td>
-          <td>Bebida</td>
-          <td>Gaseosa 2 Litros</td>
-          <td>15</td>
-          <td>15/03/2024</td>
-          <td></td>
+        {productos.map((producto) => (
+          <tr>
+          <td>{producto.nombre}</td>
+          <td>{producto.categoria}</td>
+          <td>{producto.descripcion}</td>
+          <td>{producto.stock}</td>
+          <td>{producto.precio}</td>
+          <td>{producto.fecha}</td>
+          <td>{producto.imagen}</td>
+          
           <td className='fila'><Button className='boton-crud' variant="danger">Eliminar</Button><Button className='boton-crud' variant="danger">Editar</Button></td>
         </tr>
-        <tr>
-          <td>Coca cola</td>
-          <td>Bebida</td>
-          <td>Gaseosa 2 Litros</td>
-          <td>15</td>
-          <td>15/03/2024</td>
-          <td></td>
-          <td className='fila'><Button className='boton-crud' variant="danger">Eliminar</Button><Button className='boton-crud' variant="danger">Editar</Button></td>
-        </tr>
-        <tr>
-          <td>Coca cola</td>
-          <td>Bebida</td>
-          <td>Gaseosa 2 Litros</td>
-          <td>15</td>
-          <td>15/03/2024</td>
-          <td></td>
-          <td className='fila'><Button className='boton-crud' variant="danger">Eliminar</Button><Button className='boton-crud' variant="danger">Editar</Button></td>
-        </tr>
+        ))}
+
       </tbody>
     </Table>
     )}
 
-    
-  
-    
 
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
     
     </>
     
