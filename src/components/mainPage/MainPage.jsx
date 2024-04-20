@@ -1,33 +1,21 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-
+import React, { useEffect, useState, useContext } from 'react';
+import { ProductsProvider } from '../../context/ProductosContext.jsx';
+import PropTypes from 'prop-types';
+import TablaProductos from '../Tablas/TablaProductos.jsx';
 
 
 const MainPage = () => {
 
-  const [users, setUsers] = useState([])
-  
-  
-  
-  useEffect(() => { // Aquí comenzamos el bloque de efecto
-    const obtenerDatos = async () => { // Definimos la función para obtener datos
-      try {
-        const response = await axios.get("http://localhost:8000/users");
-        //setUsers(response.data)
-      } catch (error) {
-        console.error('Error en GET:', error); // Manejamos cualquier error de solicitud
-      }
-    };
-    obtenerDatos();
+  const {productos} = useContext(ProductsProvider)
 
-  }, []);
-
-  console.log(users, "usuarios")
+  //console.log('Productos desde el componente')
 
   return (
-    <div>Soy una tabla</div> // Retornamos el JSX del componente
+    <div>
+      <h1>Listado de Productos</h1>
+      <TablaProductos/>
+    </div>
   );
 };
 
-export default MainPage; // Exportamos el componente MainPage
+export default MainPage;
