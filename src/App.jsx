@@ -5,14 +5,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
 import { Navigator } from './components/navBar/Navigator.jsx'
 import MainPage from './components/mainPage/MainPage.jsx';
+import  ProductosContext  from './context/ProductosContext';
 
 function App() {
   return (
     <>
-    <Navigator/>
-    <MainPage/>
+      <ProductosContext>
 
+        <Navigator/>
+        <MainPage/>
 
+      </ProductosContext>
     </>
   );
 }
