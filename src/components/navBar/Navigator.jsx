@@ -1,22 +1,36 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Image, Button, Stack } from 'react-bootstrap';
+import { Image, Button, Modal, ModalHeader, ModalTitle } from 'react-bootstrap';
 import '../navBar/Navigator.css'
 import imgCarrito from '../../assets/img/imgNavBar/imgCarrito.png';
 import logo3 from '../../assets/img/imgNavBar/logo3.png'
+import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import Login from '../login/Login';
+
 
 
 
 export function Navigator() {
+
+  const [show, setShow] = useState(false);
+
+  // const { logOut } = useContext(UsersProvider);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className='ms-auto text-center colorDivTopNav' xs={12}><img src={imgCarrito} alt="Carrito_logo" />RollingMarket <img src={imgCarrito} alt="Carrito_logo" /></div>
+      <div className='ms-auto text-center colorDivTopNav' xs={12}><img src={imgCarrito} alt="carrito_logo" />RollingMarket <img src={imgCarrito} alt="Carrito_logo" /></div>
       {/* probar el cambio de color en el div */}
 
       <Navbar expand="lg" className="bg-body-secondary p-2">
         <Container fluid>
-          <Navbar.Brand href="#home"><Image src={logo3} width={65} height={65} roundedCircle /></Navbar.Brand>
+          <Navbar.Brand href="/"><Image src={logo3} width={65} height={65} roundedCircle alt="logo_Grupo" /></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav variant='underline'>
@@ -31,7 +45,7 @@ export function Navigator() {
             </div>
 
 
-              {/* NAVBAR VIEJO QUITAR */}
+            {/* NAVBAR VIEJO QUITAR */}
             <Nav className='p-2 ms-auto' variant='underline'>
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -44,7 +58,7 @@ export function Navigator() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown> */}
-              <Button className='p-2 ms-auto' variant="success">Iniciar Sesión</Button>
+              <Button className='p-2 ms-auto' variant="success" onClick={handleShow}>Iniciar Sesión</Button>
             </Nav>
             {/* FIN DEL NAVBAR VIEJO A QUITAR */}
 
@@ -77,6 +91,12 @@ export function Navigator() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Body>
+          <Login handleClose={handleClose} />
+        </Modal.Body>
+      </Modal>
     </>
   );
 };
