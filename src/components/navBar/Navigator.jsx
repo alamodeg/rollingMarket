@@ -6,8 +6,11 @@ import '../navBar/Navigator.css'
 import imgCarrito from '../../assets/img/imgNavBar/imgCarrito.png';
 import logo3 from '../../assets/img/imgNavBar/logo3.png'
 import { useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Login from '../login/Login';
+import { UsersProvider } from "../../context/UsersContext";
+import { Form } from 'react-bootstrap';
+
 
 
 
@@ -16,12 +19,15 @@ export function Navigator() {
 
   const [show, setShow] = useState(false);
 
-  // const { logOut } = useContext(UsersProvider);
+  const { logOut } = useContext(UsersProvider);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
 
   return (
     <>
@@ -40,14 +46,14 @@ export function Navigator() {
 
             <div className='ms-auto d-flex align-items-center'>
               <div className='text-center'>
-                {/* {user ? `Bienvenido ${user.nombre}` : <div>!No estas Logeado!</div>} */}
+                {user ? `Bienvenido ${user.name}` : <div>!No estas Logeado!</div>}
               </div>
             </div>
 
 
             {/* NAVBAR VIEJO QUITAR */}
-            <Nav className='p-2 ms-auto' variant='underline'>
-              {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            {/* <Nav className='p-2 ms-auto' variant='underline'> */}
+            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -58,39 +64,39 @@ export function Navigator() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown> */}
-              <Button className='p-2 ms-auto' variant="success" onClick={handleShow}>Iniciar Sesión</Button>
-            </Nav>
+            {/* <Button className='p-2 ms-auto' variant="success" onClick={handleShow}>Iniciar Sesión</Button>
+            </Nav> */}
             {/* FIN DEL NAVBAR VIEJO A QUITAR */}
 
-            {/* <Form className="ms-auto">
-            <Nav>
-    {user ? (
-      user.isAdmin ? (
-        <Nav.Link onClick={() => navigate("/admin")}>
-          Administrador
-        </Nav.Link>
-      ) : (
-        <Nav.Link onClick={() => navigate("/user-menu")}>
-          Usuario
-        </Nav.Link>
-      )
-    ) : (
-      <Button variant="success" onClick={handleShow}>
-        Iniciar Sesión
-      </Button>
-    )}
-    {user ? (
-      <Button variant="danger" onClick={() => logOut()}>
-        Cerrar Sesión
-      </Button>
+            <Form className="ms-auto">
+              <Nav>
+                {user ? (
+                  user.rol === 'admin' ? (
+                    <Nav.Link onClick={() => navigate("/contacto")}>
+                      Administrador
+                    </Nav.Link>
+                  ) : (
+                    <Nav.Link onClick={() => navigate("/contacto")}>
+                      Usuario
+                    </Nav.Link>
+                  )
+                ) : (
+                  <Button variant="success" onClick={handleShow}>
+                    Iniciar Sesión
+                  </Button>
+                )}
+                {user ? (
+                  <Button Button variant="danger" onClick={() => logOut()}>
+                Cerrar Sesión
+              </Button>
     ) : null}
-  </Nav>
-            </Form> */}
+            </Nav>
+          </Form>
 
 
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar >
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
