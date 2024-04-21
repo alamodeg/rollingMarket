@@ -11,7 +11,15 @@ function FormularioProductos() {
 
   //COMPORTAMIENTO DEL MODAL
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
+    const handleClose = () => { //REINICIAR EL MODAL AL CERRARLO
+      setProducto({
+        id: uuidv4(),
+        name: "",
+        price: ""
+      });
+      setShow(false);
+    };
+    
     const handleShow = () => setShow(true);
   //------------------------------------------
 
@@ -28,9 +36,6 @@ function FormularioProductos() {
     })
   }
   
-  console.log(producto, "ESTADO INICIAL DEL PRODUCTO");
-  
-
   const handleSubmit = (e) => {
     e.preventDefault();
     addProducto(producto);
