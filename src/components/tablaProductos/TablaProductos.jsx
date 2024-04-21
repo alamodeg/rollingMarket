@@ -1,9 +1,10 @@
-import {Table, Button, Modal} from 'react-bootstrap';
+import {Table, Button, Modal, Container} from 'react-bootstrap';
 import '../tablaProductos/TablaProductos.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
+
 
 
 const TablaProductos = () => {
@@ -13,10 +14,9 @@ const TablaProductos = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
+    
+
     const handleShow = () => setShow(true);
-
-
-
 
 
     const handleEdit = (producto) => {
@@ -28,28 +28,28 @@ const TablaProductos = () => {
   return (
 
     <>
-            <div>
-        <Button variant="primary" className='boton-solo' onClick={handleShow}>
+    <div className='boton-agregar-producto-padre'>
+    <h2 className=''>Administar Productos</h2>
+      <Button className='boton-agregar-producto' variant='link' onClick={handleShow}>
         Agregar Productos
       </Button>
-    </div>
-    <div className='titulo'>
-    <h2>Administar Productos</h2>
     </div>
     
     {productos.length === 0 ? (
       "no hay productos"
     ) : (
+      <Container>
       <Table className='tabla' striped bordered hover>
-      <thead >
-        <tr >
-        <th>Nombre del Producto</th>
+        
+      <thead className='subtitulo-tabla'>
+        <tr>
+          <th >Nombre del Producto</th>
           <th>Categoria</th>
           <th>Descripcion</th>
           <th>Stock</th>
           <th>Precio</th>
-          <th>Fecha Ultima Modificacion</th>
-          <th>Imagen</th>
+          <th className='imagen'>Fecha Ultima Modificacion</th>
+          <th className='imagen'>Imagen</th>
           <th>Crud</th>
         </tr>
       </thead>
@@ -63,19 +63,22 @@ const TablaProductos = () => {
           <td>{producto.precio}</td>
           <td>{producto.fecha}</td>
           <td>{producto.imagen}</td>
-          <td className='fila'>
-            <Button className='boton-crud' variant="danger" onClick={() => deleteProductos(producto.id)}>Eliminar</Button>
-            <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="danger">Editar</Button></td>
+          <td>
+          <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
+          <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto.id)}><i class="bi bi-trash"></i></Button>
+          </td>
         </tr>
         ))}
       </tbody>
+      
     </Table>
+    </Container>
     )}
     <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
-        <Modal.Body> <FormProductos editarProductos={editarProductos}/> </Modal.Body>
+        <Modal.Body> <FormProductos editarProductos={ editarProductos } handleClose={handleClose}/> </Modal.Body>
       </Modal>
       
     </>

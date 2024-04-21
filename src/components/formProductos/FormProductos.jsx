@@ -2,8 +2,9 @@ import {useContext, useState} from 'react'
 import { Button, Modal, Form} from 'react-bootstrap';
 import { ProductsProvider } from '../../context/ProductosContext';
 import {v4 as uuidv4 } from "uuid"
+import Swal from 'sweetalert2';
 
-const FormProductos = ({editarProductos}) => {
+const FormProductos = ({editarProductos, handleClose}) => {
 
   console.log(editarProductos, "ediatr productos")
   const {addProducto, updateProductos} = useContext(ProductsProvider)
@@ -25,14 +26,19 @@ const FormProductos = ({editarProductos}) => {
     })
   }
 
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const handleSubmit = (e) =>{
     e.preventDefault()
     if (editarProductos) {
       updateProductos(producto)
+      handleClose()
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Producto Editado",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       setProducto({
         id: uuidv4(),
         nombre: "",
@@ -44,6 +50,14 @@ const FormProductos = ({editarProductos}) => {
       })
     }else {
       addProducto(producto);
+      handleClose()
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Producto Agregado",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       setProducto({
         id: uuidv4(),
         nombre: "",
@@ -54,16 +68,7 @@ const FormProductos = ({editarProductos}) => {
         imagen: ""
       })
     }
-    addProducto(producto)
-    setProducto({
-      id: uuidv4(),
-      nombre: "",
-      categoria: "",
-      descripcion: "",
-      stock: "",
-      precio: "",
-      imagen: ""
-    })
+    
   }
 
   
@@ -123,10 +128,10 @@ const FormProductos = ({editarProductos}) => {
 
       {editarProductos ? (
       <Button type="submit" variant="primary">
-      Editar Producto
-    </Button>
+        Editar Producto
+      </Button>
       ) : (
-        <Button type="submit" variant="primary">
+      <Button type="submit" >
         Agregar Producto
       </Button>
       )}
