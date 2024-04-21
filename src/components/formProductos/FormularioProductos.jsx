@@ -15,7 +15,8 @@ function FormularioProductos() {
       setProducto({
         id: uuidv4(),
         name: "",
-        price: ""
+        price: "",
+        image: ""
       });
       setShow(false);
     };
@@ -26,7 +27,8 @@ function FormularioProductos() {
   const [producto, setProducto] = useState({
     id: uuidv4(),
     name: "",
-    price: ""
+    price: "",
+    image: ""
   });
 
   const handleChange = (e) => {
@@ -46,7 +48,8 @@ function FormularioProductos() {
     setProducto({
       id: uuidv4(),
       name: "",
-      price: ""
+      price: "",
+      image: ""
     });
 
   }
@@ -79,6 +82,13 @@ function FormularioProductos() {
                 value={producto.price} 
                 onChange= { handleChange } 
                 name="price" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Imagen</Form.Label>
+                <Form.Control type="string"
+                value={producto.image} 
+                onChange= { handleChange } 
+                name="image" />
             </Form.Group>
           </Form>
         </Modal.Body>

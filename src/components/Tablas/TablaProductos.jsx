@@ -21,6 +21,7 @@ const TablaProductos = () => {
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Precio</th>
+                <th>Imagen</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -30,6 +31,7 @@ const TablaProductos = () => {
                   <td>{producto.id}</td>
                   <td>{producto.name}</td>
                   <td>{producto.price}</td>
+                  <td><img src={producto.image} style={{ width: '100px', height: '100px' }} /></td>
                   <td>
                     <Button variant="warning">Editar</Button>
                     <Button variant="danger"> Eliminar</Button>
