@@ -18,11 +18,10 @@ const ProductosContext = ({ children }) => {
   };
 
   //Agregar datos
-
   const addProducto = async (producto) => {
     try {
       const response = await axios.post("http://localhost:8000/products", producto);
-      console.log(response.data, "Producto agregado")
+      setProductos([...productos, response.data])
     } catch (error) {
       console.error('Error en agregar producto:', error);
     }
