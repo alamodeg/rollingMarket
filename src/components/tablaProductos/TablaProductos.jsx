@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
+import { ResponsiveContainer } from 'recharts';
 
 
 
@@ -42,8 +43,9 @@ const TablaProductos = () => {
     {productos.length === 0 ? (
       "no hay productos"
     ) : (
-      <Container>
-      <Table className='tabla' striped bordered hover>
+      <ResponsiveContainer >
+
+      <Table className='tabla table-responsive' striped bordered hover>
         
       <thead className='subtitulo-tabla'>
         <tr>
@@ -76,7 +78,7 @@ const TablaProductos = () => {
       </tbody>
       
     </Table>
-    </Container>
+    </ResponsiveContainer>
     )}
 <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
