@@ -24,13 +24,17 @@ const TablaProductos = () => {
       setShow(true)
     }
 
+    const handleAgregarProducto = () => {
+      setEditarProductos(null); // Establece editarProductos en null al agregar un producto nuevo
+      setShow(true);
+    };
 
   return (
 
     <>
     <div className='boton-agregar-producto-padre'>
     <h2 className=''>Administar Productos</h2>
-      <Button className='boton-agregar-producto' variant='link' onClick={handleShow}>
+      <Button className='boton-agregar-producto' variant='link' onClick={handleAgregarProducto}>
         Agregar Productos
       </Button>
     </div>
@@ -74,9 +78,9 @@ const TablaProductos = () => {
     </Table>
     </Container>
     )}
-    <Modal show={show} onHide={handleClose}>
+<Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>{editarProductos ? 'Editar Producto' : 'Agregar Producto'}</Modal.Title>
         </Modal.Header>
         <Modal.Body> <FormProductos editarProductos={ editarProductos } handleClose={handleClose}/> </Modal.Body>
       </Modal>
