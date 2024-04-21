@@ -1,6 +1,8 @@
 import { useContext, useState } from 'react';
 import {Form, Button, Modal} from 'react-bootstrap'
 import { ProductsProvider } from '../../context/ProductosContext';
+import { v4 as uuidv4 } from 'uuid';
+import Swal from 'sweetalert2';
 
 function FormularioProductos() {
 
@@ -14,7 +16,7 @@ function FormularioProductos() {
   //------------------------------------------
 
   const [producto, setProducto] = useState({
-    id: "",
+    id: uuidv4(),
     name: "",
     price: ""
   });
@@ -32,6 +34,16 @@ function FormularioProductos() {
   const handleSubmit = (e) => {
     e.preventDefault();
     addProducto(producto);
+    Swal.fire({
+      title: "Producto agregado!",
+      icon: "success"
+    });
+    setProducto({
+      id: uuidv4(),
+      name: "",
+      price: ""
+    });
+
   }
 
 
