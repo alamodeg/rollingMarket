@@ -1,35 +1,22 @@
 {
-    "productos": [
-        {
-          "id": "1",
-          "nombre": "Gaseosa",
-          "categoria": "Bebida",
-          "descripcion": "gaseosa de 2L",
-          "stock": "15",
-          "precio": "41",
-          "fecha": "12/04/2023",
-          "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
-        },
-        {
-          "id": "1",
-          "nombre": "leche",
-          "categoria": "Bebida",
-          "descripcion": "leche de 1L",
-          "stock": "5",
-          "precio": "100",
-          "fecha": "12/04/2023",
-          "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
-        },
-          {
-            "id": "1",
-          "nombre": "Gaseosa",
-          "categoria": "Bebida",
-          "descripcion": "gaseosa de 2L",
-          "stock": "15",
-          "precio": "41",
-          "fecha": "12/04/2023",
-          "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
-        }
-        
-      ]
+  "productos": [
+    {
+      "id": "9d47efc2-2e28-4010-9139-fe58be5fe090",
+      "nombre": "helado",
+      "categoria": "helado",
+      "descripcion": "helado",
+      "stock": "50",
+      "precio": "23",
+      "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
+    },
+    {
+      "id": "9d47efc2-2e28-4010-9139-fe58be5fe090",
+      "nombre": "heladoaaaa",
+      "categoria": "helado",
+      "descripcion": "helado",
+      "stock": "50",
+      "precio": "23",
+      "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
+    }
+  ]
 }

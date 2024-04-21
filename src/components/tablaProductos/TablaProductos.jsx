@@ -1,33 +1,42 @@
 import {Table, Button, Modal} from 'react-bootstrap';
 import '../tablaProductos/TablaProductos.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useState, useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
 
+
 const TablaProductos = () => {
 
-    const {productos} = useContext(ProductsProvider)
+    const {productos, deleteProductos} = useContext(ProductsProvider)
+    const [editarProductos, setEditarProductos] = useState(null)
+    const [show, setShow] = useState(false);
 
-    const [mostrarModal, setMostrarModal] = useState(false)
-    
-    const abrirModal = () => {
-      setMostrarModal(true)
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+
+
+
+    const handleEdit = (producto) => {
+      setEditarProductos(producto)
+      setShow(true)
     }
 
-    const handleShow = () => setShow(true);
+
   return (
+
     <>
+            <div>
+        <Button variant="primary" className='boton-solo' onClick={handleShow}>
+        Agregar Productos
+      </Button>
+    </div>
     <div className='titulo'>
     <h2>Administar Productos</h2>
     </div>
     
-    <div>
-        <Button variant="primary" className='boton-solo' onClick={abrirModal}>
-        Agregar Productos
-      </Button>
-      {mostrarModal && <FormProductos onClick={() => setMostrarModal(false)}/>}
-    </div>
     {productos.length === 0 ? (
       "no hay productos"
     ) : (
@@ -54,17 +63,21 @@ const TablaProductos = () => {
           <td>{producto.precio}</td>
           <td>{producto.fecha}</td>
           <td>{producto.imagen}</td>
-          
-          <td className='fila'><Button className='boton-crud' variant="danger">Eliminar</Button><Button className='boton-crud' variant="danger">Editar</Button></td>
+          <td className='fila'>
+            <Button className='boton-crud' variant="danger" onClick={() => deleteProductos(producto.id)}>Eliminar</Button>
+            <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="danger">Editar</Button></td>
         </tr>
         ))}
-
       </tbody>
     </Table>
     )}
-
-
-    
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body> <FormProductos editarProductos={editarProductos}/> </Modal.Body>
+      </Modal>
+      
     </>
     
   )
