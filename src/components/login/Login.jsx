@@ -6,70 +6,30 @@ import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja
 import { Register } from '../../components/register/Register';
 import { UsersProvider } from "../../context/UsersContext";
 import { useContext } from 'react';
+import axios from 'axios';
 
 
-// Función de componente para el modal
-// function MyVerticallyCenteredModal(props) {
-//   return (
-//     <Modal
-//       {...props}
-//       size="lg"
-//       aria-labelledby="contained-modal-title-vcenter"
-//       centered
-//     >
-//       <Modal.Header closeButton>
-//         <Modal.Title id="contained-modal-title-vcenter">
-//           Registro
-//         </Modal.Title>
-//       </Modal.Header>
-//       <Modal.Body>
-//       <div className="d-flex justify-content-center">
-//       <img src={rollingMarketNaranja} alt="Imagen de registro" className="imagenRegistro" />
-//       </div>
-//       <Form className="formLogin d-flex d-flex flex-column">
-//                 <Form.Group className="mb-3" controlId="formBasicName">
-//                   <Form.Label>Ingresá tu nombre completo</Form.Label>
-//                   <Form.Control type="text" placeholder="Nombre y apellido" maxLength={30} />
-//                   <Form.Text className="text-muted"></Form.Text>
-//                 </Form.Group> 
-
-//                 <Form.Group className="mb-3" controlId="formBasicEmail">
-//                   <Form.Label>Ingresá tu email</Form.Label>
-//                   <Form.Control type="email" placeholder="Email" maxLength={20} />
-//                   <Form.Text className="text-muted"></Form.Text>
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3" controlId="formBasicPassword">
-//                   <Form.Label>Contraseña</Form.Label>
-//                   <Form.Control type="password" placeholder="Contraseña" maxLength={20} />
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3" controlId="formBasicPasswordRepeat">
-//                   <Form.Label>Vuelva a ingresar su contraseña</Form.Label>
-//                   <Form.Control type="password" placeholder="Contraseña" maxLength={20} />
-//                 </Form.Group>
-
-//                 <Button variant="primary" className="botonFormLogin mb-4" type="submit">
-//                   Registrarme
-//                 </Button>
-//                 <div>
-//                   <p>Haciendo click en “Registrarme”, aceptas las Condiciones generales de uso y la Política de privacidad</p>
-//                 </div>
-//               </Form>
-
-//       </Modal.Body>
-//       <Modal.Footer>
-//         <Button className="botonFormLogin" onClick={props.onHide}>Cancelar</Button>
-//       </Modal.Footer>
-//     </Modal>
-//   );
-// }
 
 const Login = () => {
   const [modalShow, setModalShow] = useState(false); // Estado para controlar la visibilidad del modal
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+
+  const login = async (dataform) => {
+    const response = await axios.post("http://localhost:4000/login/",dataform)
+    const data = response.data;
+    console.log(data);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formdata = {
+      email,password
+    }
+    login(formdata);
+  }  
 
   return (
     <div className="bodyLogin">
@@ -78,7 +38,7 @@ const Login = () => {
           <Col className="d-flex justify-content-center colLogin" md={12}>
             <Card className="cardLoginPrincipal align-items-center">
               <img src={rollingMarketNaranja} alt="Imagen de registro" className="imagenRegistro" />
-              <Form className="formLogin d-flex d-flex flex-column">
+              <Form onSubmit={handleSubmit} className="formLogin d-flex d-flex flex-column">
                 <div className="opcionContraseñaLogin">
                   <p>
                     ¿Aún no tenes una cuenta?{' '}
@@ -87,16 +47,15 @@ const Login = () => {
                     </a>
                   </p>
                 </div>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="email">
                   <Form.Label>Ingresá tu email</Form.Label>
-                  <Form.Control type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}
- name="email" maxLength={50} />
+                  <Form.Control name="email" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} maxLength={50} />
                   <Form.Text className="text-muted"></Form.Text>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="password">
                   <Form.Label>Contraseña</Form.Label>
-                  <Form.Control type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={25} />
+                  <Form.Control type="password" name ="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={25} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check type="checkbox" label="Check me out" />
