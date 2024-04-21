@@ -55,7 +55,6 @@ const Login = ({ handleClose }) => {
         showConfirmButton: false,
         timer: 1500,
       })
-      handleClose();
       navigate("/principal");
 
     } catch (error) {
@@ -122,43 +121,3 @@ const Login = ({ handleClose }) => {
 };
 
 export default Login;
-
-
-
-
-
-
-
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const user = usuarios.find((user) => user.email === email && user.password === password);
-  //     console.log(user, "-----------------ESTE ES EL USER-----------------")
-
-  //     console.log(user, "user");
-  //     // if (user) {
-  //     //   Swal.fire({
-  //     //     position: "center",
-  //     //     icon: "success",
-  //     //     title: "Bienvenido",
-  //     //     showConfirmButton: false,
-  //     //     timer: 1500,
-  //     //   });
-
-  //     //   localStorage.setItem("user", JSON.stringify(user));
-  //     //   navigate("/contacto");
-  //     //   handleClose();
-  //     // } else {
-  //     //   Swal.fire({
-  //     //     position: "center",
-  //     //     icon: "error",
-  //     //     title: "Usuario o contraseña incorrectos",
-  //     //     showConfirmButton: false,
-  //     //     timer: 1500,
-  //     //   });
-  //     // }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
