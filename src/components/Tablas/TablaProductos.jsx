@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const TablaProductos = () => {
 
-    const {productos} = useContext(ProductsProvider);
+    const {productos, deleteProducto} = useContext(ProductsProvider);
 
     return (
     
@@ -34,7 +34,7 @@ const TablaProductos = () => {
                   <td><img src={producto.image} style={{ width: '100px', height: '100px' }} /></td>
                   <td>
                     <Button variant="warning">Editar</Button>
-                    <Button variant="danger"> Eliminar</Button>
+                    <Button variant="danger" onClick={() => deleteProducto(producto.id)}> Eliminar</Button>
                   </td>
                 </tr>
               ))}

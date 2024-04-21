@@ -80,7 +80,7 @@ function FormularioProductos() {
                 <Form.Label>Precio</Form.Label>
                 <Form.Control type="number"
                 value={producto.price} 
-                onChange= { handleChange } 
+                onChange= { handleChange }
                 name="price" />
             </Form.Group>
             <Form.Group className="mb-3">

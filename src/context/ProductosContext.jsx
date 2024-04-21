@@ -17,13 +17,23 @@ const ProductosContext = ({ children }) => {
     }
   };
 
-  //Agregar datos
+  //Agregar productos
   const addProducto = async (producto) => {
     try {
       const response = await axios.post("http://localhost:8000/products", producto);
       setProductos([...productos, response.data])
     } catch (error) {
       console.error('Error en agregar producto:', error);
+    }
+  }; 
+
+  //borrar productos
+  const deleteProducto = async (id) => {
+    try {
+      await axios.delete(`http://localhost:8000/products/${id}`);
+      setProductos(productos.filter((producto) => producto.id !== id));
+    } catch (error) {
+      console.error('Error al borrar producto:', error);
     }
   }; 
 
@@ -44,7 +54,7 @@ const ProductosContext = ({ children }) => {
 
     
   return (
-    <ProductsProvider.Provider value={{productos, addProducto}}>
+    <ProductsProvider.Provider value={{ productos, addProducto, deleteProducto }}>
         {children}
     </ProductsProvider.Provider>
   )
