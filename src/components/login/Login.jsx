@@ -14,8 +14,6 @@ const Login = ({ handleClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const { usuarios = [] } = useContext(UsersProvider); // Asigna un array vacío por defecto si `usuarios` no está definido
-
   const { loginUsuario, usuarioLogueado } = useContext(UsersProvider);
 
   console.log(usuarioLogueado, "usuarios en el login");
@@ -50,8 +48,25 @@ const Login = ({ handleClose }) => {
 
     try {
       loginUsuario({ email, password });
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Bienvenido",
+        showConfirmButton: false,
+        timer: 1500,
+      })
+      handleClose();
+      navigate("/principal");
+
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Usuario o contraseña Incorreca",
+        showConfirmButton: false,
+        timer: 1500,
+      })
     }
   };
 

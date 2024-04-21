@@ -5,6 +5,7 @@ import AboutUsPage from '../../page/aboutUs/AboutUsPage';
 import LoginPage from '../../page/login/LoginPage';
 
 
+
 export function Rutas() {
   // const user = JSON.parse(localStorage.getItem("user"));
 
