@@ -6,6 +6,7 @@ import './App.css'
 import { Navigator } from './components/navBar/Navigator.jsx'
 import MainPage from './components/mainPage/MainPage.jsx';
 import  ProductosContext  from './context/ProductosContext';
+import FormularioProductos from './components/formProductos/FormularioProductos.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ProductosContext>
 
         <Navigator/>
+        <FormularioProductos/>
         <MainPage/>
 
       </ProductosContext>

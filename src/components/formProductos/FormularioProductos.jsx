@@ -1,11 +1,39 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import {Form, Button, Modal} from 'react-bootstrap'
+import { ProductsProvider } from '../../context/ProductosContext';
 
 function FormularioProductos() {
 
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const {addProducto} = useContext(ProductsProvider)
+
+
+  //COMPORTAMIENTO DEL MODAL
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  //------------------------------------------
+
+  const [producto, setProducto] = useState({
+    id: "",
+    name: "",
+    price: ""
+  });
+
+  const handleChange = (e) => {
+    setProducto({
+      ...producto,
+      [e.target.name]: e.target.value
+    })
+  }
+  
+  console.log(producto, "ESTADO INICIAL DEL PRODUCTO");
+  
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addProducto(producto);
+  }
+
 
   return (
     <>
@@ -13,49 +41,42 @@ function FormularioProductos() {
         Nuevo Producto
       </Button>
 
-      {/* <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Nuevo Producto</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 
-            <Form on>
-                <Form.Group className="mb-3">
-                    <Form.Label>Nombre</Form.Label>
-                    <Form.Control type="text"
-                    value={nombre}
-                    onChange={(e) => {
-                        setNombre(e.target.value)
-                    }} 
-                    name="nombre" 
-                    placeholder= "Juan Perez" />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                    <Form.Label>Precio</Form.Label>
-                    <Form.Control type="number"
-                    value={precio}
-                    onChange={(e) => {
-                        setPrecio(e.target.value)
-                    }}
-                    name="precio" 
-                    placeholder= "1000" />
-                </Form.Group>
-                <Button variant="success" type="submit">Nuevo Producto</Button>
-            </Form>
-
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+                <Form.Label>Nombre</Form.Label>
+                <Form.Control type="text"
+                value={producto.name}
+                onChange= { handleChange } 
+                name="name" 
+                placeholder= "Juan Perez" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Precio</Form.Label>
+                <Form.Control type="number"
+                value={producto.price} 
+                onChange= { handleChange } 
+                name="price" />
+            </Form.Group>
+          </Form>
         </Modal.Body>
+
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Cerrar
           </Button>
-          <Button variant="primary">Understood</Button>
+          <Button variant="primary" onClick={handleSubmit}>
+            Guardar
+          </Button>
         </Modal.Footer>
-      </Modal> */}
+      </Modal>
+
+
     </>
   );
 }
