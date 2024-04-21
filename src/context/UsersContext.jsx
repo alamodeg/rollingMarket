@@ -59,23 +59,4 @@ const UsersContext = ({ children }) => {
   );
 };
 
-
-// const [users, setUsers] = useState([])
-
-//       useEffect(() => {
-//         const obtenerDatos = async () => {
-//           try {
-//             const url = 'https://jsonplaceholder.typicode.com/todos/'
-//             const response = await fetch(url)
-//             const resultado = await response.json()
-//             console.log(resultado)
-//             setUsers(response.data);
-//           }
-//           catch (error) {
-//             console.error(error);
-//           }
-//         }
-//         obtenerDatos();
-//       }, []);
-
 export default UsersContext;
