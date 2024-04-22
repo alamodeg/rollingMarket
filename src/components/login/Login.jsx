@@ -17,13 +17,16 @@ const Login = ({ handleClose }) => {
 
 
   const { loginUsuario, usuarioLogueado, usuarios } = useContext(UsersProvider);
-
+  console.log(usuarioLogueado,"ESTE ES UN CLG DE usuarioLogueado ");
+  console.log(usuarios,"ESTE ES UN CLG DE usuarios");
 
   const navigate = useNavigate();
 
   useEffect(() => {
     if (usuarioLogueado) {
-      console.log(usuarioLogueado,"QUE TRAE ESTO");
+
+
+
       // console.log(usuarios,"----TODOS LOS USUARIOS SON : ----");
       // console.log(email,"ESTE ES EL EMAIL")
       // console.log(password,"ESTE ES EL PASSWOORD")

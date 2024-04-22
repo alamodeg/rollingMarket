@@ -65,7 +65,7 @@ const UsersContext = ({ children }) => {
   const logOut = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
-    window.location.href = "/";
+    window.location.href = "/login";
   };
 
   const loginUsuario = async (usuario) => {
