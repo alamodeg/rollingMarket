@@ -1,27 +1,33 @@
-import React, { useState, useContext } from 'react';
-import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Button, ButtonGroup, Form, Modal } from 'react-bootstrap';
 import './Login.css';
 import { Register } from '../../components/register/Register';
 import { UsersProvider } from "../../context/UsersContext";
-import axios from 'axios';
-import Swal from "sweetalert2";
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja.png';
 import { useEffect } from 'react';
+import Swal from 'sweetalert2';
 
-const Login = ({ handleClose }) => {
-  const [modalShow, setModalShow] = useState(false); // Estado para controlar la visibilidad del modal
+const Login = ({handleClose,handleShow}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [modalShow, setModalShow] = useState(false);
 
-  const { loginUsuario, usuarioLogueado } = useContext(UsersProvider);
 
-  console.log(usuarioLogueado, "usuarios en el login");
+  const { loginUsuario, usuarioLogueado, usuarios } = useContext(UsersProvider);
+  console.log(usuarioLogueado, "ESTE ES UN CLG DE usuarioLogueado ");
+  console.log(usuarios, "ESTE ES UN CLG DE usuarios");
 
   const navigate = useNavigate();
 
   useEffect(() => {
     if (usuarioLogueado) {
+      const usuario = {
+        name: usuarioLogueado.name,
+        surname: usuarioLogueado.surname,
+        email: usuarioLogueado.email,
+        rol: usuarioLogueado.rol,
+      };
       Swal.fire({
         position: "center",
         icon: "success",
@@ -29,48 +35,30 @@ const Login = ({ handleClose }) => {
         showConfirmButton: false,
         timer: 1500,
       });
-
-      const usuario = {
-        name: usuarioLogueado.name,
-        surname: usuarioLogueado.surname,
-        email: usuarioLogueado.email,
-        rol: usuarioLogueado.rol,
-      };
-
       localStorage.setItem("user", JSON.stringify(usuario));
-      
-      handleClose();
-    } 
-  }, [usuarioLogueado, handleClose]);
+      navigate("/contacto");
+    }
+  }, [usuarioLogueado]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     try {
       loginUsuario({ email, password });
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Bienvenido",
-        showConfirmButton: false,
-        timer: 1500,
-      })
-      navigate("/principal");
-
     } catch (error) {
       console.log(error);
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "Usuario o contraseña Incorreca",
+        title: "Usuario o contraseña incorrectos",
         showConfirmButton: false,
         timer: 1500,
-      })
+      });
+    } finally{
+      handleClose();
     }
+
   };
 
-
-  
   return (
     <>
     <div className="bodyLogin">

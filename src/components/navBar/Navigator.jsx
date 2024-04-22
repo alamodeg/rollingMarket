@@ -1,17 +1,14 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Image, Button, Modal, ModalHeader, ModalTitle } from 'react-bootstrap';
+import { Image, Button, Modal, Form } from 'react-bootstrap';
 import '../navBar/Navigator.css'
 import imgCarrito from '../../assets/img/imgNavBar/imgCarrito.png';
 import logo3 from '../../assets/img/imgNavBar/logo3.png'
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from 'react';
 import Login from '../login/Login';
-import { UsersProvider } from "../../context/UsersContext";
-import { Form } from 'react-bootstrap';
-
-
+import { UsersProvider } from '../../context/UsersContext';
 
 
 
@@ -24,6 +21,10 @@ export function Navigator() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
   const navigate = useNavigate();
 
   const user = JSON.parse(localStorage.getItem("user"));
@@ -32,7 +33,7 @@ export function Navigator() {
   return (
     <>
       <div className='ms-auto text-center colorDivTopNav' xs={12}><img src={imgCarrito} alt="carrito_logo" />RollingMarket <img src={imgCarrito} alt="Carrito_logo" /></div>
-      {/* probar el cambio de color en el div */}
+
 
       <Navbar expand="lg" className="bg-body-secondary p-2">
         <Container fluid>
@@ -52,19 +53,8 @@ export function Navigator() {
 
 
             {/* NAVBAR VIEJO QUITAR */}
-            {/* <Nav className='p-2 ms-auto' variant='underline'> */}
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
-            {/* <Button className='p-2 ms-auto' variant="success" onClick={handleShow}>Iniciar Sesión</Button>
+            {/* <Nav className='p-2 ms-auto' variant='underline'>
+              <Button className='p-2 ms-auto' variant="success" onClick={handleShow}>Iniciar Sesión</Button>
             </Nav> */}
             {/* FIN DEL NAVBAR VIEJO A QUITAR */}
 
@@ -72,27 +62,26 @@ export function Navigator() {
               <Nav>
                 {user ? (
                   user.rol === 'admin' ? (
-                    <Nav.Link onClick={() => navigate("/contacto")}>
+                    <Nav.Link onClick={() => navigate("/admin")}>
                       Administrador
                     </Nav.Link>
                   ) : (
-                    <Nav.Link onClick={() => navigate("/contacto")}>
+                    <Nav.Link onClick={() => navigate("/user-menu")}>
                       Usuario
                     </Nav.Link>
                   )
                 ) : (
-                  <Button variant="success" onClick={handleShow}>
+                  <Button className='p-2 ms-auto' variant="success" onClick={handleShow}>
                     Iniciar Sesión
                   </Button>
                 )}
                 {user ? (
-                  <Button Button variant="danger" onClick={() => logOut()}>
-                Cerrar Sesión
-              </Button>
-    ) : null}
-            </Nav>
-          </Form>
-
+                  <Button variant="danger" onClick={() => logOut()}>
+                    Cerrar Sesión
+                  </Button>
+                ) : null}
+              </Nav>
+            </Form>
 
         </Navbar.Collapse>
       </Container>
@@ -100,7 +89,7 @@ export function Navigator() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
-          <Login handleClose={handleClose} />
+          <Login handleClose={handleClose}  handleShow={handleShow}/>
         </Modal.Body>
       </Modal>
     </>
