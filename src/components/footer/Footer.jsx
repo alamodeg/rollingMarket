@@ -42,24 +42,24 @@ const Footer = () => {
         <Row className="copyright pt-3 justify-content-center">
           <p className="copy col-12 col-md-8 pt-2">
             &copy; 2024 RollingMarket | Tenemos todo lo que necesitas -{" "}
-            <a href="">Política de privacidad</a>
+            <a href="*">Política de privacidad</a>
           </p>
 
           <div className="col-12 col-md-4">
             <ul className="networkList">
               <li>
-                <a href="">
-                  <i class="bi bi-facebook"></i>
+                <a href="https://www.facebook.com/RollingCodeSchool/">
+                  <i className="bi bi-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="">
-                  <i class="bi bi-instagram"></i>
+                <a href="https://www.instagram.com/rollingcodeschool/?hl=es">
+                  <i className="bi bi-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="">
-                  <i class="bi bi-twitter"></i>
+                <a href="*">
+                  <i className="bi bi-twitter"></i>
                 </a>
               </li>
             </ul>

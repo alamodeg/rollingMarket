@@ -14,6 +14,7 @@ export function Rutas() {
         <Route path ='/contacto' element={<Contact></Contact>}></Route>
         <Route path ='/quienesSomos' element={<AboutUsPage></AboutUsPage>}></Route>
         <Route path ='/login' element={<LoginPage></LoginPage>}></Route>
+
       </Routes>
     </>
   );
