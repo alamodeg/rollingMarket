@@ -62,16 +62,16 @@ const TablaProductos = () => {
       <tbody>
         {productos.map((producto) => (
           <tr>
-          <td>{producto.nombre}</td>
-          <td>{producto.categoria}</td>
-          <td>{producto.descripcion}</td>
+          <td>{producto.name}</td>
+          <td>{producto.category}</td>
+          <td>{producto.description}</td>
           <td>{producto.stock}</td>
-          <td>{producto.precio}</td>
+          <td>{producto.price}</td>
           <td>{producto.fecha}</td>
-          <td>{producto.imagen}</td>
+          <td>{producto.image}</td>
           <td>
           <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
-          <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto.id)}><i class="bi bi-trash"></i></Button>
+          <Button className='boton-crud' variant="link" onClick={() => deleteProductos(id)}><i class="bi bi-trash"></i></Button>
           </td>
         </tr>
         ))}

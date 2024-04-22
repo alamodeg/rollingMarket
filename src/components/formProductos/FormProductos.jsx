@@ -10,13 +10,13 @@ const FormProductos = ({editarProductos, handleClose}) => {
   const {addProducto, updateProductos} = useContext(ProductsProvider)
 
   const [producto, setProducto] = useState({
-    id: editarProductos ? editarProductos.id : uuidv4(),
-    nombre: editarProductos ? editarProductos.nombre : "",
-    categoria: editarProductos ? editarProductos.categoria : "",
-    descripcion: editarProductos ? editarProductos.descripcion: "",
+    _id: editarProductos ? editarProductos._id : (null),
+    name: editarProductos ? editarProductos.name : "",
+    description: editarProductos ? editarProductos.description: "",
+    category: editarProductos ? editarProductos.category : "",
+    price: editarProductos ? editarProductos.price : "",
     stock: editarProductos ? editarProductos.stock : "",
-    precio: editarProductos ? editarProductos.precio : "",
-    imagen: editarProductos ? editarProductos.imagen : ""
+    image: editarProductos ? editarProductos.image : ""
   })
 
   const handleChange = (e) => {
@@ -40,13 +40,13 @@ const FormProductos = ({editarProductos, handleClose}) => {
         timer: 1500,
       });
       setProducto({
-        id: uuidv4(),
-        nombre: "",
-        categoria: "",
-        descripcion: "",
+        _id: "",
+        name: "",
+        description: "",
+        category: "",
+        price: "",
         stock: "",
-        precio: "",
-        imagen: ""
+        image: ""
       })
     }else {
       addProducto(producto);
@@ -59,13 +59,13 @@ const FormProductos = ({editarProductos, handleClose}) => {
         timer: 1500,
       });
       setProducto({
-        id: uuidv4(),
-        nombre: "",
-        categoria: "",
-        descripcion: "",
+        _id: "",
+        name: "",
+        description: "",
+        category: "",
+        price: "",
         stock: "",
-        precio: "",
-        imagen: ""
+        image: ""
       })
     }
     
@@ -80,25 +80,25 @@ const FormProductos = ({editarProductos, handleClose}) => {
       <Form.Group className="mb-3" >
         <Form.Label>Nombre</Form.Label>
         <Form.Control type="text"
-        value={producto.nombre} 
+        value={producto.name} 
         onChange={handleChange}
-        name='nombre'
+        name='name'
         placeholder="Nombre del Producto" />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Categoria</Form.Label>
         <Form.Control type="text" 
-        value={producto.categoria} 
+        value={producto.category} 
         onChange={handleChange}
-        name='categoria'
+        name='category'
         placeholder="Categoria del Producto" />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Descripcion</Form.Label>
         <Form.Control type="text" 
-        value={producto.descripcion} 
+        value={producto.description} 
         onChange={handleChange}
-        name='descripcion'
+        name='description'
         placeholder="Descripcion del Producto" />
       </Form.Group>
       <Form.Group className="mb-3" >
@@ -112,17 +112,17 @@ const FormProductos = ({editarProductos, handleClose}) => {
       <Form.Group className="mb-3" >
         <Form.Label>Precio</Form.Label>
         <Form.Control type="number" 
-        value={producto.precio} 
+        value={producto.price} 
         onChange={handleChange}
-        name='precio'
+        name='price'
         placeholder="Precio del Producto" />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Imagen</Form.Label>
         <Form.Control type="text" 
-        value={producto.imagen}
+        value={producto.image}
         onChange={handleChange}
-        name='imagen' 
+        name='image' 
         placeholder="Imagen del Producto" />
       </Form.Group>
 

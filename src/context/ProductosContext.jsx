@@ -11,7 +11,7 @@ const ProductosContext = ({children}) => {
   
     const obtenerProductos = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/productos")
+        const response = await axios.get("https://rollingmarketbe1.onrender.com/productos")
         setProductos(response.data)
       } catch (error) {
         console.error(error)
@@ -21,7 +21,7 @@ const ProductosContext = ({children}) => {
     //POST PARA ALIMENTAR LA BASE DE DATO
     const addProducto = async (producto) => {
       try {
-        const response = await axios.post("https://rollingmarketbe-os1b.onrender.com/product", producto)
+        const response = await axios.post("https://rollingmarketbe1.onrender.com/product", producto)
         setProductos([...productos, response.data])
       } catch (error) {
         console.log(error)
@@ -31,7 +31,7 @@ const ProductosContext = ({children}) => {
     //DELETE PARA ELIMINAR UN PRODCUTO DE LA BASE DE DATOS
     const deleteProductos = async (id) => {
       try {
-        await axios.delete(`http://localhost:8000/productos/${id}`)
+        await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`)
         setProductos(productos.filter((producto) => producto.id !== id))
       } catch (error) {
         console.log(error)
@@ -40,8 +40,9 @@ const ProductosContext = ({children}) => {
 
     //PUT PARA ACTUALIZAR UN PORDUCTO DE LA BASE DE DATOS
     const updateProductos = async (producto) => {
+      console.log(producto, "productos desde put")
       try {
-        await axios.put(`http://localhost:8000/productos/${producto.id}`, producto)
+        await axios.put(`https://rollingmarketbe1.onrender.com/producto/update/${producto._id}`, producto)
         await obtenerProductos()
       } catch (error) {
         console.log(error)
@@ -51,7 +52,7 @@ const ProductosContext = ({children}) => {
       obtenerProductos()
     }, [])
 
-  console.log(productos, "productos desde el context")
+
 
   return (
     <ProductsProvider.Provider value={{productos, addProducto, deleteProductos, updateProductos}}>

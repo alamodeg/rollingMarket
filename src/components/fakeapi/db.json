@@ -1,49 +1,5 @@
 {
   "productos": [
-    {
-      "id": "9e2268a6-392c-4741-b4ad-c07618c79713",
-      "nombre": "h",
-      "categoria": "chau",
-      "descripcion": "geladoi",
-      "stock": "1",
-      "precio": "4",
-      "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
-    },
-    {
-      "id": "9457ba5d-e9d7-4dd2-8e6a-b8599e3a8ff8",
-      "nombre": "pepsi",
-      "categoria": "bebida",
-      "descripcion": "geladoi",
-      "stock": "1",
-      "precio": "25",
-      "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
-    },
-    {
-      "id": "6f63e9fa-7fdd-4470-8b5c-7c7b45ac3d08",
-      "nombre": "nacho",
-      "categoria": "chau",
-      "descripcion": "ki",
-      "stock": "14",
-      "precio": "15",
-      "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
-    },
-    {
-      "id": "cbbb44bd-de3d-4356-b03f-bb17771dc487",
-      "nombre": "cafe",
-      "categoria": "h",
-      "descripcion": "geladoi",
-      "stock": "1",
-      "precio": "15",
-      "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
-    },
-    {
-      "id": "3d957d99-d3cf-4596-8e43-4656b9157ab8",
-      "nombre": "coca",
-      "categoria": "chau",
-      "descripcion": "h",
-      "stock": "1",
-      "precio": "4",
-      "imagen": "https://www.greenstyle.com.ar/wp-content/uploads/2020/07/Cafetera-Market-Bra-12.jpg"
-    }
+
   ]
 }
