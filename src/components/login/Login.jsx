@@ -23,7 +23,7 @@ const Login = ({ handleClose }) => {
 
   useEffect(() => {
     if (usuarioLogueado) {
-      console.log(usuarioLogueado,"QUE MIERDA TRAE ESTO");
+      console.log(usuarioLogueado,"QUE TRAE ESTO");
       // console.log(usuarios,"----TODOS LOS USUARIOS SON : ----");
       // console.log(email,"ESTE ES EL EMAIL")
       // console.log(password,"ESTE ES EL PASSWOORD")
