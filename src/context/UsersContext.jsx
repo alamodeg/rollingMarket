@@ -9,7 +9,7 @@ const UsersContext = ({ children }) => {
   const [usuarioLogueado, setUsuarioLogueado] = useState();
 
 
-  const getUsers = async () => {
+  const loginUsuario = async (usuario) => {
     try {
       const response = await axios.get(
         "http://localhost:4000/usuarios"
@@ -85,7 +85,11 @@ const UsersContext = ({ children }) => {
   };
 
   useEffect(() => {
-    getUsers();
+    const token = localStorage.getItem("token");
+    if (token) {
+      const decoded = jwtDecode(token);
+      setUsuarioLogueado(decoded);
+    }
   }, []);
 
   return (
