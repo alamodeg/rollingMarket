@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { Container, Row, Col, Card, Button, ButtonGroup, Form, Modal} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Button, ButtonGroup, Form, Modal } from 'react-bootstrap';
 import './Login.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja.png';
@@ -8,40 +8,46 @@ import { UsersProvider } from "../../context/UsersContext";
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-
+import Swal from 'sweetalert2';
 
 const Login = ({ handleClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [modalShow, setModalShow] = useState(false);
 
-  const { loginUsuario, usuarioLogueado } = useContext(UsersProvider);
+
+  const { loginUsuario, usuarioLogueado, usuarios } = useContext(UsersProvider);
 
 
   const navigate = useNavigate();
 
   useEffect(() => {
     if (usuarioLogueado) {
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Bienvenido",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+      console.log(usuarioLogueado,"QUE MIERDA TRAE ESTO");
+      // console.log(usuarios,"----TODOS LOS USUARIOS SON : ----");
+      // console.log(email,"ESTE ES EL EMAIL")
+      // console.log(password,"ESTE ES EL PASSWOORD")
 
-      const usuario = {
-        name: usuarioLogueado.name,
-        surname: usuarioLogueado.surname,
-        email: usuarioLogueado.email,
-        rol: usuarioLogueado.rol,
-      };
-
-      localStorage.setItem("user", JSON.stringify(user));
-
-      
-      handleClose();
-    } 
+      // const user = usuarios.find(
+      //   (user) => user.email === email && user.password === password
+      // );
+      // console.log(user,"____________________")
+        const usuario = {
+          name: usuarioLogueado.name,
+          surname: usuarioLogueado.surname,
+          email: usuarioLogueado.email,
+          rol: usuarioLogueado.rol,
+        };
+        localStorage.setItem("user", JSON.stringify(usuario));
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Bienvenido",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        // handleClose();
+    }
   }, [usuarioLogueado, handleClose]);
 
   const handleSubmit = (e) => {
@@ -78,7 +84,7 @@ const Login = ({ handleClose }) => {
 
                 <Form.Group className="mb-3" controlId="password">
                   <Form.Label>Contraseña</Form.Label>
-                  <Form.Control type="password" name ="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={25} />
+                  <Form.Control type="password" name="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={25} />
                 </Form.Group>
                 <Button variant="primary" className="botonFormLogin mb-4" type="submit">
                   Ingresar
@@ -101,4 +107,4 @@ const Login = ({ handleClose }) => {
   );
 };
 
-export default Login;
+export default Login;

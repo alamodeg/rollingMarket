@@ -69,15 +69,12 @@ const UsersContext = ({ children }) => {
   };
 
   const loginUsuario = async (usuario) => {
-    console.log(usuario, "loginUsuario");
     try {
       const response = await axios.post(
         "http://localhost:4000/login/",
         usuario
       );
-      console.log(response.data, "response.data desde el context");
-
-      const { token } = response.data.data;
+      const token = response.data.token;
       localStorage.setItem("token", token);
       const decoded = jwtDecode(token);
 
