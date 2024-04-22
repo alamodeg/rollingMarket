@@ -27,9 +27,6 @@ export function Navigator() {
 
   const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem("user"));
-
-
   return (
     <>
       <div className='ms-auto text-center colorDivTopNav' xs={12}><img src={imgCarrito} alt="carrito_logo" />RollingMarket <img src={imgCarrito} alt="Carrito_logo" /></div>
@@ -83,9 +80,9 @@ export function Navigator() {
               </Nav>
             </Form>
 
-        </Navbar.Collapse>
-      </Container>
-    </Navbar >
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>

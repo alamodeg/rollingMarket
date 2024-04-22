@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, ButtonGroup, Form, Modal } from 'react-bootstrap';
 import './Login.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja.png';
 import { Register } from '../../components/register/Register';
 import { UsersProvider } from "../../context/UsersContext";
 import { useContext } from 'react';
@@ -60,7 +62,6 @@ const Login = ({handleClose,handleShow}) => {
   };
 
   return (
-    <>
     <div className="bodyLogin">
       <Container fluid className="containerLogin">
         <Row className="justify-content-center">
@@ -70,14 +71,14 @@ const Login = ({handleClose,handleShow}) => {
               <Form onSubmit={handleSubmit} className="formLogin d-flex d-flex flex-column">
                 <div className="opcionContraseñaLogin">
                   <p>
-                    ¿Aún no tienes una cuenta?{' '}
+                    ¿Aún no tenes una cuenta?{' '}
                     <a className="etiquetaLogin" href="#" onClick={() => setModalShow(true)}>
-                      Solicita tu alta de usuario
+                      Solicitá tu alta de usuario
                     </a>
                   </p>
                 </div>
                 <Form.Group className="mb-3" controlId="email">
-                  <Form.Label>Ingresa tu email</Form.Label>
+                  <Form.Label>Ingresá tu email</Form.Label>
                   <Form.Control name="email" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} maxLength={50} />
                   <Form.Text className="text-muted"></Form.Text>
                 </Form.Group>
@@ -102,9 +103,8 @@ const Login = ({handleClose,handleShow}) => {
           </Col>
         </Row>
       </Container>
-      <Register show={modalShow} onHide={handleClose} />
+      <Register show={modalShow} onHide={() => setModalShow(false)} />
     </div>
-    </>
   );
 };
 
