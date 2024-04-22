@@ -15,8 +15,10 @@ function FormularioProductos() {
       setProducto({
         id: uuidv4(),
         name: "",
+        description: "",
         category: "",
         price: "",
+        stock: "",
         image: ""
       });
       setShow(false);
@@ -28,8 +30,10 @@ function FormularioProductos() {
   const [producto, setProducto] = useState({
     id: uuidv4(),
     name: "",
+    description: "",
     category: "",
     price: "",
+    stock: "",
     image: ""
   });
 
@@ -50,8 +54,10 @@ function FormularioProductos() {
     setProducto({
       id: uuidv4(),
       name: "",
+      description: "",
       category: "",
       price: "",
+      stock: "",
       image: ""
     });
 
@@ -59,13 +65,13 @@ function FormularioProductos() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="success" onClick={handleShow}>
         Nuevo Producto
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Nuevo Producto</Modal.Title>
+          <Modal.Title variant="success">Nuevo Producto</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 

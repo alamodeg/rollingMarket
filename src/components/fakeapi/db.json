@@ -1,37 +1,68 @@
 {
-    "users": [
-      {
-        "name": "Juan",
-        "email": "juan@example.com",
-        "password": "password123"
-      },
-      {
-        "name": "María",
-        "email": "maria@example.com",
-        "password": "mypass456"
-      },
-      {
-        "name": "Pedro",
-        "email": "pedro@example.com",
-        "password": "securepass789"
-      }
-    ],
-    "products": [
-      {
-        "id": 101,
-        "name": "Producto 1",
-        "price": 20.50
-      },
-      {
-        "id": 102,
-        "name": "Producto 2",
-        "price": 15.75
-      },
-      {
-        "id": 103,
-        "name": "Producto 3",
-        "price": 35.00
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "name": "Juan",
+      "email": "juan@example.com",
+      "password": "password123",
+      "id": "835e"
+    },
+    {
+      "name": "María",
+      "email": "maria@example.com",
+      "password": "mypass456",
+      "id": "2827"
+    },
+    {
+      "name": "Pedro",
+      "email": "pedro@example.com",
+      "password": "securepass789",
+      "id": "40dc"
+    }
+  ],
+  "products": [
+    {
+      "id": "0b05665d-97c8-4a6b-8e46-c3181c4f4e10",
+      "name": "Coca Cola",
+      "description": "Bebida gasificada de 1L alto en azucar",
+      "category": "Bebidas",
+      "price": "324234",
+      "stock": 1,
+      "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?q=80&w=2565&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "205cafd4-72a2-44e4-8d12-72ce917c9f7b",
+      "name": "PC Gamer",
+      "description": "Computadora ideal para juegos en FHD",
+      "category": "Otros",
+      "price": "500000",
+      "stock": 1,
+      "image": "https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "f0a78f42-004b-4eba-8d9c-d80ff89feecc",
+      "name": "Martillo",
+      "description": "Mango de goma punta de acero",
+      "category": "Herramientas",
+      "price": "123123",
+      "stock": 1,
+      "image": "NULL trucho"
+    },
+    {
+      "id": "cec78e6c-9238-4b9b-8fed-7cf6b41f2df8",
+      "name": "Sierra Circular",
+      "category": "Herramientas",
+      "price": "23700",
+      "stock": 1,
+      "image": "test.com"
+    },
+    {
+      "id": "5d8a41b7-0059-458e-9220-1b6964468e10",
+      "name": "Barbie",
+      "category": "Otros",
+      "price": "8900",
+      "stock": 1,
+      "image": "https://images.unsplash.com/photo-1563475454428-db1b68095419?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "Muñeca de 20cm color negra."
+    }
+  ]
+}

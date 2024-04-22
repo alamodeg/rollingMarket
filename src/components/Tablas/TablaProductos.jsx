@@ -15,7 +15,7 @@ const TablaProductos = () => {
         <h2>El local no tiene ningún producto para mostrar</h2>
       ) : (
         <>
-          <Table striped bordered hover variant="dark">
+          <Table striped bordered hover>
             <thead>
               <tr>
                 {/* <th>ID</th> */}
@@ -23,6 +23,8 @@ const TablaProductos = () => {
                 <th>Descripcion</th>
                 <th>Categoria</th>
                 <th>Precio</th>
+                <th>Stock</th>
+                <th>Fecha de Modificacion</th>
                 <th>Imagen</th>
                 <th>Acciones</th>
               </tr>
@@ -35,6 +37,8 @@ const TablaProductos = () => {
                   <td>{producto.description}</td>
                   <td>{producto.category}</td>
                   <td>{producto.price}</td>
+                  <td>{producto.stock}</td>
+                  <td>20-03-1992</td>
                   <td><img src={producto.image} style={{ width: '100px', height: '100px' }} /></td>
                   <td>
                     <Button variant="warning">Editar</Button>

@@ -37,15 +37,15 @@ const ProductosContext = ({ children }) => {
     }
   }; 
 
-
-
-
-
-
-
-
-
-
+  const getCategoria = async (category) => {
+    try {
+      const response = await axios.get(`http://localhost:8000/products?category=${category}`);
+      setProductos(response.data);
+    } catch (error) {
+      console.error('Error al obtener productos por categoría:', error);
+    }
+  };
+  
 
   useEffect(() => {
     obtenerDatos();
@@ -54,7 +54,7 @@ const ProductosContext = ({ children }) => {
 
     
   return (
-    <ProductsProvider.Provider value={{ productos, addProducto, deleteProducto }}>
+    <ProductsProvider.Provider value={{ productos, addProducto, deleteProducto, getCategoria }}>
         {children}
     </ProductsProvider.Provider>
   )
