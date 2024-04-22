@@ -6,30 +6,53 @@ import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja
 import { Register } from '../../components/register/Register';
 import { UsersProvider } from "../../context/UsersContext";
 import { useContext } from 'react';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
-
-const Login = () => {
-  const [modalShow, setModalShow] = useState(false); // Estado para controlar la visibilidad del modal
+const Login = ({ handleClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [modalShow, setModalShow] = useState(false);
+
+  const { loginUsuario, usuarioLogueado } = useContext(UsersProvider);
 
 
-  const login = async (dataform) => {
-    const response = await axios.post("http://localhost:4000/login/",dataform)
-    const data = response.data;
-    console.log(data);
-  }
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (usuarioLogueado) {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Bienvenido",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+
+      const usuario = {
+        name: usuarioLogueado.name,
+        surname: usuarioLogueado.surname,
+        email: usuarioLogueado.email,
+        rol: usuarioLogueado.rol,
+      };
+
+      localStorage.setItem("user", JSON.stringify(user));
+
+      
+      handleClose();
+    } 
+  }, [usuarioLogueado, handleClose]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const formdata = {
-      email,password
+    try {
+      loginUsuario({ email, password });
+    } catch (error) {
+      console.log(error);
     }
-    login(formdata);
-  }  
+  };
 
   return (
     <div className="bodyLogin">
@@ -57,9 +80,6 @@ const Login = () => {
                   <Form.Label>Contraseña</Form.Label>
                   <Form.Control type="password" name ="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={25} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
                 <Button variant="primary" className="botonFormLogin mb-4" type="submit">
                   Ingresar
                 </Button>
@@ -81,4 +101,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login;
