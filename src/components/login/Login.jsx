@@ -15,24 +15,21 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { usuarios } = useContext(UsersProvider);
-  console.log(usuarios, "usuarios en el")
 
+  const login = async (dataform) => {
+    const response = await axios.post("http://localhost:4000/login/",dataform)
+    const data = response.data;
+    console.log(data);
+  }
 
-  // const login = async (dataform) => {
-  //   const response = await axios.post("http://localhost:4000/login/",dataform)
-  //   const data = response.data;
-  //   console.log(data);
-  // }
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   const formdata = {
-  //     email,password
-  //   }
-  //   login(formdata);
-  // }  
+    const formdata = {
+      email,password
+    }
+    login(formdata);
+  }  
 
   return (
     <div className="bodyLogin">
@@ -84,4 +81,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login;
