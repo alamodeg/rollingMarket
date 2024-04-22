@@ -6,9 +6,9 @@ import '../navBar/Navigator.css'
 import imgCarrito from '../../assets/img/imgNavBar/imgCarrito.png';
 import logo3 from '../../assets/img/imgNavBar/logo3.png'
 import { useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Login from '../login/Login';
-
+import { UsersProvider } from '../../context/UsersContext';
 
 
 
@@ -16,11 +16,11 @@ export function Navigator() {
 
   const [show, setShow] = useState(false);
 
-  // const { logOut } = useContext(UsersProvider);
+  const { logOut } = useContext(UsersProvider);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  // const { logOut } = useContext(UsersProvider);
+
 
 
   const user = JSON.parse(localStorage.getItem("user"));

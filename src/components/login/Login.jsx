@@ -10,10 +10,13 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Swal from 'sweetalert2';
 
-const Login = ({ handleClose }) => {
+const Login = ({ }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [modalShow, setModalShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+
 
 
   const { loginUsuario, usuarioLogueado, usuarios } = useContext(UsersProvider);
@@ -41,7 +44,6 @@ const Login = ({ handleClose }) => {
           email: usuarioLogueado.email,
           rol: usuarioLogueado.rol,
         };
-        localStorage.setItem("user", JSON.stringify(usuario));
         Swal.fire({
           position: "center",
           icon: "success",
@@ -49,7 +51,9 @@ const Login = ({ handleClose }) => {
           showConfirmButton: false,
           timer: 1500,
         });
-        // handleClose();
+        localStorage.setItem("user", JSON.stringify(usuario));
+        navigate("/contacto");
+        handleClose();
     }
   }, [usuarioLogueado, handleClose]);
 
