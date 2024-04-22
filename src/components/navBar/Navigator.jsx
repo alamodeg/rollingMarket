@@ -86,7 +86,7 @@ export function Navigator() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
-          <Login handleClose={handleClose} />
+          <Login handleClose={handleClose}  handleShow={handleShow}/>
         </Modal.Body>
       </Modal>
     </>

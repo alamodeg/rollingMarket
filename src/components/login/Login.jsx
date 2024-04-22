@@ -10,61 +10,55 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Swal from 'sweetalert2';
 
-const Login = ({ }) => {
+const Login = ({handleClose,handleShow}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [modalShow, setModalShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-
-
 
   const { loginUsuario, usuarioLogueado, usuarios } = useContext(UsersProvider);
-  console.log(usuarioLogueado,"ESTE ES UN CLG DE usuarioLogueado ");
-  console.log(usuarios,"ESTE ES UN CLG DE usuarios");
+  console.log(usuarioLogueado, "ESTE ES UN CLG DE usuarioLogueado ");
+  console.log(usuarios, "ESTE ES UN CLG DE usuarios");
 
   const navigate = useNavigate();
 
   useEffect(() => {
     if (usuarioLogueado) {
-
-
-
-      // console.log(usuarios,"----TODOS LOS USUARIOS SON : ----");
-      // console.log(email,"ESTE ES EL EMAIL")
-      // console.log(password,"ESTE ES EL PASSWOORD")
-
-      // const user = usuarios.find(
-      //   (user) => user.email === email && user.password === password
-      // );
-      // console.log(user,"____________________")
-        const usuario = {
-          name: usuarioLogueado.name,
-          surname: usuarioLogueado.surname,
-          email: usuarioLogueado.email,
-          rol: usuarioLogueado.rol,
-        };
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Bienvenido",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        localStorage.setItem("user", JSON.stringify(usuario));
-        navigate("/contacto");
-        handleClose();
+      const usuario = {
+        name: usuarioLogueado.name,
+        surname: usuarioLogueado.surname,
+        email: usuarioLogueado.email,
+        rol: usuarioLogueado.rol,
+      };
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Bienvenido",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      localStorage.setItem("user", JSON.stringify(usuario));
+      navigate("/contacto");
     }
-  }, [usuarioLogueado, handleClose]);
+  }, [usuarioLogueado]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     try {
       loginUsuario({ email, password });
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Usuario o contraseña incorrectos",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } finally{
+      handleClose();
     }
+
   };
 
   return (
