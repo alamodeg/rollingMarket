@@ -1,7 +1,7 @@
 import {useContext, useState} from 'react'
-import { Button, Modal, Form} from 'react-bootstrap';
+import { Button, Form, InputGroup} from 'react-bootstrap';
 import { ProductsProvider } from '../../context/ProductosContext';
-import {v4 as uuidv4 } from "uuid"
+
 import Swal from 'sweetalert2';
 
 const FormProductos = ({editarProductos, handleClose}) => {
@@ -83,7 +83,14 @@ const FormProductos = ({editarProductos, handleClose}) => {
         value={producto.name} 
         onChange={handleChange}
         name='name'
-        placeholder="Nombre del Producto" />
+        placeholder="Nombre del Producto"
+        minLength={3}  // Longitud mínima del nombre
+        maxLength={50} // Longitud máxima del nombre
+        required      // Campo obligatorio
+        pattern="[A-Za-z0-9_-]+" // Caracteres permitidos
+    title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
+  
+        />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Categoria</Form.Label>
@@ -111,11 +118,18 @@ const FormProductos = ({editarProductos, handleClose}) => {
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Precio</Form.Label>
+        <InputGroup>
+        <InputGroup.Text>$</InputGroup.Text>
         <Form.Control type="number" 
         value={producto.price} 
         onChange={handleChange}
         name='price'
-        placeholder="Precio del Producto" />
+        placeholder="Precio del Producto"
+        required // Campo obligatorio
+      min={0.01} // Valor mínimo del precio
+      step={0.01} // Incremento mínimo del precio
+        />
+        </InputGroup>
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Imagen</Form.Label>

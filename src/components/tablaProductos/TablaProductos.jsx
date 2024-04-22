@@ -25,6 +25,8 @@ const TablaProductos = () => {
       setShow(true)
     }
 
+
+
     const handleAgregarProducto = () => {
       setEditarProductos(null); // Establece editarProductos en null al agregar un producto nuevo
       setShow(true);
@@ -71,7 +73,7 @@ const TablaProductos = () => {
           <td>{producto.image}</td>
           <td>
           <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
-          <Button className='boton-crud' variant="link" onClick={() => deleteProductos(id)}><i class="bi bi-trash"></i></Button>
+          <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
           </td>
         </tr>
         ))}

@@ -30,9 +30,11 @@ const ProductosContext = ({children}) => {
 
     //DELETE PARA ELIMINAR UN PRODCUTO DE LA BASE DE DATOS
     const deleteProductos = async (id) => {
+      console.log(id)
       try {
         await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`)
-        setProductos(productos.filter((producto) => producto.id !== id))
+        
+        
       } catch (error) {
         console.log(error)
       }
