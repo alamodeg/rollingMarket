@@ -20,6 +20,10 @@ export function Navigator() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
+  const user = JSON.parse(localStorage.getItem("user"));
+  console.log(user,"----------ESTE USUARIO ESTA EN EL NAVBAR----------");
+
 
   const navigate = useNavigate();
 
@@ -40,7 +44,7 @@ export function Navigator() {
 
             <div className='ms-auto d-flex align-items-center'>
               <div className='text-center'>
-                {/* {user ? `Bienvenido ${user.nombre}` : <div>!No estas Logeado!</div>} */}
+                {user ? `Bienvenido ${user.name}` : <div>!No estas Logeado!</div>}
               </div>
             </div>
 

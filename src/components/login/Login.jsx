@@ -17,7 +17,6 @@ const Login = ({ handleClose }) => {
 
   const { loginUsuario, usuarioLogueado } = useContext(UsersProvider);
 
-  console.log(usuarioLogueado, "usuarios en el login");
 
   const navigate = useNavigate();
 
@@ -38,7 +37,8 @@ const Login = ({ handleClose }) => {
         rol: usuarioLogueado.rol,
       };
 
-      localStorage.setItem("user", JSON.stringify(usuario));
+      localStorage.setItem("user", JSON.stringify(user));
+
       
       handleClose();
     } 
