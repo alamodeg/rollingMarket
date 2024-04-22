@@ -15,11 +15,13 @@ const TablaProductos = () => {
         <h2>El local no tiene ningún producto para mostrar</h2>
       ) : (
         <>
-          <Table>
+          <Table striped bordered hover variant="dark">
             <thead>
               <tr>
-                <th>ID</th>
+                {/* <th>ID</th> */}
                 <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Categoria</th>
                 <th>Precio</th>
                 <th>Imagen</th>
                 <th>Acciones</th>
@@ -28,8 +30,10 @@ const TablaProductos = () => {
             <tbody>
               {productos.map(producto => (
                 <tr key={producto.id}>
-                  <td>{producto.id}</td>
+                  {/* <td>{producto.id}</td> */}
                   <td>{producto.name}</td>
+                  <td>{producto.description}</td>
+                  <td>{producto.category}</td>
                   <td>{producto.price}</td>
                   <td><img src={producto.image} style={{ width: '100px', height: '100px' }} /></td>
                   <td>

@@ -15,6 +15,7 @@ function FormularioProductos() {
       setProducto({
         id: uuidv4(),
         name: "",
+        category: "",
         price: "",
         image: ""
       });
@@ -27,6 +28,7 @@ function FormularioProductos() {
   const [producto, setProducto] = useState({
     id: uuidv4(),
     name: "",
+    category: "",
     price: "",
     image: ""
   });
@@ -48,12 +50,12 @@ function FormularioProductos() {
     setProducto({
       id: uuidv4(),
       name: "",
+      category: "",
       price: "",
       image: ""
     });
 
   }
-
 
   return (
     <>
@@ -74,7 +76,22 @@ function FormularioProductos() {
                 value={producto.name}
                 onChange= { handleChange } 
                 name="name" 
-                placeholder= "Juan Perez" />
+                placeholder= "Tu Producto" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Descripcion</Form.Label>
+                <Form.Control type="text"
+                value={producto.description}
+                onChange= { handleChange } 
+                name="description"/>
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Categoria</Form.Label>
+                <Form.Control type="string"
+                value={producto.category} 
+                onChange= { handleChange }
+                name="category" 
+                placeholder = "Herramientas" />
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Precio</Form.Label>
@@ -102,7 +119,6 @@ function FormularioProductos() {
           </Button>
         </Modal.Footer>
       </Modal>
-
 
     </>
   );
