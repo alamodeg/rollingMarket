@@ -34,7 +34,9 @@ export function Navigator() {
 
       <Navbar expand="lg" className="bg-body-secondary p-2">
         <Container fluid>
-          <Navbar.Brand href="/"><Image src={logo3} width={65} height={65} roundedCircle alt="logo_Grupo" /></Navbar.Brand>
+          <Navbar.Brand href="/">
+            <Image src={logo3} width={65} height={65} roundedCircle alt="logo_Grupo" />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav variant='underline'>
@@ -42,29 +44,16 @@ export function Navigator() {
               <Nav.Link href="/quienesSomos">Quienes Somos</Nav.Link>
             </Nav>
 
-            <div className='ms-auto d-flex align-items-center'>
-              <div className='text-center'>
-                {user ? `Bienvenido ${user.name}` : <div>!No estas Logeado!</div>}
-              </div>
-            </div>
-
-
-            {/* NAVBAR VIEJO QUITAR */}
-            {/* <Nav className='p-2 ms-auto' variant='underline'>
-              <Button className='p-2 ms-auto' variant="success" onClick={handleShow}>Iniciar Sesión</Button>
-            </Nav> */}
-            {/* FIN DEL NAVBAR VIEJO A QUITAR */}
-
             <Form className="ms-auto">
-              <Nav>
+              <Nav className="d-flex align-items-center">
                 {user ? (
                   user.rol === 'admin' ? (
                     <Nav.Link onClick={() => navigate("/admin")}>
-                      Administrador
+                      <Button className='p-2 ms-auto'>Panel Administrador</Button>
                     </Nav.Link>
                   ) : (
-                    <Nav.Link onClick={() => navigate("/user-menu")}>
-                      Usuario
+                    <Nav.Link onClick={() => navigate("/mainpage")}>
+                      <Button className='p-2 ms-auto'>Panel Usuario</Button>
                     </Nav.Link>
                   )
                 ) : (
@@ -73,20 +62,19 @@ export function Navigator() {
                   </Button>
                 )}
                 {user ? (
-                  <Button variant="danger" onClick={() => logOut()}>
+                  <Button className='p-2 ms-auto botonCerrarSesion' size="sm" variant="danger" onClick={() => logOut()}>
                     Cerrar Sesión
                   </Button>
                 ) : null}
               </Nav>
             </Form>
-
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
-          <Login handleClose={handleClose}  handleShow={handleShow}/>
+          <Login handleClose={handleClose} handleShow={handleShow} />
         </Modal.Body>
       </Modal>
     </>
