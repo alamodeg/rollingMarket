@@ -19,7 +19,7 @@ export function Rutas() {
           <Route path='/login' element={<Navigate to="/admin" />} />
           <Route path='/' element={<Navigate to="/admin" />} />
           <Route path='/admin' element={<TablaProductos />} />
-          <Route path='/mainpage' element={<TablaProductos />} />    {/* REEMPLAZAR POR COMPONENTE USUARIO*/}
+          <Route path='/mainpage' element={<TablaProductos />} />    {/* REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE*/}
           <Route path="*" element={<Page404 />} />
         </Routes>
       );
@@ -30,8 +30,8 @@ export function Rutas() {
           <Route path='/quienesSomos' element={<AboutUsPage />} />
           <Route path='/login' element={<Navigate to="/mainpage" />} />
           <Route path='/' element={<Navigate to="/mainpage" />} />
-          <Route path='/admin' element={<TablaProductos />} />
-          <Route path='/mainpage' element={<TablaProductos />} />   {/* REEMPLAZAR POR COMPONENTE USUARIO*/}
+          <Route path='/admin' element={<Page404 />} />
+          <Route path='/mainpage' element={<TablaProductos />} />   {/* REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE*/}
           <Route path="*" element={<Page404 />} />
         </Routes>
       );
