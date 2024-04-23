@@ -53,9 +53,3 @@ transition: all 0.4s;
     align-items: center;
     height: 100%;
   }
-
-  .imagenRegistro {
-    width: 80%; 
-    max-width: 300px;
-    margin-top: 40px;
-  }

@@ -9,7 +9,7 @@ export function ConsultaYMaps () {
     <Row>
       <Col md={6}>
         <div className='p-2 mapsYForm'>
-          <iframe className='' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14240.187713396721!2d-65.21420511645508!3d-26.838459654448318!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419!2sar!4v1711827232447!5m2!1ses-419!2sar" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe className='' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14240.187713396721!2d-65.21420511645508!3d-26.838459654448318!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419!2sar!4v1711827232447!5m2!1ses-419!2sar" width="600" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </Col>
 

@@ -1,23 +1,19 @@
-import Footer from './components/footer/Footer'
-import { Navigator } from './components/navBar/Navigator'
-
-import TablaProductos from './components/tablaProductos/TablaProductos'
-import TablaUsuarios from './components/tablaUsuarios/TablaUsuarios'
-import ProductosContext from './context/ProductosContext'
-import FormProductos from './components/formProductos/FormProductos'
-import Admin from './components/admin/Admin'
+import { useState } from 'react'
+import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css'
+import Footer from "./components/footer/Footer";
+import { Navigator } from './components/navBar/Navigator';
 
 function App() {
 
 
   return (
     <>
-    <ProductosContext>
-      <Navigator/>
-      <Admin/>
-      <Footer/>
-    </ProductosContext>
 
+      <Navigator/>
+
+    
+    <Footer/>
     </>
   )
 }
