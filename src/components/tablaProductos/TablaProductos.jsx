@@ -5,6 +5,7 @@ import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
 import { ResponsiveContainer } from 'recharts';
+import DropdownCategoria from '../formProductos/DropwdownCategoria';
 
 
 
@@ -37,6 +38,7 @@ const TablaProductos = () => {
   return (
 
     <>
+    <div> <DropdownCategoria/> </div>
     <div className='boton-agregar-producto-padre'>
     <h2 className=''>Administar Productos</h2>
       <Button className='boton-agregar-producto' variant='link' onClick={handleAgregarProducto}>
