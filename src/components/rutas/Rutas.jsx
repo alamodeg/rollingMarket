@@ -4,6 +4,7 @@ import { Contact } from '../../page/contacto/Contact';
 import AboutUsPage from '../../page/aboutUs/AboutUsPage';
 import LoginPage from '../../page/login/LoginPage';
 import Page404 from '../../page/404/Page404';
+import Admin from '../../components/admin/Admin'; 
 
 
 
@@ -19,9 +20,9 @@ export function Rutas() {
         <Route path ='/quienesSomos' element={<AboutUsPage></AboutUsPage>}></Route>
         <Route path ='/login' element={<LoginPage></LoginPage>}></Route>
         <Route path ='/' element={<LoginPage></LoginPage>}></Route>
-        {/* {user && user.rol === 'admin'  ? (
-           <Route path="/admin" element={<Admin />} />
-        ) : null} */}
+        {user && user.rol === 'admin'  ? (
+           <Route path="/admin" element={<Admin></Admin>} />
+        ) : null}
         <Route path="*" element={<Page404></Page404>} />
       </Routes>
     </>

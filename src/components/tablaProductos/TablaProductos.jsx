@@ -99,4 +99,4 @@ const TablaProductos = () => {
   )
 }
 
-export default TablaProductos
+export default TablaProductos;

@@ -11,7 +11,7 @@ const ProductosContext = ({children}) => {
   
     const obtenerProductos = async () => {
       try {
-        const response = await axios.get("https://rollingmarketbe1.onrender.com/productos")
+        const response = await axios.get("https://rollingmarketbe-1.onrender.com/productos")
         setProductos(response.data)
       } catch (error) {
         console.error(error)
@@ -21,7 +21,7 @@ const ProductosContext = ({children}) => {
     //POST PARA ALIMENTAR LA BASE DE DATO
     const addProducto = async (producto) => {
       try {
-        const response = await axios.post("https://rollingmarketbe1.onrender.com/product", producto)
+        const response = await axios.post("https://rollingmarketbe-1.onrender.com/product", producto)
         setProductos([...productos, response.data])
       } catch (error) {
         console.log(error)
@@ -32,7 +32,7 @@ const ProductosContext = ({children}) => {
     const deleteProductos = async (id) => {
       console.log(id)
       try {
-        await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`)
+        await axios.delete(`https://rollingmarketbe-1.onrender.com/producto/delete/${id}`)
         setProductos(productos.filter(producto => producto._id !== id));
       } catch (error) {
         console.log(error)
@@ -43,7 +43,7 @@ const ProductosContext = ({children}) => {
     const updateProductos = async (producto) => {
       console.log(producto, "productos desde put")
       try {
-        await axios.put(`https://rollingmarketbe1.onrender.com/producto/update/${producto._id}`, producto)
+        await axios.put(`https://rollingmarketbe-1.onrender.com/producto/update/${producto._id}`, producto)
         await obtenerProductos()
       } catch (error) {
         console.log(error)
