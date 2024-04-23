@@ -13,6 +13,10 @@ const TablaProductos = () => {
     const {productos, deleteProductos} = useContext(ProductsProvider)
     const [editarProductos, setEditarProductos] = useState(null)
     const [show, setShow] = useState(false);
+    const formatDate = (dateString) => {
+      const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+      return new Date(dateString).toLocaleDateString(undefined, options);
+    };
 
     const handleClose = () => setShow(false);
     
@@ -56,9 +60,9 @@ const TablaProductos = () => {
           <th>Descripcion</th>
           <th>Stock</th>
           <th>Precio</th>
-          <th className='imagen'>Fecha Ultima Modificacion</th>
+          <th className='imagen'>Fecha ultima Modificacion</th>
           <th className='imagen'>Imagen</th>
-          <th>Crud</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -69,7 +73,7 @@ const TablaProductos = () => {
           <td>{producto.description}</td>
           <td>{producto.stock}</td>
           <td>{producto.price}</td>
-          <td>{producto.fecha}</td>
+          <td>{formatDate(producto.updatedAt)}</td>
           <td>{producto.image}</td>
           <td>
           <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
@@ -82,7 +86,7 @@ const TablaProductos = () => {
     </Table>
     </ResponsiveContainer>
     )}
-<Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{editarProductos ? 'Editar Producto' : 'Agregar Producto'}</Modal.Title>
         </Modal.Header>
