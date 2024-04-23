@@ -20,10 +20,23 @@ export function Register(props) {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
+    // Validar que el nombre y apellido contengan solo letras
+    const nameRegex = /^[a-zA-Z\s]*$/;
+    if (!nameRegex.test(name)) {
+      console.error('El nombre solo debe contener letras');
+      return;
+    }
+
+    const surnameRegex = /^[a-zA-Z\s]*$/;
+    if (!surnameRegex.test(surname)) {
+      console.error('El apellido solo debe contener letras');
+      return;
+    }
+
     // Validar que las contraseñas coincidan
     if (password !== passwordc) {
       console.error('Las contraseñas no coinciden');
-      return; // Detener el proceso si las contraseñas no coinciden
+      return;
     }
     
     // Crear un objeto con los datos del usuario
