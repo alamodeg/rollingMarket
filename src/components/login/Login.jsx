@@ -16,9 +16,7 @@ const Login = ({handleClose,handleShow}) => {
   const [modalShow, setModalShow] = useState(false);
 
 
-  const { loginUsuario, usuarioLogueado, usuarios } = useContext(UsersProvider);
-  console.log(usuarioLogueado, "ESTE ES UN CLG DE usuarioLogueado ");
-  console.log(usuarios, "ESTE ES UN CLG DE usuarios");
+  const { loginUsuario, usuarioLogueado } = useContext(UsersProvider);
 
   const navigate = useNavigate();
 
@@ -42,10 +40,11 @@ const Login = ({handleClose,handleShow}) => {
     }
   }, [usuarioLogueado]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      loginUsuario({ email, password });
+      await loginUsuario({ email, password });
+      handleClose();
     } catch (error) {
       console.log(error);
       Swal.fire({
@@ -55,10 +54,7 @@ const Login = ({handleClose,handleShow}) => {
         showConfirmButton: false,
         timer: 1500,
       });
-    } finally{
-      handleClose();
     }
-
   };
 
   return (
