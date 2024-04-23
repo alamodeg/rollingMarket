@@ -75,13 +75,13 @@ const Login = ({handleClose,handleShow}) => {
                 </div>
                 <Form.Group className="mb-3" controlId="email">
                   <Form.Label>Ingresá tu email</Form.Label>
-                  <Form.Control name="email" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} maxLength={50} />
+                  <Form.Control name="email" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} maxLength={50} autoComplete="username" />
                   <Form.Text className="text-muted"></Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="password">
                   <Form.Label>Contraseña</Form.Label>
-                  <Form.Control type="password" name="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={25} />
+                  <Form.Control type="password" name="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} maxLength={25} autoComplete="current-password" />
                 </Form.Group>
                 <Button variant="primary" className="botonFormLogin mb-4" type="submit">
                   Ingresar
