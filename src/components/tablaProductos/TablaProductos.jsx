@@ -22,9 +22,6 @@ const TablaProductos = () => {
     const handleClose = () => setShow(false);
     
 
-    const handleShow = () => setShow(true);
-
-
     const handleEdit = (producto) => {
       setEditarProductos(producto)
       setShow(true)
@@ -77,8 +74,8 @@ const TablaProductos = () => {
           <td>{formatDate(producto.updatedAt)}</td>
           <td><img src={producto.image} style={{ width: '100px', height: '100px' }} /></td>
           <td>
-          <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
-          <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
+            <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
+            <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
           </td>
         </tr>
         ))}
