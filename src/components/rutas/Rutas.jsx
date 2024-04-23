@@ -7,6 +7,7 @@ import Page404 from '../../page/404/Page404';
 
 
 
+
 export function Rutas() {
 
   const user = JSON.parse(localStorage.getItem("user"));
