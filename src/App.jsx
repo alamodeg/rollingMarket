@@ -5,6 +5,7 @@ import { Navigator } from './components/navBar/Navigator';
 import { Rutas } from './components/rutas/Rutas.jsx';
 import Footer from "./components/footer/Footer";
 import UsersContext from './context/UsersContext.jsx';
+import ProductosContext from './context/ProductosContext.jsx';
 
 
 
@@ -13,13 +14,17 @@ function App() {
 
   return (
     <>
+
       <UsersContext>
-        <Navigator />
-        <Rutas />
-        <Footer />
+        <ProductosContext>
+          <Navigator />
+          <Rutas />
+          <Footer />
+        </ProductosContext>
       </UsersContext>
+
     </>
   )
 }
 
-export default App
+export default App;
