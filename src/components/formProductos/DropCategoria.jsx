@@ -21,6 +21,12 @@ function DropCategoria() {
         <Dropdown.Item onClick={() => handleCategorySelect('Herramientas')}>
           Herramientas
         </Dropdown.Item>
+        <Dropdown.Item onClick={() => handleCategorySelect('Lacteos')}>
+          Lacteos
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => handleCategorySelect('Limpieza')}>
+          Limpieza
+        </Dropdown.Item>
         <Dropdown.Item onClick={() => handleCategorySelect('Otros')}>
           Otros
         </Dropdown.Item>
