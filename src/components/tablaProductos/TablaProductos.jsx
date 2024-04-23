@@ -41,7 +41,7 @@ const TablaProductos = () => {
     <div> <DropdownCategoria/> </div>
     <div className='boton-agregar-producto-padre'>
     <h2 className=''>Administar Productos</h2>
-      <Button className='boton-agregar-producto' variant='link' onClick={handleAgregarProducto}>
+      <Button className='boton-agregar-producto' onClick={handleAgregarProducto}>
         Agregar Productos
       </Button>
     </div>
