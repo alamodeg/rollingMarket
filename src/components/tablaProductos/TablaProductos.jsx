@@ -5,6 +5,7 @@ import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
 import { ResponsiveContainer } from 'recharts';
+import DropCategoria from '../formProductos/DropCategoria';
 
 
 const TablaProductos = () => {
@@ -36,6 +37,7 @@ const TablaProductos = () => {
   return (
 
     <>
+    <div><DropCategoria/></div>
     <div className='boton-agregar-producto-padre'>
     <h2 className=''>Administar Productos</h2>
       <Button className='boton-agregar-producto' onClick={handleAgregarProducto}>
