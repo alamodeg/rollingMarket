@@ -18,6 +18,16 @@ const ProductosContext = ({children}) => {
       }
     }
 
+    //OBTENER CATEGORIAS
+    const getCategoria = async (category) => {
+      try {
+        const response = await axios.get(`http://localhost:8000/products?category=${category}`);
+        setProductos(response.data);
+      } catch (error) {
+        console.error('Error al obtener productos por categoría:', error);
+      }
+    };
+
     //POST PARA ALIMENTAR LA BASE DE DATO
     const addProducto = async (producto) => {
       try {
@@ -55,7 +65,7 @@ const ProductosContext = ({children}) => {
 
 
   return (
-    <ProductsProvider.Provider value={{productos, addProducto, deleteProductos, updateProductos}}>
+    <ProductsProvider.Provider value={{productos, addProducto, deleteProductos, updateProductos, getCategoria}}>
         {children}
     </ProductsProvider.Provider>
   )
