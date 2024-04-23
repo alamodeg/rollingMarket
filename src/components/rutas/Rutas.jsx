@@ -30,7 +30,7 @@ export function Rutas() {
           <Route path='/quienesSomos' element={<AboutUsPage />} />
           <Route path='/login' element={<Navigate to="/mainpage" />} />
           <Route path='/' element={<Navigate to="/mainpage" />} />
-          <Route path='/admin' element={<Page404 />} />
+          <Route path='/admin' element={<Page404 />} />             {/* REEMPLAZAR POR COMPONENTE HOEM O CORRESPONDIENTE.*/}
           <Route path='/mainpage' element={<TablaProductos />} />   {/* REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE*/}
           <Route path="*" element={<Page404 />} />
         </Routes>

@@ -71,16 +71,17 @@ const UsersContext = ({ children }) => {
   const loginUsuario = async (usuario) => {
     try {
       const response = await axios.post(
-        "https://rollingmarketbe-1.onrender.com/login/",
+        "http://localhost:4000/login/",
         usuario
       );
+      console.log(response);
       const token = response.data.token;
       localStorage.setItem("token", token);
       const decoded = jwtDecode(token);
 
       setUsuarioLogueado(decoded);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data.message);
     }
   };
 
