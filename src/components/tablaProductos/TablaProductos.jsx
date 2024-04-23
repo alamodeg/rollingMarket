@@ -42,7 +42,7 @@ const TablaProductos = () => {
     <div className='boton-agregar-producto-padre'>
     <h2 className=''>Administar Productos</h2>
       <Button className='boton-agregar-producto' onClick={handleAgregarProducto}>
-        Agregar Productos
+        Agregar Producto
       </Button>
     </div>
     
