@@ -6,7 +6,6 @@ import Swal from 'sweetalert2';
 
 const FormProductos = ({editarProductos, handleClose}) => {
 
-  console.log(editarProductos, "ediatr productos")
   const {addProducto, updateProductos} = useContext(ProductsProvider)
 
   const [producto, setProducto] = useState({
@@ -26,6 +25,8 @@ const FormProductos = ({editarProductos, handleClose}) => {
     })
   }
 
+
+  
 
   const handleSubmit = (e) =>{
     e.preventDefault()
@@ -84,32 +85,35 @@ const FormProductos = ({editarProductos, handleClose}) => {
         onChange={handleChange}
         name='name'
         placeholder="Nombre del Producto"
-        minLength={3}  // Longitud mínima del nombre
-        maxLength={50} // Longitud máxima del nombre
+        minLength={2}  // Longitud mínima del nombre
+        maxLength={100} // Longitud máxima del nombre
         required      // Campo obligatorio
         pattern="[A-Za-z0-9_]+" // Caracteres permitidos
         title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
         />
       </Form.Group>
-      <Form.Group className="mb-3" >
+      <Form.Group className="mb-3">
         <Form.Label>Categoria</Form.Label>
-        <Form.Control type="text" 
-        value={producto.category} 
-        onChange={handleChange}
-        name='category'
-        placeholder="Categoria del Producto"
-        minLength={3}  // Longitud mínima del nombre
-        maxLength={50} // Longitud máxima del nombre
-        required      // Campo obligatorio
-        pattern="[A-Za-z0-9_]+" // Caracteres permitidos
-        title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
-        />
+        <Form.Select
+          value={producto.category}
+          onChange={handleChange}
+          name="category"
+          required
+          aria-label="Selecciona la categoría del producto">
+          <option value="">Selecciona una categoría</option>
+          <option value="Bebidas">Bebidas</option>
+          <option value="Herramientas">Herramientas</option>
+          <option value="Limpieza">Limpieza</option>
+          <option value="Lacteos">Lácteos</option>
+          <option value="Otros">Otros</option>
+        </Form.Select>
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Descripcion</Form.Label>
         <Form.Control type="text" 
         value={producto.description} 
         onChange={handleChange}
+        required
         name='description'
         placeholder="Descripcion del Producto"
         minLength={3}  // Longitud mínima del nombre
@@ -125,13 +129,8 @@ const FormProductos = ({editarProductos, handleClose}) => {
         value={producto.stock} 
         onChange={handleChange}
         name='stock'
-        placeholder="Stock del Producto"
-        minLength={3}  // Longitud mínima del nombre
-        maxLength={50} // Longitud máxima del nombre
-        required      // Campo obligatorio
-        pattern="[A-Za-z0-9_-]+" // Caracteres permitidos
-        title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
-        />
+        required
+        placeholder="Stock del Producto" />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Precio</Form.Label>

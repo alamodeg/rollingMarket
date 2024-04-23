@@ -22,9 +22,6 @@ const TablaProductos = () => {
     const handleClose = () => setShow(false);
     
 
-    const handleShow = () => setShow(true);
-
-
     const handleEdit = (producto) => {
       setEditarProductos(producto)
       setShow(true)
@@ -42,8 +39,8 @@ const TablaProductos = () => {
     <>
     <div className='boton-agregar-producto-padre'>
     <h2 className='titulo-admin'>Administar Productos</h2>
-      <Button className='boton-agregar-producto' variant='link' onClick={handleAgregarProducto}>
-        Agregar Productos
+      <Button className='boton-agregar-producto' onClick={handleAgregarProducto}>
+        Agregar Producto
       </Button>
     </div>
     
@@ -77,8 +74,8 @@ const TablaProductos = () => {
           <td>{formatDate(producto.updatedAt)}</td>
           <td><img src={producto.image} style={{ width: '70px', height: '60px' }} /></td>
           <td>
-          <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
-          <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
+            <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
+            <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
           </td>
         </tr>
         ))}
