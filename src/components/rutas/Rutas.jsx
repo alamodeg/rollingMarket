@@ -10,16 +10,43 @@ import TablaProductos from '../tablaProductos/TablaProductos';
 export function Rutas() {
   const user = JSON.parse(localStorage.getItem("user"));
 
-  return (
-    <>
+  if (user) {
+    if (user.rol === 'admin') {
+      return (
+        <Routes>
+          <Route path='/contacto' element={<Contact />} />
+          <Route path='/quienesSomos' element={<AboutUsPage />} />
+          <Route path='/login' element={<Navigate to="/admin" />} />
+          <Route path='/' element={<Navigate to="/admin" />} />
+          <Route path='/admin' element={<TablaProductos />} />
+          <Route path='/mainpage' element={<TablaProductos />} />    {/* REEMPLAZAR POR COMPONENTE USUARIO*/}
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      );
+    } else if (user.rol === 'usuario') {
+      return (
+        <Routes>
+          <Route path='/contacto' element={<Contact />} />
+          <Route path='/quienesSomos' element={<AboutUsPage />} />
+          <Route path='/login' element={<Navigate to="/mainpage" />} />
+          <Route path='/' element={<Navigate to="/mainpage" />} />
+          <Route path='/admin' element={<TablaProductos />} />
+          <Route path='/mainpage' element={<TablaProductos />} />   {/* REEMPLAZAR POR COMPONENTE USUARIO*/}
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      );
+    }
+  } else {
+    return (
       <Routes>
-
         <Route path='/contacto' element={<Contact />} />
         <Route path='/quienesSomos' element={<AboutUsPage />} />
-        <Route path='/' element={user ? (user.rol === 'admin' ? <TablaProductos /> : <Navigate to="/mainpage" />) : <LoginPage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/' element={<LoginPage />} />
+        <Route path='/admin' element={<Page404 />} />
+        <Route path='/mainpage' element={<Page404 />} /> 
         <Route path="*" element={<Page404 />} />
-
       </Routes>
-    </>
-  );
+    );
+  }
 }
