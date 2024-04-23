@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
-import { ResponsiveContainer } from 'recharts';
+
 
 
 
@@ -41,7 +41,7 @@ const TablaProductos = () => {
 
     <>
     <div className='boton-agregar-producto-padre'>
-    <h2 className=''>Administar Productos</h2>
+    <h2 className='titulo-admin'>Administar Productos</h2>
       <Button className='boton-agregar-producto' variant='link' onClick={handleAgregarProducto}>
         Agregar Productos
       </Button>
@@ -50,12 +50,12 @@ const TablaProductos = () => {
     {productos.length === 0 ? (
       "no hay productos"
     ) : (
-      <ResponsiveContainer >
+      <Container >
 
       <Table className='tabla table-responsive' striped bordered hover>
         
-      <thead className='subtitulo-tabla'>
-        <tr>
+      <thead>
+        <tr className='subtitulo-tabla'>
           <th >Nombre del Producto</th>
           <th>Categoria</th>
           <th>Descripcion</th>
@@ -68,14 +68,14 @@ const TablaProductos = () => {
       </thead>
       <tbody>
         {productos.map((producto) => (
-          <tr>
+          <tr className='contenido-tabla'>
           <td>{producto.name}</td>
           <td>{producto.category}</td>
           <td>{producto.description}</td>
           <td>{producto.stock}</td>
           <td>{producto.price}</td>
           <td>{formatDate(producto.updatedAt)}</td>
-          <td><img src={producto.image} style={{ width: '100px', height: '100px' }} /></td>
+          <td><img src={producto.image} style={{ width: '70px', height: '60px' }} /></td>
           <td>
           <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
           <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
@@ -85,7 +85,7 @@ const TablaProductos = () => {
       </tbody>
       
     </Table>
-    </ResponsiveContainer>
+    </Container>
     )}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

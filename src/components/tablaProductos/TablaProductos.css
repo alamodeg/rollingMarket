@@ -19,9 +19,20 @@
 
 .subtitulo-tabla{
     text-align: center;
-    font-size: 25px;
+    font-size: 18px ;
+    
+}
+.contenido-tabla{
+
+    font-size: 18px;
+    text-align: center;
 }
 
+.titulo-admin{
+    background-color:#FF553B;
+    padding: 10px;
+    color: white;
+}
 .imagen{
     width: 15px;
     text-align: center;
@@ -36,7 +47,7 @@ tr{
     display: flex;
     justify-content:flex-end;
     margin: 15px 15px 0px 0px;
-    
+    text-decoration: none;
 }
 
 .boton-agregar-producto{
@@ -56,6 +67,7 @@ tr{
     overflow: hidden;
     color: white !important;
     font-size: 25px !important;
+
 }
 .boton-agregar-producto::before{
     content: "";

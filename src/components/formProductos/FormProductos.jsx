@@ -87,9 +87,8 @@ const FormProductos = ({editarProductos, handleClose}) => {
         minLength={3}  // Longitud mínima del nombre
         maxLength={50} // Longitud máxima del nombre
         required      // Campo obligatorio
-        pattern="[A-Za-z0-9_-]+" // Caracteres permitidos
-    title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
-  
+        pattern="[A-Za-z0-9_]+" // Caracteres permitidos
+        title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
         />
       </Form.Group>
       <Form.Group className="mb-3" >
@@ -98,7 +97,13 @@ const FormProductos = ({editarProductos, handleClose}) => {
         value={producto.category} 
         onChange={handleChange}
         name='category'
-        placeholder="Categoria del Producto" />
+        placeholder="Categoria del Producto"
+        minLength={3}  // Longitud mínima del nombre
+        maxLength={50} // Longitud máxima del nombre
+        required      // Campo obligatorio
+        pattern="[A-Za-z0-9_]+" // Caracteres permitidos
+        title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
+        />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Descripcion</Form.Label>
@@ -106,7 +111,13 @@ const FormProductos = ({editarProductos, handleClose}) => {
         value={producto.description} 
         onChange={handleChange}
         name='description'
-        placeholder="Descripcion del Producto" />
+        placeholder="Descripcion del Producto"
+        minLength={3}  // Longitud mínima del nombre
+        maxLength={50} // Longitud máxima del nombre
+        required      // Campo obligatorio
+        pattern="[A-Za-z0-9_]+" // Caracteres permitidos
+        title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
+        />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Stock</Form.Label>
@@ -114,7 +125,13 @@ const FormProductos = ({editarProductos, handleClose}) => {
         value={producto.stock} 
         onChange={handleChange}
         name='stock'
-        placeholder="Stock del Producto" />
+        placeholder="Stock del Producto"
+        minLength={3}  // Longitud mínima del nombre
+        maxLength={50} // Longitud máxima del nombre
+        required      // Campo obligatorio
+        pattern="[A-Za-z0-9_-]+" // Caracteres permitidos
+        title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
+        />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Precio</Form.Label>
@@ -126,9 +143,9 @@ const FormProductos = ({editarProductos, handleClose}) => {
         name='price'
         placeholder="Precio del Producto"
         required // Campo obligatorio
-      min={0.01} // Valor mínimo del precio
-      step={0.01} // Incremento mínimo del precio
-        />
+      min={0} // Valor mínimo del precio
+      step={1} // Incremento mínimo del precio
+              />
         </InputGroup>
       </Form.Group>
       <Form.Group className="mb-3" >
