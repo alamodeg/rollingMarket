@@ -21,7 +21,7 @@ const ProductosContext = ({children}) => {
     //POST PARA ALIMENTAR LA BASE DE DATO
     const addProducto = async (producto) => {
       try {
-        const response = await axios.post("https://rollingmarketbe-1.onrender.com/product", producto)
+        const response = await axios.post("https://rollingmarketbe-1.onrender.com/productos", producto)
         setProductos([...productos, response.data])
       } catch (error) {
         console.log(error)
