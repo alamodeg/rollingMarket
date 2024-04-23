@@ -19,6 +19,12 @@ export function Register(props) {
   // Función para manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    // Validar que las contraseñas coincidan
+    if (password !== passwordc) {
+      console.error('Las contraseñas no coinciden');
+      return; // Detener el proceso si las contraseñas no coinciden
+    }
     
     // Crear un objeto con los datos del usuario
     const newUser = {
@@ -97,6 +103,6 @@ export function Register(props) {
           <Button className="botonFormLogin" onClick={props.onHide}>Cancelar</Button>
         </Modal.Footer>
       </Modal>
-    </>
-  );
+    </>
+  );
 }
