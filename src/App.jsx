@@ -9,6 +9,8 @@ import UsersContext from './context/UsersContext.jsx';
 
 
 function App() {
+
+
   return (
     <>
       <UsersContext>
@@ -17,7 +19,7 @@ function App() {
         <Footer />
       </UsersContext>
     </>
-  );
+  )
 }
 
 export default App
