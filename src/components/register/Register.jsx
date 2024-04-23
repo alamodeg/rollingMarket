@@ -4,10 +4,11 @@ import { Button, Form, Modal } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja.png';
 import { UsersProvider } from "../../context/UsersContext";
+import Swal from 'sweetalert2';
 
 export function Register(props) {
-  // Obtener la función addUser del contexto de usuario
-  const { addUser } = useContext(UsersProvider);
+  // Obtener la función addUser y la lista de usuarios del contexto de usuario
+  const { addUser, usuarios } = useContext(UsersProvider);
 
   // Declaración de estados para almacenar los valores del formulario
   const [name, setName] = useState('');
@@ -23,19 +24,43 @@ export function Register(props) {
     // Validar que el nombre y apellido contengan solo letras
     const nameRegex = /^[a-zA-Z\s]*$/;
     if (!nameRegex.test(name)) {
-      console.error('El nombre solo debe contener letras');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'El nombre solo debe contener letras',
+      });
       return;
     }
 
     const surnameRegex = /^[a-zA-Z\s]*$/;
     if (!surnameRegex.test(surname)) {
-      console.error('El apellido solo debe contener letras');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'El apellido solo debe contener letras',
+      });
       return;
     }
 
     // Validar que las contraseñas coincidan
     if (password !== passwordc) {
-      console.error('Las contraseñas no coinciden');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Las contraseñas no coinciden',
+      });
+      return;
+    }
+
+    // Validar si el correo electrónico ya está registrado
+    const emailExists = usuarios.some(user => user.email === email);
+    if (emailExists) {
+      console.error('El mail ingresado ya está registrado');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'El mail ingresado ya está registrado',
+      });
       return;
     }
     
@@ -50,9 +75,19 @@ export function Register(props) {
     try {
       // Llamar a la función addUser del contexto de usuario para agregar un nuevo usuario
       await addUser(newUser);
+      Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'Usuario registrado exitosamente',
+      });
       console.log('Usuario registrado exitosamente');
       // Aquí puedes redirigir al usuario a otra página o mostrar un mensaje de éxito
     } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Error al registrar el usuario',
+      });
       console.error('Error al registrar el usuario:', error);
       // Aquí puedes mostrar un mensaje de error al usuario si ocurrió algún problema
     }
