@@ -13,6 +13,7 @@ const TablaProductos = () => {
     const {productos, deleteProductos} = useContext(ProductsProvider)
     const [editarProductos, setEditarProductos] = useState(null)
     const [show, setShow] = useState(false);
+    //formateo de hora
     const formatDate = (dateString) => {
       const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
       return new Date(dateString).toLocaleDateString(undefined, options);
@@ -74,7 +75,7 @@ const TablaProductos = () => {
           <td>{producto.stock}</td>
           <td>{producto.price}</td>
           <td>{formatDate(producto.updatedAt)}</td>
-          <td>{producto.image}</td>
+          <td><img src={producto.image} style={{ width: '100px', height: '100px' }} /></td>
           <td>
           <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
           <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
