@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../register/Register.css';
 import { Button, Form, Modal } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import rollingMarketNaranja from '../../assets/img/imgLogin/rollingMarketNaranja.png';
 import { UsersProvider } from "../../context/UsersContext";
-import { useContext } from 'react';
 
 export function Register(props) {
+  // Obtener la función addUser del contexto de usuario
+  const { addUser } = useContext(UsersProvider);
+
   // Declaración de estados para almacenar los valores del formulario
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
@@ -15,14 +17,26 @@ export function Register(props) {
   const [passwordc, setPasswordc] = useState('');
 
   // Función para manejar el envío del formulario
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
-    // Aquí puedes utilizar los valores de las constantes para lo que necesites, como enviar una solicitud al servidor, por ejemplo.
-    console.log('Nombre:', name);
-    console.log('Apellido:', surname);
-    console.log('Email:', email);
-    console.log('Contraseña:', password);
-    console.log('Confirmación de contraseña:', passwordc);
+    
+    // Crear un objeto con los datos del usuario
+    const newUser = {
+      name: name,
+      surname: surname,
+      email: email,
+      password: password,
+    };
+
+    try {
+      // Llamar a la función addUser del contexto de usuario para agregar un nuevo usuario
+      await addUser(newUser);
+      console.log('Usuario registrado exitosamente');
+      // Aquí puedes redirigir al usuario a otra página o mostrar un mensaje de éxito
+    } catch (error) {
+      console.error('Error al registrar el usuario:', error);
+      // Aquí puedes mostrar un mensaje de error al usuario si ocurrió algún problema
+    }
   };
 
   return (
@@ -42,7 +56,7 @@ export function Register(props) {
           <div className="d-flex justify-content-center">
             <img src={rollingMarketNaranja} alt="Imagen de registro" className="imagenRegistro" />
           </div>
-          <Form className="d-flex d-flex flex-column">
+          <Form className="d-flex d-flex flex-column" onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicName">
               <Form.Label>Ingresá tu nombre</Form.Label>
               <Form.Control type="text" placeholder="Nombre" maxLength={30} onChange={(e) => setName(e.target.value)} />
@@ -83,6 +97,6 @@ export function Register(props) {
           <Button className="botonFormLogin" onClick={props.onHide}>Cancelar</Button>
         </Modal.Footer>
       </Modal>
-    </>
-  );
+    </>
+  );
 }
