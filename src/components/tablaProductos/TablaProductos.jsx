@@ -45,7 +45,7 @@ const TablaProductos = () => {
     </div>
     
     {productos.length === 0 ? (
-      "no hay productos"
+      <h1 className="text-center">No hay productos para mostrar</h1>
     ) : (
       <Container >
 

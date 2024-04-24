@@ -12,7 +12,7 @@ const UsersContext = ({ children }) => {
   const getUsers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/usuarios"
+        "https://rollingmarketbe-1.onrender.com/usuarios"
       );
       setUsuarios(response.data);
     } catch (error) {
@@ -22,8 +22,8 @@ const UsersContext = ({ children }) => {
 
   const addUser = async (usuario) => {
     try {
-      await axios.post("http://localhost:4000/usuario", usuario);
-      await getUsers(); //actualizar la lista de usuarios
+      await axios.post("https://rollingmarketbe-1.onrender.com/usuario", usuario);
+      await getUsers();
     } catch (error) {
       console.log(error);
     }
@@ -31,7 +31,7 @@ const UsersContext = ({ children }) => {
 
   const deleteUsuario = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/usuario/delete/${id}`);
+      await axios.delete(`https://rollingmarketbe-1.onrender.com/usuario/delete/${id}`);
       await getUsers();
     } catch (error) {
       console.log(error);
@@ -39,7 +39,6 @@ const UsersContext = ({ children }) => {
   };
 
   const editUsuario = async (usuario) => {
-    console.log(usuario, "editUsuario");
     const token = localStorage.getItem("token");
 
     if (!token) {
@@ -47,8 +46,8 @@ const UsersContext = ({ children }) => {
     }
 
     try {
-      await axios.put(
-        `http://localhost:4000/usuario/update/${usuario.id}`,
+      await axios.put(`
+        https://rollingmarketbe-1.onrender.com/usuario/update/${usuario.id}`,
         usuario,
         {
           headers: {
@@ -71,7 +70,7 @@ const UsersContext = ({ children }) => {
   const loginUsuario = async (usuario) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/login/",
+        "https://rollingmarketbe-1.onrender.com/login/",
         usuario
       );
       const token = response.data.token;
@@ -80,9 +79,10 @@ const UsersContext = ({ children }) => {
 
       setUsuarioLogueado(decoded);
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data.message);
     }
   };
+
 
   useEffect(() => {
     getUsers();
