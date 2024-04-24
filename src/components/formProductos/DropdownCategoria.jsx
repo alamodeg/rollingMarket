@@ -10,8 +10,8 @@ function DropdownCategoria() {
   };
 
   return (
-    <Dropdown className='titulo-admin2' variant='danger' >
-      <Dropdown.Toggle variant="primary" id="dropdown-basic">
+    <Dropdown className='titulo-admin2'>
+      <Dropdown.Toggle  variant="outline-success"  id="dropdown-basic">
         Buscar por Categoría
       </Dropdown.Toggle>
       <Dropdown.Menu>
