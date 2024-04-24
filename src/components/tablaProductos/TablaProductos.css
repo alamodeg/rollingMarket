@@ -41,6 +41,12 @@ h5{
     border-radius: 5px;
     font-size: 50px;
 }
+.titulo-admin2{
+    padding: 10px;
+    color: #FF553B;
+    border-radius: 5px;
+    font-size: 50px;
+}
 /*TITULO ADMINISTRAR*/
 .imagen{
     width: 15px;

@@ -56,11 +56,11 @@ const TablaProductos = () => {
       <thead>
         <tr className='subtitulo-tabla'>
           <th>Producto</th>
-          <th className='columna-categoria'>Categoria</th>
-          <th>Descripcion</th>
+          <th className='columna-categoria'>Categoría</th>
+          <th>Descripción</th>
           <th>Stock</th>
           <th>Precio</th>
-          <th className='imagen columna-fecha'>Fecha ultima Modificacion</th>
+          <th className='imagen columna-fecha'>Fecha última Modificación</th>
           <th className='imagen columna-imagen'>Imagen</th>
           <th>Acciones</th>
         </tr>
