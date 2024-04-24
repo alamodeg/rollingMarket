@@ -15,7 +15,7 @@ const ProductosContext = ({children}) => {
         const response = await axios.get("https://rollingmarketbe1.onrender.com/productos"
         ,{
           headers: {
-            Authorization:`${token}`,
+            authorization:`${token}`,
           }
         });
 
@@ -32,7 +32,7 @@ const ProductosContext = ({children}) => {
         const response = await axios.post("https://rollingmarketbe1.onrender.com/product", producto
         ,{
           headers: {
-            Authorization:`${token}`,
+            authorization:`${token}`,
           }
         });
         
@@ -49,7 +49,7 @@ const ProductosContext = ({children}) => {
       
         ,{
           headers: {
-            Authorization:`${token}`,
+            authorization:`${token}`,
           }
         });
         setProductos(response.data);
@@ -77,7 +77,7 @@ const ProductosContext = ({children}) => {
           await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`
           ,{
             headers: {
-              Authorization:`${token}`,
+              authorization:`${token}`,
             }
           });
           setProductos(productos.filter(producto => producto._id !== id));
@@ -96,7 +96,7 @@ const ProductosContext = ({children}) => {
         await axios.put(`https://rollingmarketbe1.onrender.com/producto/update/${producto.id}`, producto
         ,{
           headers: {
-            Authorization:`${token}`,
+            authorization:`${token}`,
           }
         });
         await obtenerProductos()
