@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
+import DropdownCategoria from '../formProductos/DropdownCategoria';
 
 
 
@@ -37,7 +38,7 @@ const TablaProductos = () => {
   return (
 
     <>
-    
+    <DropdownCategoria/>
     <h2 className='text-center mt-3 mb-3 titulo-admin2'>Administrar Productos</h2>
     <div className='boton-agregar-producto-padre'>
     </div>
