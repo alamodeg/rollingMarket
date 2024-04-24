@@ -11,7 +11,7 @@ const TablaUsuarios = () => {
   return (
 
     <>
-    <h2 className='titulo-admin'>Administar Usuarios</h2>
+    <h2 className='titulo-admin'>Administrar Usuarios</h2>
     <Container>
       <Table className='tabla' striped bordered hover>
             
