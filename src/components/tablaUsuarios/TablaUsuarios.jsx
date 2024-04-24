@@ -2,7 +2,7 @@ import {Table, Button, Modal, Container} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { UsersProvider } from '../../context/UsersContext';
-import '../' //ELIMINAR LUEGO
+import '../tablaProductos/TablaProductos.css'
 
 
 
@@ -14,12 +14,12 @@ const TablaUsuarios = () => {
   return (
 
     <>
-
-    <Table className='tabla' striped bordered hover>
+    <Container>
+      <Table className='tabla' striped bordered hover>
             
             <thead>
               <tr className='subtitulo-tabla'>
-                <th >Usuario</th>
+                <th>Usuario</th>
                 <th>Apellido</th>
                 <th>Role</th>
                 <th>Email</th>
@@ -41,6 +41,8 @@ const TablaUsuarios = () => {
             </tbody>
             
           </Table>
+
+      </Container>
     
     {usuarios.length === 0 ? (
       <h1 className="text-center">No hay usuarios para mostrar</h1>

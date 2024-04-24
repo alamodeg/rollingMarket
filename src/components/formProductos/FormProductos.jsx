@@ -130,6 +130,10 @@ const FormProductos = ({editarProductos, handleClose}) => {
         onChange={handleChange}
         name='stock'
         required
+        min={0}
+        step={1}
+        max={500}
+        pattern="[0-9]*"
         placeholder="Stock del Producto" />
       </Form.Group>
       <Form.Group className="mb-3" >
@@ -140,6 +144,7 @@ const FormProductos = ({editarProductos, handleClose}) => {
         value={producto.price} 
         onChange={handleChange}
         name='price'
+        pattern="[0-9]*"
         placeholder="Precio del Producto"
         required // Campo obligatorio
       min={0} // Valor mínimo del precio
