@@ -114,6 +114,7 @@ const FormProductos = ({editarProductos, handleClose}) => {
         <Form.Control type="text" 
         value={producto.description} 
         onChange={handleChange}
+        required
         name='description'
         placeholder="Descripcion del Producto" />
       </Form.Group>
@@ -123,6 +124,7 @@ const FormProductos = ({editarProductos, handleClose}) => {
         value={producto.stock} 
         onChange={handleChange}
         name='stock'
+        required
         placeholder="Stock del Producto" />
       </Form.Group>
       <Form.Group className="mb-3" >
