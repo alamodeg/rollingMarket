@@ -117,4 +117,4 @@ const ProductosContext = ({children}) => {
   )
 }
 
-export default ProductosContext
+export default ProductosContext;
