@@ -20,7 +20,7 @@ const UsersContext = ({ children }) => {
         "https://rollingmarketbe-1.onrender.com/usuarios"
         , {
           headers: {
-            Authorization: `${token}`,
+            authorization: `${token}`,
           }
         }
       );
@@ -44,7 +44,7 @@ const UsersContext = ({ children }) => {
       const token = localStorage.getItem("token");
       await axios.delete(`https://rollingmarketbe-1.onrender.com/usuario/delete/${id}`, {
         headers: {
-          Authorization: `${token}`,
+          authorization: `${token}`,
         }
       });
       await getUsers();
@@ -67,7 +67,7 @@ const UsersContext = ({ children }) => {
         usuario,
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            authorization: `${token}`,
           },
         }
       );
