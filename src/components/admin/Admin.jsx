@@ -7,6 +7,7 @@ const Admin = () => {
   return (
     <>
     <TablaProductos />
+    <TablaUsuarios/>
     </>
     
   )

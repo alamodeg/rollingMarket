@@ -32,7 +32,8 @@ const ProductosContext = ({children}) => {
     const deleteProductos = async (id) => {
       console.log(id)
       try {
-        await axios.delete(`https://rollingmarketbe-1.onrender.com/producto/delete/${id}`)
+        await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`)
+        
         setProductos(productos.filter(producto => producto._id !== id));
       } catch (error) {
         console.log(error)
