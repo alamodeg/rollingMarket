@@ -102,7 +102,7 @@ const FormProductos = ({editarProductos, handleClose}) => {
           aria-label="Selecciona la categoría del producto">
           <option value="">Selecciona una categoría</option>
           <option value="Bebidas">Bebidas</option>
-          <option value="Herramientas">Herramientas</option>
+          <option value="Golosinas">Golosinas</option>
           <option value="Limpieza">Limpieza</option>
           <option value="Lacteos">Lácteos</option>
           <option value="Otros">Otros</option>
