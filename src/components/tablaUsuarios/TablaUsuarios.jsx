@@ -4,9 +4,6 @@ import { useContext, useState } from 'react';
 import { UsersProvider } from '../../context/UsersContext';
 import '../tablaProductos/TablaProductos.css'
 
-
-
-
 const TablaUsuarios = () => {
 
     const {usuarios} = useContext(UsersProvider)
@@ -14,6 +11,7 @@ const TablaUsuarios = () => {
   return (
 
     <>
+    <h2 className='titulo-admin'>Administar Usuarios</h2>
     <Container>
       <Table className='tabla' striped bordered hover>
             
@@ -23,6 +21,7 @@ const TablaUsuarios = () => {
                 <th>Apellido</th>
                 <th>Role</th>
                 <th>Email</th>
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
@@ -31,12 +30,14 @@ const TablaUsuarios = () => {
                 <td>Rosameltrozo</td>
                 <td>Admin</td>
                 <td>rosalemo@gmail.com</td>
+                <Button className='boton-crud' variant="link"><i class="bi bi-pencil-square"></i></Button>
               </tr>
               <tr>
                 <td>Jorge</td>
                 <td>Avalos</td>
                 <td>Usuario</td>
                 <td>jorge@mail.com</td>
+                <Button className='boton-crud' variant="link"><i class="bi bi-pencil-square"></i></Button>
               </tr>
             </tbody>
             
