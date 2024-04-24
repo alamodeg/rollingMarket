@@ -37,6 +37,7 @@ const TablaProductos = () => {
   return (
 
     <>
+    
     <h2 className='text-center mt-3 mb-3 titulo-admin2'>Administrar Productos</h2>
     <div className='boton-agregar-producto-padre'>
     </div>

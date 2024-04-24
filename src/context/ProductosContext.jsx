@@ -28,6 +28,15 @@ const ProductosContext = ({children}) => {
       }
     }
 
+    const getCategoria = async (category) => {
+      try {
+        const response = await axios.get(`https://rollingmarketbe1.onrender.com/producto/categoria/${category}`);
+        setProductos(response.data);
+      } catch (error) {
+        console.error('Error al obtener productos por categoría:', error);
+      }
+    };
+
     //DELETE PARA ELIMINAR UN PRODCUTO DE LA BASE DE DATOS
     const deleteProductos = async (id) => {
       try {
@@ -69,7 +78,7 @@ const ProductosContext = ({children}) => {
 
 
   return (
-    <ProductsProvider.Provider value={{productos, addProducto, deleteProductos, updateProductos}}>
+    <ProductsProvider.Provider value={{productos, addProducto, deleteProductos, updateProductos, getCategoria}}>
         {children}
     </ProductsProvider.Provider>
   )
