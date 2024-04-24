@@ -33,6 +33,7 @@ const ProductosContext = ({children}) => {
       console.log(id)
       try {
         await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`)
+        
         setProductos(productos.filter(producto => producto._id !== id));
       } catch (error) {
         console.log(error)

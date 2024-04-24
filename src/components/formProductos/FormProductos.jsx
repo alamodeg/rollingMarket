@@ -9,7 +9,7 @@ const FormProductos = ({editarProductos, handleClose}) => {
   const {addProducto, updateProductos} = useContext(ProductsProvider)
 
   const [producto, setProducto] = useState({
-    _id: editarProductos ? editarProductos._id : (null),
+    id: editarProductos ? editarProductos._id : (null),
     name: editarProductos ? editarProductos.name : "",
     description: editarProductos ? editarProductos.description: "",
     category: editarProductos ? editarProductos.category : "",
@@ -118,7 +118,7 @@ const FormProductos = ({editarProductos, handleClose}) => {
         placeholder="Descripcion del Producto"
         minLength={3}  // Longitud mínima del nombre
         maxLength={50} // Longitud máxima del nombre
-        required      // Campo obligatorio
+             // Campo obligatorio
         pattern="[A-Za-z0-9_]+" // Caracteres permitidos
         title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
         />
