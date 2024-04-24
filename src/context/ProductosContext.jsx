@@ -25,7 +25,7 @@ const ProductosContext = ({children}) => {
       }
     }
 
-    //POST PARA ALIMENTAR LA BASE DE DATO
+    //POST PARA ALIMENTAR LA BASE DE DAT
     const addProducto = async (producto) => {
       try {
         const token = localStorage.getItem("token");
