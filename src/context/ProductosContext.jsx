@@ -1,5 +1,6 @@
 import { useEffect, useState, createContext } from 'react'
 import axios from "axios"
+import Swal from 'sweetalert2';
 
 export const ProductsProvider = createContext()
 
@@ -29,14 +30,26 @@ const ProductosContext = ({children}) => {
 
     //DELETE PARA ELIMINAR UN PRODCUTO DE LA BASE DE DATOS
     const deleteProductos = async (id) => {
-      console.log(id)
       try {
-        await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`)
-        
-        setProductos(productos.filter(producto => producto._id !== id));
-        
+        const confirmacion = await Swal.fire({
+          title: '¿Estás seguro que desea eliminar el producto?',
+          text: 'Esta acción no se puede deshacer',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sí, eliminar',
+          cancelButtonText: 'Cancelar'
+        });
+    
+        if (confirmacion.isConfirmed) {
+          await axios.delete(`https://rollingmarketbe1.onrender.com/producto/delete/${id}`);
+          setProductos(productos.filter(producto => producto._id !== id));
+          Swal.fire('¡Eliminado!', 'El producto ha sido eliminado correctamente', 'success');
+        }
       } catch (error) {
-        console.log(error)
+        console.log(error);
+        Swal.fire('¡Error!', 'Ha ocurrido un error al eliminar el producto', 'error');
       }
     }
 
