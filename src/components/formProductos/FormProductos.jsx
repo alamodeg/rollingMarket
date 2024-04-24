@@ -154,7 +154,11 @@ const FormProductos = ({editarProductos, handleClose}) => {
         onChange={handleChange}
         name='image' 
         placeholder="Imagen del Producto" />
+       <Form.Text className="form-text" id="basic-addon4">
+        Debe ingresar el link de una imagen válida.
+      </Form.Text>
       </Form.Group>
+
 
       {editarProductos ? (
       <Button type="submit" variant="primary">

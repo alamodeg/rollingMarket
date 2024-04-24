@@ -43,7 +43,7 @@ const ProductosContext = ({children}) => {
     //PUT PARA ACTUALIZAR UN PORDUCTO DE LA BASE DE DATOS
     const updateProductos = async (producto) => {
       try {
-        await axios.put(`https://rollingmarketbe1.onrender.com/producto/update/${producto._id}`, producto)
+        await axios.put(`https://rollingmarketbe1.onrender.com/producto/update/${producto.id}`, producto)
         await obtenerProductos()
       } catch (error) {
         console.log(error)
