@@ -4,8 +4,8 @@ import { Contact } from '../../page/contacto/Contact';
 import AboutUsPage from '../../page/aboutUs/AboutUsPage';
 import LoginPage from '../../page/login/LoginPage';
 import Page404 from '../../page/404/Page404';
-import Admin from '../../components/admin/Admin';
 import TablaProductos from '../tablaProductos/TablaProductos';
+import ProductoTablaUsuario from '../../page/tablaProductoUsuario/ProductoTablaUsuario';
 
 export function Rutas() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -19,7 +19,7 @@ export function Rutas() {
           <Route path='/login' element={<Navigate to="/admin" />} />
           <Route path='/' element={<Navigate to="/admin" />} />
           <Route path='/admin' element={<TablaProductos />} />
-          <Route path='/mainpage' element={<TablaProductos />} />    {/* REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE*/}
+          <Route path='/mainpage' element={<ProductoTablaUsuario />} />    {/* REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE*/}
           <Route path="*" element={<Page404 />} />
         </Routes>
       );
@@ -30,8 +30,8 @@ export function Rutas() {
           <Route path='/quienesSomos' element={<AboutUsPage />} />
           <Route path='/login' element={<Navigate to="/mainpage" />} />
           <Route path='/' element={<Navigate to="/mainpage" />} />
-          <Route path='/admin' element={<Page404 />} />             {/* REEMPLAZAR POR COMPONENTE HOEM O CORRESPONDIENTE.*/}
-          <Route path='/mainpage' element={<TablaProductos />} />   {/* REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE*/}
+          <Route path='/admin' element={<Navigate to="/mainpage" />} />       
+          <Route path='/mainpage' element={<ProductoTablaUsuario />} />   {/* REEMPLAZAR POR COMPONENTE USUARIO O SEA MAINPAGE*/}
           <Route path="*" element={<Page404 />} />
         </Routes>
       );
@@ -43,8 +43,8 @@ export function Rutas() {
         <Route path='/quienesSomos' element={<AboutUsPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/' element={<LoginPage />} />
-        <Route path='/admin' element={<Page404 />} />
-        <Route path='/mainpage' element={<Page404 />} /> 
+        <Route path='/admin' element={<Navigate to="/login" />} />
+        <Route path='/mainpage' element={<Navigate to="/login" />} /> 
         <Route path="*" element={<Page404 />} />
       </Routes>
     );
