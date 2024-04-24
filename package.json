@@ -13,11 +13,16 @@
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "jwt-decode": "^4.0.0",
+    "json-server": "^1.0.0-alpha.23",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
+    "react-material-ui-form-validator": "^3.0.1",
     "react-router-dom": "^6.22.3",
-    "sweetalert2": "^11.10.6",
+    "recharts": "^2.12.6",
+    "sweetalert2": "^11.10.8",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
