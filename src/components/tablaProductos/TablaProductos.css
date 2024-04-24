@@ -6,6 +6,18 @@
     margin: 15px 10px 0px 0px!important;
 }
 
+/*BOTON DE AGREGAR MODAL*/
+.boton-agregar-modal{
+    background-color: #FF553B !important;
+    color: aliceblue !important;
+    margin: 0px 15px 0px 45px!important;
+    width: 80%;
+}
+/*BOTON DE AGREGAR MODAL*/
+
+.modal-header{
+    padding: 6px 15px;
+}
 /*BOTONES DEL CRUD FIN*/
 
 h5{

@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
+import Swal from 'sweetalert2';
 
 
 
@@ -12,6 +13,7 @@ const TablaProductos = () => {
 
     const {productos, deleteProductos} = useContext(ProductsProvider)
     const [editarProductos, setEditarProductos] = useState(null)
+
     const [show, setShow] = useState(false);
     //formateo de hora
     const formatDate = (dateString) => {
@@ -21,6 +23,7 @@ const TablaProductos = () => {
 
     const handleClose = () => setShow(false);
     
+
 
     const handleEdit = (producto) => {
       setEditarProductos(producto)
@@ -84,7 +87,7 @@ const TablaProductos = () => {
     </Container>
     )}
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header className='modal-header' closeButton>
           <Modal.Title>{editarProductos ? 'Editar Producto' : 'Agregar Producto'}</Modal.Title>
         </Modal.Header>
         <Modal.Body> <FormProductos editarProductos={ editarProductos } handleClose={handleClose}/> </Modal.Body>
