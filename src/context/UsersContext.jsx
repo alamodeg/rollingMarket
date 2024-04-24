@@ -4,6 +4,8 @@ import { jwtDecode } from "jwt-decode";
 
 export const UsersProvider = createContext();
 
+
+
 const UsersContext = ({ children }) => {
   const [usuarios, setUsuarios] = useState([]);
   const [usuarioLogueado, setUsuarioLogueado] = useState();
@@ -11,8 +13,16 @@ const UsersContext = ({ children }) => {
 
   const getUsers = async () => {
     try {
+
+      const token = localStorage.getItem("token");
+
       const response = await axios.get(
         "https://rollingmarketbe-1.onrender.com/usuarios"
+        , {
+          headers: {
+            Authorization: `${token}`,
+          }
+        }
       );
       setUsuarios(response.data);
     } catch (error) {
@@ -31,7 +41,12 @@ const UsersContext = ({ children }) => {
 
   const deleteUsuario = async (id) => {
     try {
-      await axios.delete(`https://rollingmarketbe-1.onrender.com/usuario/delete/${id}`);
+      const token = localStorage.getItem("token");
+      await axios.delete(`https://rollingmarketbe-1.onrender.com/usuario/delete/${id}`, {
+        headers: {
+          Authorization: `${token}`,
+        }
+      });
       await getUsers();
     } catch (error) {
       console.log(error);
@@ -71,7 +86,7 @@ const UsersContext = ({ children }) => {
   const loginUsuario = async (usuario) => {
     try {
       const response = await axios.post(
-        "https://rollingmarketbe-1.onrender.com/login/",
+        "http://localhost:4000/login/",
         usuario
       );
       console.log(response);
