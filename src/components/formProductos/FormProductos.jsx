@@ -119,7 +119,7 @@ const FormProductos = ({editarProductos, handleClose}) => {
         minLength={3}  // Longitud mínima del nombre
         maxLength={50} // Longitud máxima del nombre
              // Campo obligatorio
-        pattern="[A-Za-z0-9_]+" // Caracteres permitidos
+             pattern="[A-Za-z0-9_\s]+" // Caracteres permitidos
         title="El nombre debe contener solo letras, números, guiones bajos (_) o guiones medios (-)."
         />
       </Form.Group>
@@ -153,6 +153,7 @@ const FormProductos = ({editarProductos, handleClose}) => {
         value={producto.image}
         onChange={handleChange}
         name='image' 
+        required
         placeholder="Imagen del Producto" />
       </Form.Group>
 
