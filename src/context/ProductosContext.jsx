@@ -49,6 +49,8 @@ const ProductosContext = ({children}) => {
       }
     }
 
+    
+
     //PUT PARA ACTUALIZAR UN PRODUCTO DE LA BASE DE DATOS
     const updateProductos = async (producto) => {
       try {
