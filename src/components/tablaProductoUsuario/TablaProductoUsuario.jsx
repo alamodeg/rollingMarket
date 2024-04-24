@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useContext, useState } from 'react';
 import { ProductsProvider } from '../../context/ProductosContext';
 import FormProductos from '../formProductos/FormProductos';
-import Swal from 'sweetalert2';
+import DropdownCategoria from '../formProductos/DropdownCategoria';
 
 
 
@@ -13,7 +13,6 @@ const TablaProductos = () => {
 
     const {productos, deleteProductos} = useContext(ProductsProvider)
     const [editarProductos, setEditarProductos] = useState(null)
-
     const [show, setShow] = useState(false);
     //formateo de hora
     const formatDate = (dateString) => {
@@ -23,7 +22,6 @@ const TablaProductos = () => {
 
     const handleClose = () => setShow(false);
     
-
 
     const handleEdit = (producto) => {
       setEditarProductos(producto)
@@ -40,11 +38,9 @@ const TablaProductos = () => {
   return (
 
     <>
+    <DropdownCategoria/>
+    <h2 className='text-center mt-3 mb-3 titulo-admin2'>Administrar Productos</h2>
     <div className='boton-agregar-producto-padre'>
-    <h2 className='titulo-admin'>Administrar Productos</h2>
-      <Button className='boton-agregar-producto' onClick={handleAgregarProducto}>
-        Agregar Producto
-      </Button>
     </div>
     
     {productos.length === 0 ? (
@@ -60,7 +56,7 @@ const TablaProductos = () => {
           <th>Descripción</th>
           <th>Stock</th>
           <th>Precio</th>
-          <th className='imagen columna-fecha'>Fecha última Modificación</th>
+          <th className='imagen columna-fecha'>Fecha última Modificacion</th>
           <th className='imagen columna-imagen'>Imagen</th>
           <th>Acciones</th>
         </tr>
@@ -77,7 +73,6 @@ const TablaProductos = () => {
           <td className='columna-imagen'><img src={producto.image} style={{ width: '70px', height: '60px' }} /></td>
           <td>
             <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
-            <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
           </td>
         </tr>
         ))}
@@ -87,7 +82,7 @@ const TablaProductos = () => {
     </Container>
     )}
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header className='modal-header' closeButton>
+        <Modal.Header closeButton>
           <Modal.Title>{editarProductos ? 'Editar Producto' : 'Agregar Producto'}</Modal.Title>
         </Modal.Header>
         <Modal.Body> <FormProductos editarProductos={ editarProductos } handleClose={handleClose}/> </Modal.Body>
@@ -98,4 +93,4 @@ const TablaProductos = () => {
   )
 }
 
-export default TablaProductos;
+export default TablaProductos

@@ -54,7 +54,6 @@ const UsersContext = ({ children }) => {
   };
 
   const editUsuario = async (usuario) => {
-    console.log(usuario, "editUsuario");
     const token = localStorage.getItem("token");
 
     if (!token) {
@@ -86,7 +85,7 @@ const UsersContext = ({ children }) => {
   const loginUsuario = async (usuario) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/login/",
+        "https://rollingmarketbe-1.onrender.com/login/",
         usuario
       );
       console.log(response);
@@ -99,6 +98,7 @@ const UsersContext = ({ children }) => {
       console.log(error.response.data.message);
     }
   };
+
 
   useEffect(() => {
     getUsers();

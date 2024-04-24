@@ -86,6 +86,8 @@ const ProductosContext = ({children}) => {
       } catch (error) {
         console.log(error);
         Swal.fire('¡Error!', 'Ha ocurrido un error al eliminar el producto', 'error');
+        console.log(error);
+        Swal.fire('¡Error!', 'Ha ocurrido un error al eliminar el producto', 'error');
       }
     }
 

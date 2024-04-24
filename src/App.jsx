@@ -15,7 +15,6 @@ function App() {
 
   return (
     <>
-
       <UsersContext>
         <ProductosContext>
           <Navigator />
@@ -23,7 +22,6 @@ function App() {
           <Footer />
         </ProductosContext>
       </UsersContext>
-
     </>
   )
 }
