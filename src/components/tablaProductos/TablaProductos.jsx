@@ -38,7 +38,7 @@ const TablaProductos = () => {
 
     <>
     <div className='boton-agregar-producto-padre'>
-    <h2 className='titulo-admin'>Administar Productos</h2>
+    <h2 className='titulo-admin'>Administrar Productos</h2>
       <Button className='boton-agregar-producto' onClick={handleAgregarProducto}>
         Agregar Producto
       </Button>
