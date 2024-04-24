@@ -49,30 +49,29 @@ const TablaProductos = () => {
     ) : (
       <Container >
 
-      <Table className='tabla table-responsive' striped bordered hover>
-        
+      <Table variant='link' className='tabla' striped bordered hover>
       <thead>
         <tr className='subtitulo-tabla'>
-          <th >Nombre del Producto</th>
-          <th>Categoria</th>
+          <th>Producto</th>
+          <th className='columna-categoria'>Categoria</th>
           <th>Descripcion</th>
           <th>Stock</th>
           <th>Precio</th>
-          <th className='imagen'>Fecha ultima Modificacion</th>
-          <th className='imagen'>Imagen</th>
+          <th className='imagen columna-fecha'>Fecha ultima Modificacion</th>
+          <th className='imagen columna-imagen'>Imagen</th>
           <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
         {productos.map((producto) => (
           <tr className='contenido-tabla'>
-          <td>{producto.name}</td>
-          <td>{producto.category}</td>
-          <td>{producto.description}</td>
-          <td>{producto.stock}</td>
-          <td>{producto.price}</td>
-          <td>{formatDate(producto.updatedAt)}</td>
-          <td><img src={producto.image} style={{ width: '70px', height: '60px' }} /></td>
+          <td><h5></h5>{producto.name}</td>
+          <td className='columna-categoria'><h5></h5>{producto.category}</td>
+          <td><h5></h5>{producto.description}</td>
+          <td><h5></h5>{producto.stock}</td>
+          <td><h5></h5>${producto.price}</td>
+          <td className='columna-fecha'><h5></h5>{formatDate(producto.updatedAt)}</td>
+          <td className='columna-imagen'><img src={producto.image} style={{ width: '70px', height: '60px' }} /></td>
           <td>
             <Button className='boton-crud' onClick={() => handleEdit(producto)} variant="link"><i class="bi bi-pencil-square"></i></Button>
             <Button className='boton-crud' variant="link" onClick={() => deleteProductos(producto._id)}><i class="bi bi-trash"></i></Button>
