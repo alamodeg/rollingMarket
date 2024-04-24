@@ -24,6 +24,7 @@ export function Navigator() {
               <Nav.Link href="/quienesSomos">Quienes Somos</Nav.Link>
             </Nav>
 
+
             <div className='ms-auto d-flex align-items-center'>
               <div className='text-center'>
                 {/* {user ? `Bienvenido ${user.nombre}` : <div>!No estas Logeado!</div>} */}
@@ -46,6 +47,7 @@ export function Navigator() {
             </NavDropdown> */}
               <Button className='p-2 ms-auto' variant="success">Iniciar Sesión</Button>
             </Nav>
+
             {/* FIN DEL NAVBAR VIEJO A QUITAR */}
 
             {/* <Form className="ms-auto">
@@ -72,7 +74,6 @@ export function Navigator() {
     ) : null}
   </Nav>
             </Form> */}
-
 
           </Navbar.Collapse>
         </Container>
